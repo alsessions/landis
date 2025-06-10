@@ -1,10 +1,12 @@
 # CRAFT ENVIRONMENT
 /.env
+.env
 /.env.sh
 /.env.php
 /.env.local
 /.env.production
 /deploy.sh
+deploy.sh
 
 # COMPOSER
 /vendor
