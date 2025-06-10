@@ -1,0 +1,60 @@
+field: 06f53f9c-c9f2-4452-89d4-8cfe045a5cef # Page Builder
+fieldLayouts:
+  75420397-f429-42b2-87c3-f8241b9e1ab6:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 6e84d1fc-35d0-4de0-b386-1cc89dae0293 # Text
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 3fc99ae1-d13f-45aa-a61c-678bf1a57ff9
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 7d83a33d-dc5a-4e13-b61b-0d8b30a13e9a
+        userCondition: null
+fields:
+  6e84d1fc-35d0-4de0-b386-1cc89dae0293: # Text
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: text
+    instructions: null
+    name: Text
+    searchable: false
+    settings:
+      availableTransforms:
+        - 511297b0-ffe8-4eb3-8bf8-1255f1cd2729 # Article 400 Wide
+        - 9afd4d0c-09d0-4382-82c4-df2b2ff26cd0 # Article 640
+        - d866b8d6-1eab-473e-84ef-a97f7bad68e6 # Article(cropped 640x400)
+        - 3ac2e256-40fd-4b34-b810-13b77f2770c3 # Max Width 1200
+        - 143f81b0-d6eb-4d09-8d8c-ccf521028653 # square 300
+        - c0202351-7f7a-483f-b04d-68ca50a0a35b # Square 500
+      availableVolumes:
+        - 19d84302-acf0-4f82-bb97-a7391fd042ed # Images
+        - e143b871-ce17-4247-898b-0476b2325dac # FP Images
+      characterLimit: null
+      ckeConfig: a0e368cb-9d8f-427e-bb9a-fe91b8848733 # Less Simple
+      columnType: text
+      defaultTransform: 9afd4d0c-09d0-4382-82c4-df2b2ff26cd0 # Article 640
+      purifierConfig: null
+      purifyHtml: false
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      showWordCount: false
+      sourceEditingGroups:
+        - __ADMINS__
+      wordLimit: null
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\ckeditor\Field
+handle: text
+name: Text
+sortOrder: 3

@@ -1,0 +1,78 @@
+field: 8d7b8773-ed1d-47bd-9e1e-11cf57d4ff45 # Home Triptych
+fieldLayouts:
+  f3393f90-1724-4896-921f-a440a99ca3e0:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 9eaabe94-5978-461f-879d-c030b12da858 # Title
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b70bf5d9-0b42-40d4-9e90-2a0d275eb63f
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: eeca32c2-8e52-4400-88eb-983c61727aa9 # Text
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 177abd02-4eef-427b-a036-4b9857344691
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: a61b32eb-3300-4131-af79-5803d335a73b
+        userCondition: null
+fields:
+  9eaabe94-5978-461f-879d-c030b12da858: # Title
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: tripTitle
+    instructions: null
+    name: Title
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  eeca32c2-8e52-4400-88eb-983c61727aa9: # Text
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: tripText
+    instructions: null
+    name: Text
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 6
+      multiline: true
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: homeTriptych
+name: 'Home Triptych'
+sortOrder: 1

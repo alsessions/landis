@@ -1,0 +1,25 @@
+columnSuffix: ejaszhub
+contentColumnType: text
+fieldGroup: c060adfd-ad0d-44ee-9598-933e4f598995 # Common
+handle: rightColumn
+instructions: null
+name: 'Right Column'
+searchable: false
+settings:
+  availableTransforms: '*'
+  availableVolumes: '*'
+  characterLimit: null
+  ckeConfig: 1a3c75ec-5449-408a-90b3-92144c5b8ae1 # Simple
+  columnType: text
+  defaultTransform: null
+  purifierConfig: null
+  purifyHtml: true
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  showWordCount: false
+  sourceEditingGroups:
+    - __ADMINS__
+  wordLimit: null
+translationKeyFormat: null
+translationMethod: none
+type: craft\ckeditor\Field

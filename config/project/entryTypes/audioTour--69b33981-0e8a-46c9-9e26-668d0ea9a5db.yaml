@@ -1,0 +1,119 @@
+fieldLayouts:
+  a58b0c30-443b-41a1-a3b5-37ba3cc3686a:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: bde25c99-740d-4759-8c5b-703c02d4e3d7
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 0eb73179-957c-4167-af47-81d8e8c339fb # Subtitle
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 9b395c38-585a-4fa7-93d0-15773a6fe10d
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 9d00a830-216b-4f32-8860-c1eddd638719 # Featured Image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a2035b7d-51a2-4cc5-9b17-fa14fb6caf59
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 76ed9077-0f92-4dc0-b3ff-c772483f67ec # Body
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f0f68202-0210-4bdc-8ea6-4a2c61ae6ad0
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 6efe8901-fa7b-43a2-ae01-3ca9e385858b # Tour Intro
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 0d2f51b5-27b2-4369-8418-a06c8c844252
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 6be3c218-cb3f-4fe6-b053-d244f17578ba # Audio
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 6023c763-b3c6-4df8-a2a0-7b7c6fe1b5a1
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: a9ca2ff0-0116-44ce-9c8b-7559b0da835b # Transcript
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ecca8703-4eac-4294-88a2-62f73bdc6113
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: a7fdc75d-36f1-426c-b226-67040d96eadd
+        userCondition: null
+handle: audioTour
+hasTitleField: true
+name: 'Audio Tour'
+section: 7be06789-bc7c-40fa-a931-0947a71cae01 # Audio Tour
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+sortOrder: 1
+titleFormat: '{section.name|raw}'
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

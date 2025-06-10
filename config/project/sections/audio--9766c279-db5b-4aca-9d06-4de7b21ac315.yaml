@@ -1,0 +1,15 @@
+defaultPlacement: end
+enableVersioning: true
+handle: audio
+name: Audio
+propagationMethod: all
+siteSettings:
+  ccdf06db-63d7-465e-8ec1-7ae2b8a1ad53: # Landis Arboretum
+    enabledByDefault: true
+    hasUrls: true
+    template: audio/_entry
+    uriFormat: 'audio/{slug}'
+structure:
+  maxLevels: null
+  uid: e490f498-fa17-477d-b075-87bff0b10c79
+type: structure

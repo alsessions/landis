@@ -1,0 +1,107 @@
+fieldLayouts:
+  297942e9-3f77-49a3-95f0-927d3400338b:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: aa948494-c478-4256-96dc-001e6a840338
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 0eb73179-957c-4167-af47-81d8e8c339fb # Subtitle
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 669b7479-5e18-45d1-bd0e-5bf967907d21
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 9d00a830-216b-4f32-8860-c1eddd638719 # Featured Image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 6b6ac7af-0b83-4ccb-9368-96900ecf7578
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: b236cf2f-1df7-447e-9c79-bfbb315ab575
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 876c86b2-cb6f-4641-8c5b-30c64d43f934 # Left Column
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: eb5857bd-a381-4aa9-a848-eca92c4423a5
+            userCondition: null
+            warning: null
+            width: 100
+        name: 'Left Column'
+        uid: 25c634c1-1c66-49b5-8a07-5dda35ce157a
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 29496a6c-2d9b-4895-8c36-2039cd24b17e # Right Column
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: fe758648-dec6-445d-9f3e-ebd0934cd66f
+            userCondition: null
+            warning: null
+            width: 100
+        name: 'Right Column'
+        uid: 3b7421ff-054d-475a-8fb8-3b83878ccc86
+        userCondition: null
+handle: support
+hasTitleField: true
+name: Support
+section: ddd2d790-60f7-4746-a49b-4e4d0860afa1 # Support
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+sortOrder: 1
+titleFormat: '{section.name|raw}'
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

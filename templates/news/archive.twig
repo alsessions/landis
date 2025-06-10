@@ -1,0 +1,66 @@
+{% include '_partials/_head.twig' %}
+
+<body class="ltr">
+	{% include '_partials/_header.twig' %}
+
+	{% if entry.featuredImage | length %}
+
+		{% set optimizedImages = entry.featuredImage.one().optimizedHero %}
+		<div
+			style="
+				        background-image:url('{{ optimizedImages.src() }}');
+				        background-position: center center;
+				        background-size: cover;
+				        background-repeat: no-repeat;
+				        width:100%;
+				        height:100%;
+				        ">
+
+		{% endif %}
+<div class=" bg-opacity-50 bg-black px-14" style="background:rgba(0,0,0,0.5);">
+    <h1  class="pt-40  md:pt-60 text-white text-4xl md:text-5xl text-center mt-0 font-semibold">{{ entry.title }}</h1>
+	<h2 class="text-3xl md:text-4xl text-center pb-40 md:pb-60 text-white font-serif font-semibold">{{ entry.subtitle }}</h2>
+	</div>
+    </div>
+
+
+
+
+	<section class="px-4 py-10 mx-auto max-w-4xl lg:max-w-5xl min-h-screen"> 
+
+	{% set allEntries = craft.entries()
+  .section('news')
+  .all() %}
+
+<div class="grid grid-cols-2 gap-6">
+
+
+{% for year, entriesInYear in allEntries|group("postDate|date('Y')") %}
+<div class="bg-green-50 px-2">
+  <h3 class="mb-2">{{ year }}</h3>
+  
+  <ul>
+    {% for month, entriesInMonth in entriesInYear|group("postDate|date('F')") %}
+      <h4 class="text-lg text-green-800 mb-2">{{ month }}</h4>
+      <ul>
+        {% for entry in entriesInMonth %}
+	
+          <li class="text-blue-600">{{ entry.getLink() }}</li>
+        {% endfor %}
+      </ul>
+    {% endfor %}
+  </ul>
+  </div>
+{% endfor %}
+</div>
+
+
+
+{% include '_partials/_share.twig' %}
+</section>
+{# PurgeCSS: text-base #}
+
+	{% include '_partials/_footer.twig' %}
+
+</body>
+</html>

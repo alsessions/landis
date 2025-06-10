@@ -1,0 +1,56 @@
+fieldLayouts:
+  8b5849a8-b7ad-49a5-9804-c873ef8bec62:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\assets\AssetTitleField
+            uid: 21f8de74-8138-4676-8cb0-127bbb2dcc81
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: fb4c1616-9377-4fbb-8863-b8e1f86c1c32 # FP Images
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 281f8e07-2fba-456d-a087-774ed8777e87
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: eb380e63-02cd-4f96-913e-93ffda20d8ae
+        userCondition: null
+fs: fpImages
+handle: fpImages
+name: 'FP Images'
+sortOrder: 3
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+transformFs: null
+transformSubpath: ''

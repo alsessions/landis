@@ -1,0 +1,19 @@
+columnSuffix: xqhadsua
+contentColumnType: text
+fieldGroup: 9408d083-2398-4d15-9c7c-c166bacbc95b # Enupal Slider
+handle: enupalSliderLink
+instructions: 'Open Link on same window or new tab'
+name: Link
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  columnType: text
+  initialRows: 4
+  multiline: false
+  placeholder: 'Leave it blank to disable'
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: language
+type: craft\fields\PlainText

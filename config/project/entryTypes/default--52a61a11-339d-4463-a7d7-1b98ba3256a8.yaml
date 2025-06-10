@@ -1,0 +1,155 @@
+fieldLayouts:
+  90cd885d-3da0-431d-bb38-a76ccf3f6992:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 0ecde7f9-0bb9-49d3-8420-2685975fa903
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 9d00a830-216b-4f32-8860-c1eddd638719 # Featured Image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 64da305c-1986-4593-b900-2ba61f1d5436
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 6cbeb24e-1d09-449d-8e70-95dd68e8f71d # Date
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8db67666-604c-4cc5-945f-1657c079e26d
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: d82b3de6-16cd-433b-a8bb-2ec7424afc41 # Location
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: fc283593-b9b1-4f21-8c95-682fa109e09b
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 624d4351-1181-4547-b6d7-39dd7928a2cd # Donation
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 46715b1b-853e-4fdd-8ebf-f3c3a8383db2
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 76ed9077-0f92-4dc0-b3ff-c772483f67ec # Body
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 854c9bb5-ce11-44a9-996b-08fb77b351b3
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: a588c41c-3ec4-4bbb-8d7f-a389ba747a3e # Sponsors
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 30273358-c31a-4478-8fd2-ff3d559e548c
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: a6fe533c-58d5-4f0d-9fb2-a9d84939983d # Event Footer
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 1c1a5ea8-d354-409a-b508-7081075cc948
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: d3ddbe67-66e9-431f-8412-0c27e6706065 # PayPal Button Code
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e573222c-d7c8-424b-b5fb-7286b51f7e36
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 3d4d795a-2baa-4dbe-b785-0c2d1f3f0c95 # Timer
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 7d37c699-6023-42d1-a03f-b787c61dea20
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: d211d252-da00-4d30-a53c-b9e64430416f
+        userCondition: null
+handle: default
+hasTitleField: true
+name: Default
+section: 1bd53fd1-157a-471b-a19d-caa2a0a2f0b1 # Events
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+sortOrder: 1
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

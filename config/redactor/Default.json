@@ -1,0 +1,28 @@
+{
+  "buttons": [
+    "html",
+    "formatting",
+    "bold",
+    "italic",
+    "unorderedlist",
+    "orderedlist",
+    "link",
+    "image",
+    "video",
+    "alignment"
+  ],
+  "plugins": [
+    "fullscreen",
+    "video",
+    "alignment"
+  ],
+  "linkNewTab": true,
+  "toolbarFixed": true,
+  "imagePosition":true,
+  "imageResizable":true,
+  "imagePosition" : {
+    "left": "image-left max-w-none",
+    "right": "image-right",
+    "center": "image-center"
+}
+}

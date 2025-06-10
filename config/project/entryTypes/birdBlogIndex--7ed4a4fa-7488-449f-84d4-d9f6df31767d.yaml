@@ -1,0 +1,71 @@
+fieldLayouts:
+  9844a15e-f877-4edc-a757-d745b9ed64cb:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 303c8a29-cdc3-40a0-b4b4-0abab996d22f
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 9d00a830-216b-4f32-8860-c1eddd638719 # Featured Image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 949ebb7e-1fb0-4f24-a8e0-d28c6408e108
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 76ed9077-0f92-4dc0-b3ff-c772483f67ec # Body
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 6ef55b49-1890-4d9b-aa7c-df762c8ed29e
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: fadd6aca-4bf0-4466-8ecd-a980028ff7a8
+        userCondition: null
+handle: birdBlogIndex
+hasTitleField: true
+name: 'Bird Blog Index'
+section: 2bd7afc9-7594-4e2c-a3a1-25c9fffca299 # Bird Blog Index
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+sortOrder: 1
+titleFormat: '{section.name|raw}'
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

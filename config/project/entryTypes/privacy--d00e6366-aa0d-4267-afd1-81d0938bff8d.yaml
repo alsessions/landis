@@ -1,0 +1,59 @@
+fieldLayouts:
+  8341a28a-0dd7-42dc-b98f-1da52e3a61a8:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 42c7196a-aedb-4e29-9e11-c31bcf4a5821
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 76ed9077-0f92-4dc0-b3ff-c772483f67ec # Body
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 79ce5f03-1d3f-4496-b5d3-189461a2f5a8
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 59491434-b199-4334-996a-ebf47e364e33
+        userCondition: null
+handle: privacy
+hasTitleField: false
+name: 'Privacy Policy'
+section: a7931313-4e13-4423-ae89-3e60ed563a58 # Privacy Policy
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+sortOrder: 1
+titleFormat: '{section.name|raw}'
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

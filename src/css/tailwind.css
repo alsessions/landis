@@ -1,0 +1,332 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    font-family: 'Inter','sans-serif';
+    scroll-behavior: smooth;
+}
+
+
+
+h1 {
+    @apply my-3 text-green-700 mb-8 text-3xl md:text-4xl md:text-4xl;
+}
+
+article a,
+.triptych a {
+    @apply text-blue-700 hover:decoration-blue-400 hover:decoration-dotted hover:underline no-underline hover:text-blue-900;
+}
+
+ h2 {
+     @apply my-3 text-3xl md:text-4xl font-medium text-green-600 lg:text-2xl;
+ }
+
+ h3 {
+    @apply clear-both my-4 text-lg md:text-2xl text-green-700;
+}
+
+ul {
+    @apply list-disc list-inside;
+}
+
+ul li {
+    @apply mb-2;
+}
+
+p {
+    @apply mb-4  text-gray-700 leading-relaxed;
+}
+
+
+blockquote {
+    @apply px-5 py-5 text-lg italic leading-relaxed text-gray-600 md:px-20  md:text-xl;
+}
+
+
+
+figure.image.image-style-align-left{
+    @apply  clear-both mx-auto px-2 md:w-2/5 md:float-left md:mr-4 md:my-4;
+}
+
+figure.image.image-style-align-right {
+    @apply  clear-both mx-auto px-2 md:w-2/5 md:float-right md:ml-4 md:my-4 ;
+}
+
+figure.image-left {
+    @apply  clear-both mx-auto px-2 md:w-2/5 md:float-left md:mr-4 md:my-2;
+}
+
+figure.image-right {
+    @apply  clear-both mx-auto px-2 md:w-2/5 md:float-right md:ml-4 md:my-2 ;
+}
+
+figure.image-center,
+figure.image.image-style-align-center {
+    @apply clear-both mb-4 mx-auto;
+}
+
+figure.image.image-style-align-center img {
+    @apply text-center mx-auto;
+}
+
+article img {
+    @apply mx-auto rounded-sm rounded shadow-md clear-both ;
+}
+
+figcaption {
+    @apply mx-auto mt-4 mb-4 text-base italic text-center text-gray-600 max-w-3xl;
+}
+
+/* Slideshow container overrides */
+
+.bx-wrapper {
+    @apply mx-auto mb-0  !important;
+    border:none !important;
+    
+}
+
+.bx-wrapper img {
+    @apply mx-auto w-full !important;
+    
+    
+}
+
+/* Front page slider */
+
+
+
+.slider-image {
+    @apply flex items-center bg-green-800;
+    
+}
+
+@media (max-width: 640px) {
+    .slider-image { 
+        height: 20rem !important;
+     }
+  }
+
+  @media (min-width: 768px) {
+    .slider-image { 
+        height: 35rem !important;
+     }
+  }
+
+.slider-text {
+    @apply px-2 mx-auto font-semibold font-serif text-2xl text-center text-white md:text-3xl lg:text-4xl md:max-w-5xl;
+}
+
+.toggler {
+    display: none;
+  }
+  
+  .toggler+.toggler-content {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: all .4s ease-in-out;
+  }
+  
+  .toggler:checked+.toggler-content {
+    max-height: 1000px;
+  }
+
+ .btn-blue {
+      @apply px-4 py-2 mx-auto my-4 font-semibold text-white bg-blue-500 rounded shadow-md hover:text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75 md:w-auto;
+ }
+
+ .btn-plain {
+    @apply    block w-3/4 mx-auto my-4 text-gray-700 border-b-2 border-gray-700 border-dotted md:mx-4 md:w-auto;
+}
+
+ .btn-green {
+    @apply px-2 py-1 text-base tracking-wide text-white bg-green-700 rounded shadow hover:bg-green-900 focus:outline-none focus:ring-1 focus:ring-green-400 focus:ring-opacity-75 ;
+}
+
+.btn-slideshow {
+    @apply px-3 py-2 font-sans text-lg tracking-wide text-white uppercase bg-green-400 rounded shadow hover:bg-green-900 hover:text-white focus:outline-none focus:ring-1 focus:ring-green-400 focus:ring-opacity-75 bg-opacity-70;
+}
+
+.btn-light-green {
+    @apply px-2 py-1 text-base font-semibold tracking-wide text-blue-500 bg-green-200 rounded shadow hover:bg-green-900 hover:text-white focus:outline-none focus:ring-1 focus:ring-green-400 focus:ring-opacity-75 ;
+}
+
+ .btn-blue-small {
+     @apply inline-block px-2 py-1 mt-2 mb-2 text-sm font-medium tracking-wide text-white bg-blue-500 rounded shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75;
+ }
+
+ .home-icon {
+     @apply inline-block w-4 h-4 mb-1 mr-1 text-green-800 md:h-5 md:w-5;
+ }
+
+
+
+ /* Lightgallery CSS overrides - bad stuff. 
+    We should not use !important anywhere. */
+
+
+ .lg-sub-html h4 {
+   @apply text-lg md:text-3xl font-normal !important;
+}
+
+.lg-sub-html p {
+    @apply text-base md:text-lg text-white !important;
+ }
+
+ #fb-share-button  {
+    background: #3b5998;
+    border-radius: 6px;
+    font-weight: 600;
+    padding: .25rem 1rem .5rem 1rem;
+    display: inline-block;
+    position: static;
+    border: 1px 0px 2px 0px solid rgb(2, 2, 117);
+}
+
+#fb-share-button:hover {
+    cursor: pointer;
+    background: #213A6F
+}
+
+#fb-share-button svg {
+    width: 18px;
+    fill: white;
+    vertical-align: middle;
+   
+}
+
+#fb-share-button span {
+    vertical-align: middle;
+    color: white;
+    
+    padding: 0 3px;
+    @apply text-sm;
+}
+
+.fb-share-button > span:nth-child(1) > iframe:nth-child(1) {
+    margin-top:2px;
+}
+
+
+html#facebook.svg body.plugin.gecko.x1.Locale_en_US div._li div.pluginSkinLight.pluginFontHelvetica div div#u_0_0_cu.inlineBlock a#u_0_1_PI._2vmz div button.inlineBlock._2tga._89n_._8j9w div span._49vh._2pi7 {
+    padding-top:4px !important;
+}
+
+details summary { 
+    cursor: pointer;
+  }
+
+#movie_player {
+    @apply my-6;
+}  
+
+[x-cloak] { display: none !important; }
+
+.scrollToTopBtn {
+    background-color: black;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 48px;
+    width: 48px;
+  
+    /* place it at the bottom right corner */
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    /* keep it at the top of everything else */
+    z-index: 100;
+    /* hide with opacity */
+    opacity: 0;
+    /* also add a translate effect */
+    transform: translateY(100px);
+    /* and a transition */
+    transition: all 0.5s ease;
+  }
+  
+  .showBtn {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  div.paypal select {
+      @apply rounded-lg mb-4 px-2 py-1;
+  }
+
+   /* Swiper follows */
+
+
+   .swiper {
+    width: 100%;
+    
+  }
+
+  .swiper {
+      @apply h-[640px] md:h-[640px];
+  }
+
+  .swiper-text p {
+      @apply text-white text-lg md:text-xl leading-loose mt-4;
+  }
+
+  .swiper-text h3 {
+    @apply text-gray-100 text-lg md:text-2xl leading-loose mt-4 font-semibold;
+}
+
+  @media (min-width: 768px){
+  .swiper-text p {
+    font-size: 1.25rem;
+    line-height: 1.75 !important;
+  }
+}
+
+  .swiper-text p a {
+      @apply no-underline text-blue-100 border-b-2 border-blue-200 hover:border-blue-300 hover:text-blue-300 ;
+  }
+
+
+
+  
+  .swiper-pagination-bullet {
+      background-color: #fff !important;
+      opacity: .9 !important;
+      @apply h-4 w-4;
+      
+  }
+
+  span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background-color: blue !important;
+    
+}
+.swiper-button-new-last,
+.swiper-button-new-next {
+    @apply text-white font-semibold text-xl px-2  bg-gray-700 bg-opacity-50 mb-6;
+}
+.swiper-button-next, .swiper-button-prev {
+    top:100% !important;
+    width: calc(var(--swiper-navigation-size)/ 44 * 27);
+    height: var(--swiper-navigation-size);
+    margin-top: calc(0px - (var(--swiper-navigation-size)/ 2));
+    z-index: 10;
+    cursor: pointer;
+    display: flex;
+    align-items: bottom;
+    justify-content: center;
+    color: #fff !important;  
+    background-color:transparent;
+    opacity:.9;
+    padding:40px !important;
+}  
+
+.swiper-button-next::after, .swiper-button-prev::after {
+    font-family: inherit;
+    font-size: 16px;
+    text-transform: none !important;
+    letter-spacing: 0;
+    text-transform: none;
+    font-variant: initial;
+    line-height: 1;
+    padding:10px;
+}

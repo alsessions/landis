@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta charset="utf-8" />
+	<title>Landis Arboretum</title>
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+	<meta name="referrer" content="origin-when-cross-origin" />
+	<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"></script>
+	<script>
+		// Alpine.js v2 component initialization
+		function countdownTimer(targetDate) {
+			return {
+				days: 0,
+				hours: 0,
+				minutes: 0,
+				seconds: 0,
+				countdownInterval: null,
+				targetTimestamp: new Date(targetDate).getTime(),
+				
+				init() {
+					this.updateCountdown();
+					this.countdownInterval = setInterval(() => {
+						this.updateCountdown();
+					}, 1000);
+				},
+				
+				updateCountdown() {
+					const now = new Date().getTime();
+					const timeRemaining = this.targetTimestamp - now;
+					
+					if (timeRemaining > 0) {
+						this.days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+						this.hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+						this.minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+						this.seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+					} else {
+						clearInterval(this.countdownInterval);
+						this.days = 0;
+						this.hours = 0;
+						this.minutes = 0;
+						this.seconds = 0;
+					}
+				},
+				
+				padZero(num) {
+					return num.toString().padStart(2, "0");
+				}
+			}
+		}
+	</script>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Rosarivo&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="/css/styles.css">
+	<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+	<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+</head>
+
+<body class="ltr">
+	<div class="w-full bg-green-200 mx-auto py-2">
+		<div class="mx-auto md:max-w-xl px-2">
+			<div class="md:px-4 flex gap-4 justify-center items-center text-black bg-green-200">
+				<div class="px-2 mr-2 text-xs font-semibold text-white bg-green-800 rounded-md inline-block md:text-sm">
+					NEW
+				</div>
+				<div class="uppercase text-sm">
+					Rentals at Landis. <a href="/rentals" class="underline">Find out more</a>.
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	{% include '_partials/_header.twig' %}
+	
+	<div class="swiper mySwiper relative">
+		<div class="swiper-wrapper">
+			{% for block in entry.frontPageHero.all() %}
+				{% switch block.type %}
+					{% case "slideImage" %}
+						{% set image = block.slideImage.one().optimizedHero %}
+						<div class="swiper-slide flex flex-row"
+							style="background-image:linear-gradient(
+								to left,
+								rgba(0, 0, 0, 0.0),
+								rgba(0, 0, 0, 0.7)
+							),url('{{ image.src() }}');
+							background-size: cover;
+							background-repeat: no-repeat;
+							background-position: center center;">
+							
+							<div class="swiper-text absolute top-0 px-4 md:px-10 py-10 max-w-3xl" style="text-shadow: 0 1px 3px rgba(0,0,0,0.5);">
+								<h2 class="text-2xl md:text-4xl font-bold text-white mb-4">
+									{{ block.slideTitle }}
+								</h2>
+								<div class="flex justify-start gap-6 mb-3">
+									<div class="swiper-button-new-last hover:scale-110 transition-transform cursor-pointer bg-black bg-opacity-20 hover:bg-opacity-40 rounded-full w-8 h-8 flex items-center justify-center text-white">&larr;</div>
+									<div class="swiper-button-new-next hover:scale-110 transition-transform cursor-pointer bg-black bg-opacity-20 hover:bg-opacity-40 rounded-full w-8 h-8 flex items-center justify-center text-white">&rarr;</div>
+								</div>
+								<div class="max-w-none text-white prose prose-invert prose-p:text-white prose-p:leading-relaxed">
+									{{ block.slideBody | markdown }}
+								</div>
+								
+								{% if block.ctaLink | length %}
+									<a href="{{ block.ctaLink }}" class="inline-block uppercase py-2 px-4 text-white font-medium bg-green-600 hover:bg-green-700 mt-10 border-0 rounded shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+										{{ block.ctaButtonText }}
+									</a>
+								{% endif %}
+								
+								{% if block.timer | length %}
+									<div>
+										<div 
+											x-data="countdownTimer('{{ block.timer | date('F j, Y H:i:s', 'America/New_York') }}')"
+											x-init="init()"
+											class="countdown-timer rounded-lg shadow-md max-w-xl my-8 bg-black bg-opacity-30 backdrop-blur-sm p-3 text-white">
+											<div class="grid grid-cols-4 gap-3 text-center max-w-md">
+												<div class="countdown-segment bg-gradient-to-b from-green-700 to-green-800 rounded-lg p-2 text-white shadow-inner">
+													<div x-text="padZero(days)" class="text-2xl font-bold text-white">00</div>
+													<div class="text-xs uppercase tracking-wide mt-1 font-medium text-white">Days</div>
+												</div>
+												<div class="countdown-segment bg-gradient-to-b from-green-600 to-green-700 rounded-lg p-2 text-white shadow-inner">
+													<div x-text="padZero(hours)" class="text-2xl font-bold text-white">00</div>
+													<div class="text-xs uppercase tracking-wide mt-1 font-medium text-white">Hours</div>
+												</div>
+												<div class="countdown-segment bg-gradient-to-b from-green-500 to-green-600 rounded-lg p-2 text-white shadow-inner">
+													<div x-text="padZero(minutes)" class="text-2xl font-bold text-white">00</div>
+													<div class="text-xs uppercase tracking-wide mt-1 font-medium text-white">Minutes</div>
+												</div>
+												<div class="countdown-segment bg-gradient-to-b from-green-400 to-green-500 rounded-lg p-2 text-white shadow-inner">
+													<div x-text="padZero(seconds)" class="text-2xl font-bold text-white">00</div>
+													<div class="text-xs uppercase tracking-wide mt-1 font-medium text-white">Seconds</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								{% endif %}
+							</div>
+						</div>
+					
+					{% default %}
+						...
+				{% endswitch %}
+			{% endfor %}
+		</div>
+		
+		<div class="swiper-pagination mt-10"></div>
+	</div>
+	
+	<!-- Initialize Swiper -->
+	<script>
+		var swiper = new Swiper(".mySwiper", {
+			spaceBetween: 30,
+			centeredSlides: true,
+			autoplay: {
+				delay: 5000,
+				disableOnInteraction: false,
+				pauseOnMouseEnter: true,
+			},
+			pagination: {
+				el: ".swiper-pagination",
+				clickable: true,
+			},
+			navigation: {
+				nextEl: ".swiper-button-new-next",
+				prevEl: ".swiper-button-new-last",
+			},
+			effect: 'fade',
+			fadeEffect: {
+				crossFade: true,
+				delay: 2000,
+			},
+			loop: true,
+		});
+	</script>
+	
+	<section class="px-6 py-10 mx-auto md:py-20 bg-gradient-to-b from-white to-green-50">
+		<div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto">
+			{% set triptychBlocks = entry.homeTriptych.all() %}
+			{% for block in triptychBlocks|reverse %}
+				<div class="triptych p-8 bg-white rounded-md shadow-lg hover:shadow-xl transition-all duration-300 border-t-4 border-green-600">
+					{% switch block.type %}
+						{% case "homeTriptych" %}
+							<div class="flex justify-center mb-4">
+								<div class="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center">
+									{% if loop.first %}
+										<!-- Third icon: Garden/Nature Enthusiasts -->
+										<svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+											<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+										</svg>
+									{% elseif loop.index == 2 %}
+										<!-- Second icon: Leaf/Education -->
+										<svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+											<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+											<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14" />
+										</svg>
+									{% elseif loop.index == 3 %}
+										<!-- First icon: Tree/Plant -->
+										<svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+											<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+											<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292V15M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" transform="translate(12, -4) scale(0.6)" />
+											<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14" transform="translate(0, 4)" />
+										</svg>
+									{% else %}
+										<!-- Fallback icon: Nature -->
+										<svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+											<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+										</svg>
+									{% endif %}
+								</div>
+							</div>
+							<h3 class="text-2xl font-medium text-center uppercase text-green-800 mb-4">
+								{{ block.tripTitle }} {# Type: Plain Text #}
+							</h3>
+							<div class="prose prose-p:leading-relaxed max-w-none text-gray-600">
+								{{ block.tripText | markdown | typogrify | widont }}
+							</div>
+					{% endswitch %}
+				</div>
+			{% endfor %}
+		</div>
+	</section>
+	<section class="w-full px-4 py-10 sm:py-20 md:py-32 bg-fixed" style="
+									background-image: url('/assets/images/landis-big-view.jpg');
+									background-size: cover;
+									background-repeat: no-repeat;
+									background-position: center center">
+		<div class="px-8 py-5 md:px-10 md:py-6 not-prose md:w-2/3 lg:w-3/5 mx-auto bg-black rounded-lg bg-opacity-40 backdrop-filter backdrop-blur-sm shadow-xl border border-white border-opacity-10 transition-all duration-300 hover:shadow-2xl">
+			<h2 class="mx-auto mt-0 mb-2 text-xl font-bold text-center text-white md:text-3xl tracking-wide">
+				Weddings &amp; Rentals
+			</h2>
+			<p class="text-lg text-center text-white leading-relaxed mb-4">
+				Hold your wedding, celebration or other event on hundreds of acres with a 
+				<span class="font-bold text-green-200">panoramic view</span> of the Schoharie valley.
+			</p>
+			<div class="mx-auto text-center">
+				<a href="/rentals" 
+					class="btn btn-blue inline-block px-8 py-3 text-white bg-blue-600 hover:bg-blue-700 rounded-md shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+					Details & Info
+				</a>
+			</div>
+		</div>
+	</section>
+	
+	<section class="px-6 py-10 mx-auto md:py-20 xl:px-20 bg-white">
+		<div class="max-w-7xl mx-auto">
+			<div class="grid gap-8 py-10 mx-auto md:py-10 lg:grid-cols-3">
+				<div class="bg-white p-6 rounded-md shadow-lg transform transition-all duration-300 hover:shadow-xl border-t-4 border-green-800 col-span-1">
+					<h2 class="text-2xl md:text-3xl  font-medium text-center uppercase text-green-800 mb-4">Support the Arboretum</h2>
+					<p class="mb-4 text-gray-600">
+						Your membership dollars, donations and volunteer efforts are critical to our economic
+						viability and the sustainability of our collections, grounds, and educational programs.
+					</p>
+					<p class="mb-6 text-gray-600">
+						Landis Arboretum is a 501(c)(3) not for profit organization. All donations are tax
+						deductible to the full extent of the law.
+					</p>
+					<div class="w-full h-auto">
+						<a href="/support" class="btn btn-green inline-block px-6 py-2 text-white bg-green-700 rounded-sm hover:bg-green-900 transition-colors duration-300">Learn More</a>
+					</div>
+					<!-- <h2 class="mb-2 text-lg font-semibold md:text-2xl">Take A Tour</h2>
+					<p class="text-gray-700">Take a self-paced tour of Landis from Uniguide.
+						Download
+						the <strong>free</strong> app and search for "Landis Arboretum".</p>
+					<div class="flex flex-wrap">
+						<a href="https://apps.apple.com/us/app/uniguide-audio-tours-and-maps/id862232588?mt=8"><img
+								src="/assets/images/app-store.jpg"
+								class="inline-block max-w-full px-2 w-36 filter hover:brightness-50"></a>
+						<a href="https://play.google.com/store/apps/details?id=com.vitart.audiotour"><img
+								src="/assets/images/play-store.jpg"
+								class="inline-block max-w-full px-2 w-36 filter hover:brightness-50"></a>
+					</div>-->
+				</div>
+
+				<div class="bg-white p-6 rounded-md shadow-lg transform transition-all duration-300 hover:shadow-xl  border-t-4 border-green-800 col-span-2">
+					<h2 class="text-2xl md:text-3xl font-medium text-center uppercase text-green-800 mb-4">Visit Landis</h2>
+					<p class="mb-6 text-gray-600">
+						The Arboretum is open daily, dawn to dusk for hiking,
+						walking, cross country skiing and biking. Please take a moment and review
+						our <a href="/visit" class="text-blue-500 hover:text-blue-800 hover:underline">visitor
+							guidelines</a>.
+					</p>
+					<div class="overflow-hidden aspect-w-16 aspect-h-9 rounded-sm shadow-md">
+						<iframe
+							src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d108234.6969020929!2d-74.23463617655747!3d42.798198685381124!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89de86d74e56a575%3A0xac42bc5610e31de6!2s174%20Lape%20Rd%2C%20Esperance%2C%20NY%2012066!5e0!3m2!1sen!2sus!4v1632142178261!5m2!1sen!2sus"
+							style="border:0;"
+							allowfullscreen=""
+							loading="lazy">
+						</iframe>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="px-6 py-10 mx-auto md:py-20 xl:px-20 bg-green-50">
+		<div class="max-w-7xl mx-auto">
+			<div class="grid gap-8 lg:grid-cols-2 mx-auto">
+				<div class="bg-white p-6 rounded-md shadow-lg transform transition-all duration-300 hover:shadow-xl border-t-4 border-green-800">
+					<h2 class="text-2xl font-medium text-center uppercase text-green-800 mb-4">Landis Arboretum: Who We Are</h2>
+					<div class="aspect-w-16 aspect-h-9 overflow-hidden rounded-sm shadow-md">
+						<iframe src="https://www.youtube.com/embed/M8g4RC_FudM?rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					</div>
+				</div>
+				
+				<div class="bg-white p-6 rounded-md shadow-lg transform transition-all duration-300 hover:shadow-xl border-t-4 border-green-800">
+					<h2 class="text-2xl font-medium text-center uppercase text-green-800 mb-4">Landis Arboretum: Yesterday, Today ...</h2>
+					<div class="aspect-w-16 aspect-h-9 overflow-hidden rounded-sm shadow-md">
+						<iframe src="https://www.youtube.com/embed/U8vF-696mOE?rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="px-4 py-10 sm:py-20 md:py-32"
+		style="background-image:url('/assets/images/_1920x1569_crop_center-center_82_line/goldenrod.jpg.webp');">
+		<div class="px-4 py-2 mx-auto bg-white border-8 border-gray-200 rounded-sm sm:w-2/3 lg:w-1/2 bg-opacity-90">
+			<h2 class="mx-auto mb-2 text-xl font-semibold text-center md:text-3xl">
+				Keep in Touch
+			</h2>
+			<p class="text-base text-center">
+				Subscribe to our quarterly email newsletter<br>and never miss a thing.
+			</p>
+			<!-- BEGIN MODAL -->
+			<div x-data="{ open: false }">
+				<div class="flex items-center justify-center relative mx-auto">
+					<button class="bg-green-500 hover:bg-green-600 text-white rounded py-2 px-4 text-center transition-colors duration-300" @click="open = !open">Subscribe Now!</button>
+					
+				</div>
+				<p class="text-sm italic text-center mt-2">As per our <a href="/privacy" class="text-blue-500 hover:text-blue-800 hover:underline">privacy policy</a>, we'll never share your information.</p>
+				<div x-show="open" x-cloak="" class="fixed inset-0 z-50 flex justify-center items-center max-w-5xl mx-auto">
+					<div class="bg-green-300 rounded shadow-lg p-8 relative">
+						<button class="absolute right-0 text-xl top-0 px-3 py-1" @click="open = false">x</button>
+						<!-- Begin Constant Contact Inline Form Code -->
+						<div class="ctct-inline-form" data-form-id="ee8156e7-8d1f-4ab2-9f63-9623bc04d66a"></div>
+						<!-- End Constant Contact Inline Form Code -->
+					</div>
+				</div>
+			</div>
+			<!-- END MODAL -->
+		</div>
+	</section>
+	
+	<section class="px-4 py-16 mx-auto bg-green-50">
+		<div class="grid grid-cols-1 gap-5 mx-auto md:grid-cols-2 max-w-7xl">
+			<div>
+				<h2 class="mb-4 text-lg text-green-700 uppercase ml-2">News from Landis</h2>
+				{% set myEntryQuery = craft.entries()
+					.section('news')
+					.limit(5) %}
+				{% set entries = myEntryQuery.all() %}
+				{% for entry in entries %}
+					<div class="mb-6 bg-white rounded-sm shadow-sm hover:shadow transition-all duration-300 overflow-hidden border border-gray-50">
+						<div class="p-4">
+							<div class="flex items-center mb-2 not-prose">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="inline w-4 h-4">
+									<path style="fill:#80bc2b; stroke:#528c00; stroke-width:1" d="M6,12 C6,5 12,3 12,3 C12,3 18,5 18,12 C18,16 15,19 12,20 C9,19 6,16 6,12 Z M12,3 C12,9 14,12 16,14 M12,3 C12,9 10,12 8,14"></path>
+								</svg>
+								<p class="m-0 ml-2 text-xs text-gray-500 lg:text-sm">
+									{{ entry.postDate | date("M d, Y") }}
+									{% if entry.newsAuthor | length %}
+										| {{ entry.newsAuthor }}
+									{% endif %}
+								</p>
+							</div>
+							<h4 class="mb-2 text-lg font-medium text-green-800">
+								<a href="{{ entry.url }}" class="hover:text-blue-600 transition-colors">{{ entry.title }}</a>
+							</h4>
+							<div class="text-gray-600">
+								{{ entry.textMarkdown | chop(limit=20, unit='w',append="...") | retconAttr('p', { class: 'text-sm mb-3 lg:text-base' }) }}
+							</div>
+							<div class="mt-3 pt-2 border-t border-gray-100">
+								<a href="{{ entry.url }}" class="inline-flex items-center text-sm text-blue-600 font-medium hover:text-blue-800 transition-colors">
+									Read More
+									<svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+									</svg>
+								</a>
+							</div>
+						</div>
+					</div>
+				{% endfor %}
+				<p class="px-4 mt-2 mb-6 text-sm text-right">
+					<a href="/news" class="btn-blue-small">All News</a>
+				</p>
+			</div>
+			<div>
+				<h2 class="mb-4 text-lg text-green-700 uppercase ml-2">Upcoming Events</h2>
+				{% set events = craft.entries()
+					.section('events')
+					.date('>= '~ now|atom)
+					.orderBy('date asc')
+					.limit(5)
+					.all() %}
+				{% for entry in events %}
+					<div class="mb-6 bg-white rounded-sm shadow-sm hover:shadow transition-all duration-300 overflow-hidden border border-gray-50 not-prose">
+						<div class="p-4">
+							{% if entry.date %}
+								<div class="flex items-center mb-2">
+									<svg xmlns="https://www.w3.org/2000/svg" class="w-4 h-4" viewbox="0 0 20 20" fill="currentColor">
+										<path fill-rule="evenodd"
+											d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+											clip-rule="evenodd" />
+									</svg>
+									<p class="m-0 ml-2 text-xs text-gray-500 lg:text-sm">
+										{{ entry.date | date('M j, Y') }}
+										|
+										{{ entry.date | date('g:i A') }}
+									</p>
+								</div>
+							{% endif %}
+							<h4 class="mb-2 text-lg font-medium text-green-800">
+								<a href="{{ entry.url }}" class="hover:text-blue-600 transition-colors">{{ entry.title }}</a>
+							</h4>
+							<div class="text-gray-600">
+								{{ entry.textMarkdown | chop(limit=20, unit='w',append="...") | retconAttr('p', { class: 'text-sm mb-3 lg:text-base' }) }}
+							</div>
+							<div class="mt-3 pt-2 border-t border-gray-100">
+								<a href="{{ entry.url }}" class="inline-flex items-center text-sm text-blue-600 font-medium hover:text-blue-800 transition-colors">
+									Details &amp; Registration
+									<svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+									</svg>
+								</a>
+							</div>
+						</div>
+					</div>
+				{% endfor %}
+				<p class="px-4 mt-2 mb-6 text-sm text-right">
+					<a href="/events" class="btn-blue-small">All Events</a>
+				</p>
+			</div>
+		</div>
+	</section>
+	
+	{% include '_partials/_footer.twig' %}
+</body>
+
+</html>

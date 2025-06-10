@@ -1,0 +1,19 @@
+columnSuffix: nukeduro
+contentColumnType: text
+fieldGroup: c060adfd-ad0d-44ee-9598-933e4f598995 # Common
+handle: caption
+instructions: null
+name: Caption
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  columnType: null
+  initialRows: 2
+  multiline: true
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

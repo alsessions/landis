@@ -1,0 +1,166 @@
+{% include '_partials/_head.twig' %}
+
+<body class="ltr">
+    {% include '_partials/_header.twig' %}
+
+    {# --- Featured Image Section --- #}
+    {% if entry.featuredImage | length %}
+        {% set optimizedImages = entry.featuredImage.one().optimizedHero %}
+        <div style="background-image:url('{{ optimizedImages.src() }}');background-position: center center;background-size: cover; background-repeat: no-repeat; width:100%;height:100%; ">
+    {% else %}
+        <div style="background-image:url('/assets/images/IMG_0432.JPG'); background-position: center center; background-size: cover; background-repeat: no-repeat; width:100%;height:100%; ">
+    {% endif %}
+        <div class="px-4 py-24 bg-black bg-opacity-50 md:py-48" style="background:rgba(0,0,0,0.3);">
+            <h1 class="mx-auto text-3xl font-semibold text-center text-white md:text-4xl lg:text-5xl md:max-w-5xl">
+                {{ entry.title | widont }}
+            </h1>
+            <p class="mt-0 text-xl font-semibold text-center text-white md:text-2xl">
+                {% if entry.newsAuthor | length %}By {{ entry.newsAuthor }}{% endif %}
+            </p>
+        </div>
+    </div>
+
+    <section class="px-4 mx-auto my-10 md:max-w-4xl">
+        <section class="max-w-4xl min-h-screen px-4 py-10 mx-auto lg:max-w-5xl xl:max-w-5xl">
+            <article class="mx-auto prose md:prose-lg lg:prose-xl prose-img:p-2 prose-p:mb-0 prose-p:mt-4 max-w-none">
+                {{ entry.textMarkdown }}
+            </article>
+
+            {# --- Page Photo Gallery Section --- #}
+            {% if entry.pageImages | length %}
+                <section class="clear-both max-w-6xl pt-10 pb-20 mx-auto">
+                    <p class="inline-flex items-center mb-2 text-sm md:text-base">
+                        <svg class="inline w-5 h-5 mr-2 fill-current" viewbox="0 0 470 363" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M438.827 133.347l-80.213-88.149c-15.872-15.872-41.728-15.893-57.749.128-5.077 5.077-8.533 11.157-10.325 17.643-15.957-12.224-38.976-11.008-53.675 3.691a40.64 40.64 0 00-10.347 17.621c-15.957-12.181-38.976-10.987-53.653 3.712-4.971 4.971-8.384 10.901-10.24 17.216l-37.803-37.803c-15.872-15.872-41.728-15.893-57.749.128-15.893 15.872-15.893 41.728 0 57.621L212.31 270.392l-86.144 13.525c-23.275 3.328-40.832 23.552-40.832 47.083 0 17.643 14.357 32 32 32h201.152c31.339 0 60.8-12.203 82.965-34.368l33.557-33.557c22.144-22.123 34.325-51.563 34.325-82.859 0-29.227-10.837-57.237-30.506-78.869zm-18.902 146.645l-33.557 33.557c-18.133 18.133-42.24 28.117-67.883 28.117H117.333c-5.888 0-10.667-4.779-10.667-10.667 0-12.971 9.685-24.128 22.677-25.984l106.987-16.811c3.968-.619 7.232-3.413 8.491-7.232 1.237-3.797.235-8-2.603-10.837L82.155 110.072c-7.573-7.573-7.573-19.904.107-27.605a19.436 19.436 0 0113.739-5.675c4.971 0 9.941 1.899 13.739 5.696l106.731 106.731c4.16 4.16 10.923 4.16 15.083 0a10.716 10.716 0 003.115-7.552c0-2.731-1.045-5.461-3.136-7.552l-43.584-43.584c-7.573-7.573-7.573-19.883.128-27.584 7.552-7.552 19.904-7.552 27.456 0l43.605 43.605c4.16 4.16 10.923 4.16 15.083 0a10.716 10.716 0 003.115-7.552c0-2.731-1.045-5.461-3.136-7.552l-22.251-22.251c-7.573-7.573-7.573-19.883.128-27.584 7.552-7.552 19.904-7.552 27.456 0l22.357 22.357c.043.021.021.021.021.021l.021.021.021.021.021.021h.021c.021 0 .021.021.021.021 4.181 3.968 10.795 3.883 14.869-.213 4.16-4.16 4.16-10.923 0-15.083l-.917-.917a19.32 19.32 0 01-5.696-13.739c0-5.184 2.005-10.048 5.803-13.845 7.595-7.552 19.883-7.531 27.115-.363l79.872 87.787C439.125 165.389 448 188.301 448 212.216c0 25.6-9.963 49.664-28.075 67.776z"></path>
+                            <path d="M0 0h470v363H0z" fill="none"></path>
+                        </svg>
+                        <span class="hidden mr-1 md:inline"> Click </span>
+                        <span class="mr-1 md:hidden"> Tap </span> to view full size
+                    </p>
+                    <div class="grid clear-both max-w-6xl grid-cols-2 gap-4 py-5 mx-auto md:grid-cols-3">
+                        {% for myAsset in entry.pageImages %}
+                            <a href="{{ myAsset.url }}" class="block overflow-hidden rounded-lg shadow-lg" data-lg-size="{{ myAsset.width }}-{{ myAsset.height }}" data-src="{{ myAsset.url }}">
+                                <img src="{{ myAsset.url }}" alt="{{ myAsset.title }}" class="object-cover w-full h-full transition-transform duration-300 transform hover:scale-105" />
+                            </a>
+                        {% endfor %}
+                    </div>
+                </section>
+            {% endif %}
+
+            {# --- Pagination Section --- #}
+            {% set category = entry.category.one() %}
+            {% set params = craft.entries.section('news').relatedTo(category) %}
+            {% set prevEntry = entry.getPrev(params) %}
+            {% set nextEntry = entry.getNext(params) %}
+            <div class="flex justify-between max-w-7xl mx-auto my-20">
+                <div>
+                    {% if prevEntry %}
+                        <a href="{{ prevEntry.url }}" class="inline-flex items-center px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-md shadow-sm hover:bg-blue-700 transition-colors duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+                            Previous
+                        </a>
+                    {% endif %}
+                </div>
+                <div>
+                    <a href="{{ category.url }}" class="inline-flex items-center px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-md shadow-sm hover:bg-blue-700 transition-colors duration-300">{{ category.title }}</a>
+                </div>
+                <div>
+                    {% if nextEntry %}
+                        <a href="{{ nextEntry.url }}" class="inline-flex items-center px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-md shadow-sm hover:bg-blue-700 transition-colors duration-300">
+                            Next
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" /></svg>
+                        </a>
+                    {% endif %}
+                </div>
+            </div>
+
+            <hr class="clear-both px-20 mt-20 mb-4">
+
+            {# --- Meta and Share Section --- #}
+            <div class="flex flex-wrap justify-between clear-both">
+                <div>
+                    <p class="mb-0 italic">
+                        {% if entry.category | length %}
+                            {% set category = entry.category.one() %}
+                            <a href="{{ category.url }}" class="text-base text-blue-600 border-b border-blue-600 border-dotted">
+                                {{ category.title }}
+                            </a>
+                        {% endif %}
+                    </p>
+                    <p class="mb-10 text-base italic">
+                        Volume {{ category.volume }}, Number {{ category.number }}
+                    </p>
+                    <p>
+                        {% if currentUser and entry is defined %}
+                            <a href="{{ entry.cpEditUrl }}" class="text-sm" target="_blank">Edit this entry</a>
+                        {% endif %}
+                    </p>
+                </div>
+                <div>
+                    {% include '_partials/_share.twig' %}
+                </div>
+            </div>
+            <hr>
+        </section>
+    </section>
+
+    {# --- Latest News Section --- #}
+    <section class="clear-both max-w-7xl px-6 mx-auto my-20">
+        <h2 class="px-4 mb-6 md:px-0"> The Latest from Landis </h2>
+        <div class="grid gap-6 md:grid-cols-3">
+            {% set myEntryQuery = craft.entries()
+                .section('news')
+                .id('not ' ~ entry.id)
+                .limit(6) %}
+            {% set entries = myEntryQuery.all() %}
+            {% for entry in entries %}
+                <div class="flex flex-col md:px-0">
+                    <p class="mb-0 text-sm text-gray-500">
+                        {{ entry.postDate | date("M d, Y") }}
+                        {% if entry.newsAuthor | length %} | {{ entry.newsAuthor }}{% endif %}
+                    </p>
+                    <h4 class="mb-1 text-lg font-medium ">
+                        <a href="{{ entry.url }}" class="text-blue-500 hover:text-blue-800">
+                            {{ entry.title }}
+                        </a>
+                    </h4>
+                    <p class="text-base">
+                        {{ entry.textMarkdown | chop(limit=15, unit='w', append="...") }}
+                        <a href="{{ entry.url }}" class="text-blue-500 hover:text-blue-800 text-base"> read more </a>
+                    </p>
+                </div>
+            {% endfor %}
+            <p class="mt-4 mb-6 text-sm">
+                <a href="/news" class="btn-blue-small"> News Archive </a>
+            </p>
+        </div>
+    </section>
+
+    {% include '_partials/_footer.twig' %}
+
+    {# --- Scripts Section --- #}
+    <script src="/js/lightgallery/lightgallery.min.js"></script>
+    <script src="/js/lightgallery/plugins/zoom/lg-zoom.umd.js"></script>
+    <script src="/js/lightgallery/plugins/fullscreen/lg-fullscreen.umd.js"></script>
+    <script src="/js/lightgallery/plugins/thumbnail/lg-thumbnail.umd.js"></script>
+    <script type="text/javascript">
+        lightGallery(document.getElementById("lightgallery"), {
+            speed: 500,
+            plugins: [lgFullscreen],
+            showZoomInOutIcons: false,
+            actualSize: true,
+            zoom: true,
+            thumbMargin: 20,
+            thumbHeight: 120,
+            thumbWidth: 120,
+            download: true,
+            actualSizeIcons: {
+                zoomIn: 'lg-actual-size',
+                zoomOut: 'lg-zoom-out'
+            }
+        });
+    </script>
+
+</body>
+
+</html>

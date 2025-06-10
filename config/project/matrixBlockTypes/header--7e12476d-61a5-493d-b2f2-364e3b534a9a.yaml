@@ -1,0 +1,46 @@
+field: 29496a6c-2d9b-4895-8c36-2039cd24b17e # Right Column
+fieldLayouts:
+  09241086-669b-42f2-a481-46cf3534bb37:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 5d0ee4cd-9057-429c-a007-961de734922f # Header
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 9441cb54-c3cf-4dea-a378-bcb9ecf6e60e
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 32c2bba1-1c6c-47eb-b822-5e3961c02f6f
+        userCondition: null
+fields:
+  5d0ee4cd-9057-429c-a007-961de734922f: # Header
+    columnSuffix: eluccgpw
+    contentColumnType: text
+    fieldGroup: null
+    handle: header
+    instructions: null
+    name: Header
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: header
+name: Header
+sortOrder: 1

@@ -1,0 +1,71 @@
+fieldLayouts:
+  8625ea72-9bd7-4437-8e66-331e2881a49d:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: ea06155d-b73f-4eba-9af5-f3300995a6a4
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 9d00a830-216b-4f32-8860-c1eddd638719 # Featured Image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 3cbe644b-10d6-436b-9193-5af9190638a4
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 76ed9077-0f92-4dc0-b3ff-c772483f67ec # Body
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 0087086c-3ba0-41c9-a2c2-f1873938cce0
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 74f8e85e-5da8-4536-ad6e-31a196e2a44a
+        userCondition: null
+handle: eventsIndex
+hasTitleField: false
+name: 'Upcoming Events'
+section: 888dcda0-1806-4ad3-906c-d61ea274c245 # Upcoming Events
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+sortOrder: 1
+titleFormat: '{section.name|raw}'
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

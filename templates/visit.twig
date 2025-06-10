@@ -1,0 +1,50 @@
+{% include '_partials/_head.twig' %}
+
+<body class="ltr">
+	{% include '_partials/_header.twig' %}
+<main class="mx-auto md:max-w-5xl lg:max-w-7xl">
+	<section class="py-10 mx-auto  grid md:grid-cols-2">
+		
+		<article class=" px-4 mt-4">
+			<div class="prose  prose-headings:font-normal mb-4">
+			{{ entry.leftColumn }}
+			</div>
+			
+<!--
+						<div class="bg-green-100 text-gray-900 py-4 px-4 rounded-2xl">
+
+				                         <h3 class="text-center font-bold text-lg md:text-xl mb-0 text-black">COVID-19 CONSIDERATIONS<br>
+                                          WHEN YOU VISIT THE GEORGE LANDIS ARBORETUM​</h3>
+​
+<h4 class="mb-2">For the safety of everyone, we ask that you please:</h4>
+ <ul>
+
+    <li>Keep a distance of at least 6 feet between you and others.</li>
+    <li>Wear a mask to cover your nose and mouth, especially when encountering other visitors.</li>
+    <li>Stay at home when feeling sick and seek medical attention.</li>
+    <li>Avoid surfaces that may have been touched by other people.</li>
+    
+    <li>Carry out any trash that you generate, including masks and gloves, and dispose of them at home.</li>
+	</ul>
+	</div>
+-->		
+		</article>
+			<article class="px-4 mt-4">
+				<div class="prose  prose-headings:font-normal prose-ul:pl-0">
+				{{ entry.rightColumn }}
+				</div>
+	
+
+
+
+		</article>
+		
+		</section>
+		</main>
+		<section class="mt-10 mb-20">
+		<div class="aspect-w-1 aspect-h-1 md:aspect-w-16 md:aspect-h-9 w-full lg:max-w-7xl mx-auto">
+			<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d108234.6969020929!2d-74.23463617655747!3d42.798198685381124!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89de86d74e56a575%3A0xac42bc5610e31de6!2s174%20Lape%20Rd%2C%20Esperance%2C%20NY%2012066!5e0!3m2!1sen!2sus!4v1632142178261!5m2!1sen!2sus"  style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+		</div>
+</section>
+	{% include '_partials/_footer.twig' %}
+</body></html>

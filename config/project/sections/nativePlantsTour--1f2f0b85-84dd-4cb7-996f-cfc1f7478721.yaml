@@ -1,0 +1,15 @@
+defaultPlacement: end
+enableVersioning: true
+handle: nativePlantsTour
+name: 'Native Plants Tour'
+propagationMethod: all
+siteSettings:
+  ccdf06db-63d7-465e-8ec1-7ae2b8a1ad53: # Landis Arboretum
+    enabledByDefault: true
+    hasUrls: true
+    template: native-plants/_entry
+    uriFormat: 'audio/{slug}'
+structure:
+  maxLevels: null
+  uid: 17d22ef9-4ba7-4cf4-9c34-fa6a7ae186ff
+type: structure

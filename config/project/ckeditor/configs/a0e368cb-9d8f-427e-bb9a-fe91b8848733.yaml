@@ -1,0 +1,27 @@
+headingLevels:
+  - 1
+  - 2
+  - 3
+  - 4
+name: 'Less Simple'
+options:
+  image:
+    toolbar:
+      - transformImage
+      - 'imageStyle:alignLeft'
+      - 'imageStyle:alignCenter'
+      - 'imageStyle:alignRight'
+      - toggleImageCaption
+      - imageTextAlternative
+toolbar:
+  - heading
+  - '|'
+  - bold
+  - italic
+  - link
+  - '|'
+  - bulletedList
+  - numberedList
+  - '|'
+  - insertImage
+  - sourceEditing

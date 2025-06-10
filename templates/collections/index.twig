@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+		<meta charset="utf-8"/>
+		<title>Landis Arboretum | Collections</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"/>
+		<meta name="referrer" content="origin-when-cross-origin"/>
+		<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+
+		   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Rosarivo&display=swap" rel="stylesheet"> 
+
+		<link rel="stylesheet" href="/css/styles.css">
+
+	</head>
+
+<body class="ltr">
+	{% include '_partials/_header.twig' %}
+
+	{% set myEntryQuery = craft.entries()
+    .section('collections')
+    .limit(10) %}
+
+	{# Fetch the entries #}
+	{% set entries = myEntryQuery.all() %}
+
+<section class="max-w-6xl px-4 mx-auto mt-10">
+<h1 class="text-center">Collections at Landis</h1>
+	<h4 class="text-lg text-gray-700 leading-loose mx-auto">Come to Landis during any season of the year to walk among our collections and learn more about the natural world.  We are in the process of creating audio trail and collection guides that you will be able to access through QR codes with your smartphone or tablet.<br><br>The first collection to have QR codes for its entirety will be the <a href="/collections/native-plants">Native Plant Trail</a>.</h4>
+ 	<div class=" py-10 mx-auto grid sm:grid-cols-2 md:grid-cols-3 gap-4 border-gray-800">
+		{% for entry in entries %}   
+        
+			<div>
+
+				<h4 class="mb-0 text-lg bg-green-900 text-white font-medium p-2 rounded-t"><a href="{{ entry.url }}">{{ entry.title }}</a></h4>
+				
+				{% for myAsset in entry.featuredImage.all() %}
+		<a href="{{ entry.url }}"><img src="{{ myAsset.url('square500') }}" class="mx-auto bg-gray-800 rounded-b"></a>
+	{% endfor %}
+
+    </div>
+            	{% endfor %}
+
+
+	
+	</div>
+
+    </section>
+</body></html>

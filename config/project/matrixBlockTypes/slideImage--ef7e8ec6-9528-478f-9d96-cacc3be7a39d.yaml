@@ -1,0 +1,227 @@
+field: d0953044-7462-4cdc-9525-9c8bf47f2680 # Front Page Hero
+fieldLayouts:
+  f758f757-4fd9-412b-a289-e804a2320724:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 080a8953-e1e2-46e6-8872-b248d20a5273 # Slide Image
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 9b7e3ede-3e54-4e98-b2f9-ef07b64d47c4
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: e8f2f648-3c3d-4ad4-a522-d8f4d8569369 # Slide Title
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 3a5472b2-23fc-4507-b3b2-3c93f80c27cd
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 2cc319de-e826-4dd2-8d36-d9a76b76c8e7 # Slide Body
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f136e70f-6327-4794-942f-12f6944808bc
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 70c5c096-4ae4-48cf-ba86-ddf5ddb57606 # CTA Link
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: eb736ef1-26b2-4372-bee1-ea824b99d16e
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 81f4f832-7c04-42af-9192-dc125d097512 # CTA Button Text
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 3d78010d-6945-4f00-86cf-170d48485d15
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 1f417d95-1bb6-4dcf-be82-51d9c8e69684 # Timer
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4835d96f-2603-42d0-89c8-009c604e2621
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: fc67f744-f813-47ba-a895-94345f7e6694
+        userCondition: null
+fields:
+  1f417d95-1bb6-4dcf-be82-51d9c8e69684: # Timer
+    columnSuffix: hpgwohjj
+    contentColumnType: datetime
+    fieldGroup: null
+    handle: timer
+    instructions: null
+    name: Timer
+    searchable: false
+    settings:
+      max: null
+      min: null
+      minuteIncrement: 30
+      showDate: true
+      showTime: true
+      showTimeZone: false
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Date
+  2cc319de-e826-4dd2-8d36-d9a76b76c8e7: # Slide Body
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: slideBody
+    instructions: null
+    name: 'Slide Body'
+    searchable: false
+    settings:
+      availableTransforms: '*'
+      availableVolumes: '*'
+      characterLimit: null
+      ckeConfig: 1a3c75ec-5449-408a-90b3-92144c5b8ae1 # Simple
+      columnType: text
+      defaultTransform: null
+      purifierConfig: null
+      purifyHtml: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      showWordCount: false
+      sourceEditingGroups:
+        - __ADMINS__
+      wordLimit: null
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\ckeditor\Field
+  70c5c096-4ae4-48cf-ba86-ddf5ddb57606: # CTA Link
+    columnSuffix: goheuqze
+    contentColumnType: text
+    fieldGroup: null
+    handle: ctaLink
+    instructions: 'If desired ,a call to action button. Full url only.'
+    name: 'CTA Link'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  080a8953-e1e2-46e6-8872-b248d20a5273: # Slide Image
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: slideImage
+    instructions: null
+    name: 'Slide Image'
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      allowSubfolders: false
+      allowUploads: true
+      allowedKinds: null
+      branchLimit: null
+      defaultUploadLocationSource: 'volume:19d84302-acf0-4f82-bb97-a7391fd042ed' # Images
+      defaultUploadLocationSubpath: null
+      localizeRelations: false
+      maintainHierarchy: false
+      maxRelations: 1
+      minRelations: null
+      previewMode: full
+      restrictFiles: false
+      restrictLocation: false
+      restrictedDefaultUploadSubpath: null
+      restrictedLocationSource: 'volume:19d84302-acf0-4f82-bb97-a7391fd042ed' # Images
+      restrictedLocationSubpath: null
+      selectionLabel: null
+      showSiteMenu: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      sources: '*'
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  81f4f832-7c04-42af-9192-dc125d097512: # CTA Button Text
+    columnSuffix: rqbmnkna
+    contentColumnType: text
+    fieldGroup: null
+    handle: ctaButtonText
+    instructions: 'Text for the above call to action link.'
+    name: 'CTA Button Text'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  e8f2f648-3c3d-4ad4-a522-d8f4d8569369: # Slide Title
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: slideTitle
+    instructions: null
+    name: 'Slide Title'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: slideImage
+name: 'Slide Image'
+sortOrder: 1

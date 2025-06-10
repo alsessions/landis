@@ -1,0 +1,25 @@
+columnSuffix: ehhlmgki
+contentColumnType: text
+fieldGroup: c060adfd-ad0d-44ee-9598-933e4f598995 # Common
+handle: leftColumn
+instructions: null
+name: 'Left Column'
+searchable: false
+settings:
+  availableTransforms: '*'
+  availableVolumes: '*'
+  characterLimit: null
+  ckeConfig: a0e368cb-9d8f-427e-bb9a-fe91b8848733 # Less Simple
+  columnType: text
+  defaultTransform: null
+  purifierConfig: null
+  purifyHtml: true
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  showWordCount: false
+  sourceEditingGroups:
+    - __ADMINS__
+  wordLimit: null
+translationKeyFormat: null
+translationMethod: none
+type: craft\ckeditor\Field

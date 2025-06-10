@@ -1,0 +1,35 @@
+columnSuffix: utzhppcc
+contentColumnType: string
+fieldGroup: 9408d083-2398-4d15-9c7c-c166bacbc95b # Enupal Slider
+handle: enupalSliderOpenLink
+instructions: 'Where should be opened the link?'
+name: 'Open Link In'
+searchable: false
+settings:
+  columnType: string
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - 'Same window'
+        -
+          - value
+          - sameWindow
+        -
+          - default
+          - '1'
+    -
+      __assoc__:
+        -
+          - label
+          - 'New Tab or Window'
+        -
+          - value
+          - newTabOrWindow
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: language
+type: craft\fields\Dropdown

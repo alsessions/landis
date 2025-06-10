@@ -1,0 +1,19 @@
+columnSuffix: stzxlryf
+contentColumnType: text
+fieldGroup: 0979c525-68a2-44e5-95a2-1a5385cad4fa # Video
+handle: embedCode
+instructions: null
+name: 'You Tube Embed'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  columnType: null
+  initialRows: 4
+  multiline: true
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

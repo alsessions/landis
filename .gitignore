@@ -1,0 +1,53 @@
+# CRAFT ENVIRONMENT
+/.env
+/.env.sh
+/.env.php
+/.env.local
+/.env.production
+/deploy.sh
+
+# COMPOSER
+/vendor
+/composer.phar
+
+# CRAFT STORAGE
+/storage/*
+!/storage/.gitkeep
+!/storage/rebrand/
+
+# ASSETS
+/web/assets/*
+!/web/assets/.gitkeep
+/web/cpresources/*
+/web/uploads/*
+
+# DATABASE BACKUPS
+*.sql
+*.sql.gz
+*.sql.zip
+*.sql.tar
+*.sql.7z
+*.db
+*.sqlite
+dbdump*
+
+# BUILD FILES
+/node_modules
+/bower_components
+/build
+/yarn-error.log
+/npm-debug.log
+
+# DEVELOPMENT
+/.idea
+/.vscode
+/.vagrant
+/.cache
+
+# SYSTEM FILES
+.DS_Store
+Thumbs.db
+.php_cs.cache
+__MACOSX
+
+

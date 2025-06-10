@@ -1,0 +1,9 @@
+baseUrl: $PRIMARY_SITE_URL
+enabled: true
+handle: default
+hasUrls: true
+language: en-US
+name: 'Landis Arboretum'
+primary: true
+siteGroup: 63087f66-bf86-47c5-bab3-a40e6106e03f # Landis Arboretum
+sortOrder: 1

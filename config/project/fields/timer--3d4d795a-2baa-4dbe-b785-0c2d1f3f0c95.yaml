@@ -1,0 +1,17 @@
+columnSuffix: bxfsmhsh
+contentColumnType: datetime
+fieldGroup: 60ef0d6d-98db-4d15-b7e7-a7334cbf9d9a # Events
+handle: timer
+instructions: 'End date and time for the countdown timer.'
+name: Timer
+searchable: false
+settings:
+  max: null
+  min: null
+  minuteIncrement: 30
+  showDate: true
+  showTime: true
+  showTimeZone: false
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Date

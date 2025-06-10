@@ -1,0 +1,17 @@
+columnSuffix: ipklaotx
+contentColumnType: datetime
+fieldGroup: 60ef0d6d-98db-4d15-b7e7-a7334cbf9d9a # Events
+handle: date
+instructions: null
+name: Date
+searchable: false
+settings:
+  max: null
+  min: '2021-01-01T03:00:00-05:00'
+  minuteIncrement: 30
+  showDate: true
+  showTime: true
+  showTimeZone: false
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Date

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html
+	lang="en-US">
+	<head>
+		<meta
+			http-equiv="X-UA-Compatible"
+			content="IE=edge"/>
+		<meta
+			charset="utf-8"/>
+		<title>
+			Landis Arboretum|
+			{{ entry.title }}
+		</title>
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"/>
+		<meta
+			name="referrer"
+			content="origin-when-cross-origin"/>
+		<script
+			src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
+			defer></script>
+
+		<link
+			rel="stylesheet"
+			href="/css/styles.css">
+
+	</head>
+
+	<body
+		class="ltr">
+		{% include '_partials/_header.twig' %}
+
+
+
+	<section class="max-w-7xl px-4 mx-auto mt-10">
+			<h1 class="mb-12">Photos of Landis</h1>
+
+			<article
+				class=" mx-auto">
+
+				{{ entry.textMarkdown | markdown }}
+			</article>
+
+		</section>
+
+		<section
+			class="w-full px-4 py-20 min-h-screen">
+			<div
+				class="max-w-6xl  lg:max-w-7xl mx-auto grid grid-cols-2 sm:grid-cols-3 gap-4 md:gap-6 xl:gap-8"
+				id="lightgallery">
+
+				{# Create an entry query with the 'section' and 'limit' parameters #}
+				{% set myEntryQuery = craft.entries()
+  .section('gallery')
+  .limit(10) %}
+
+				{# Fetch the entries #}
+				{% set entries = myEntryQuery.all() %}
+
+				{# Display the entries #}
+				{% for entry in entries %}
+					<article>
+					
+
+						{% set myAsset = entry.pageImages.one() %}
+						{% if myAsset %}
+							<a
+								href="{{ entry.url }}">
+								<img
+									src="{{ myAsset.url('square500') }}" class="rounded shadow-lg hover:scale-95 duration-300">
+							</a>
+						{% endif %}
+
+						<h1 class="text-xl md:text-2xl mb-2 pl-2">
+							<a
+								href="{{ entry.url }}" class="text-gray-500 uppercase">
+								{{ entry.title }}
+							</a>
+						</h1>
+
+					</article>
+				{% endfor %}
+
+			</div>
+		</section>
+
+		{# PurgeCSS: text-base #}
+
+		{% include '_partials/_footer.twig' %}
+	</body>
+</html></main></body></html>

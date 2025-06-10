@@ -1,0 +1,40 @@
+{% include '_partials/_head.twig' %}
+
+<body class="ltr">
+	{% include '_partials/_header.twig' %}
+	
+	{% paginate craft.entries.section('video').limit(12) as pageInfo, pageEntries %}
+
+	{# Fetch the entries #}
+	
+
+<section class="max-w-7xl px-4 mx-auto mt-10 min-h-screen">
+<h1 class="mb-12">Video from Landis</h1>
+<h2 class="mb-10 text-gray-700 text-xl md:text-xl italic mx-auto">In order to help stop the spread of the COVID-19 virus, many things have been cancelled at the Arboretum.  If you enjoy this classes and performances and can afford to, please consider <a href="/donate" class="text-blue-500 hover:underline">donating</a> or <a href="/membership" class="text-blue-500 hover:underline">joining</a> Landis &mdash; any donation is sincerely appreciated and tax-deductable!</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 mx-auto md:gap-4 my-10">
+		{% for entry in pageEntries %}
+        	<div class="">
+		
+
+			<div class="aspect-w-16 aspect-h-9 mt-2">
+				{{ entry.embedCode | raw }}
+			</div>
+				<div>
+
+				<h4 class="mb-0 text-lg  pt-2 pb-4 px-1 "><a href="{{ entry.url }}" class="text-blue-500 py-4 font-semibold">{{ entry.title }}</a></h4>
+			</div>
+	</div>
+		{% endfor %}
+	
+</div>
+
+<div class="flex justify-between mt-10">
+	<p class="text-base px-4">
+		{% if pageInfo.prevUrl %}<a href="{{ pageInfo.prevUrl }}"
+			class="text-blue-800 font-semibold">&larr; Previous Page</a>{% endif %}</p>
+	<p class="text-base px-4">{% if pageInfo.nextUrl %}<a href="{{ pageInfo.nextUrl }}"
+			class="text-blue-800 font-semibold">Next Page &rarr;</a>{% endif %}</p>
+</div>
+    </section>
+	{% include '_partials/_footer' %}
+</body></html>

@@ -1,0 +1,17 @@
+columnSuffix: yicszmgm
+contentColumnType: datetime
+fieldGroup: 0979c525-68a2-44e5-95a2-1a5385cad4fa # Video
+handle: videoDate
+instructions: null
+name: 'Video Date'
+searchable: false
+settings:
+  max: null
+  min: '1990-01-01T03:00:00-05:00'
+  minuteIncrement: 30
+  showDate: true
+  showTime: false
+  showTimeZone: false
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Date

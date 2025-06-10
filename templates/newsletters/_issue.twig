@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta charset="utf-8" />
+        <title>
+            Landis Arboretum
+        </title>
+        <meta name="viewport"
+            content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+        <meta name="referrer" content="origin-when-cross-origin" />
+        <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
+            defer></script>
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Rosarivo&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet" href="/css/styles.css">
+        <link type="text/css" rel="stylesheet" href="/js/lightgallery/css/lightgallery.css" />
+        <link type="text/css" rel="stylesheet" href="/js/lightgallery/css/lg-fullscreen.css" />
+        <link type="text/css" rel="stylesheet" href="/js/lightgallery/css/lg-thumbnail.css" />
+    </head>
+
+    <body class="ltr">
+        {% include '_partials/_header.twig' %}
+        {% if category.featuredImage | length %}
+        {% set optimizedImages = category.featuredImage.one().optimizedHero %}
+        <div
+            style="background-image:url('{{ optimizedImages.src() }}');background-position: center center;background-size: cover; background-repeat: no-repeat; width:100%;height:100%; ">
+            {% else %}
+            <div
+                style="background-image:url('/assets/images/IMG_0432.JPG'); background-position: center center; background-size: cover; background-repeat: no-repeat; width:100%;height:100%; ">
+                {% endif %}
+                <div class="px-4 py-24 bg-black bg-opacity-50 md:py-40"
+                    style="background:rgba(0,0,0,0.3);">
+                    <h1
+                        class="mx-auto text-4xl font-semibold text-center text-white md:text-6xl md:max-w-6xl">
+                        The Landis Newsletter
+                    </h1>
+                    <h2
+                        class="mx-auto text-2xl font-semibold text-center text-white md:text-3xl md:max-w-5xl">
+                        {{ category.title }}
+                    </h2>
+                    <p class="mb-5 text-xl text-center text-white uppercase">
+                        Volume
+                        {{ category.volume }}
+                        , Number
+                        {{ category.number }}
+                    </p>
+                </div>
+            </div>
+            <section class="min-h-screen px-4 mx-auto my-10 md:my-20 max-w-7xl">
+
+                {# Fetch all entries related to this category #}
+                {% set entries = craft.entries()
+                    .relatedTo(category)
+                     .all() %}
+                <div class="mx-auto max-w-6xl">
+                    <div class="grid md:grid-cols-2 gap-x-6 gap-y-2">
+                        {# Output them #}
+                        {% for entry in entries %}
+                        <div class="py-1 break-inside-avoid-column flex items-center justify-center">
+                            <div class="mr-1 text-green-500 flex-shrink-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12.0001 3.00005C11.5001 3.00005 11.0001 3.50005 10.5001 4.00005C9.00007 6.50005 5.00007 11.0001 5.00007 14.0001C5.00007 18.5001 8.50007 21.0001 12.0001 21.0001C15.5001 21.0001 19.0001 18.5001 19.0001 14.0001C19.0001 11.0001 15.0001 6.50005 13.5001 4.00005C13.0001 3.50005 12.5001 3.00005 12.0001 3.00005Z"/>
+                                </svg>
+                            </div>
+                            <a href="{{ entry.url }}" 
+                               class="text-base text-blue-600 hover:text-blue-800 hover:bg-blue-50 px-1 py-0.5 transition-colors rounded-sm">
+                                {{ entry.title }}
+                            </a>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+        </div>
+        <hr class="my-10">
+        <div class="grid grid-cols-1 mt-20 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {% for entry in craft.entries.section('news').relatedTo(category).all() %}
+            {# Fetch the entries #}
+            <div class="bg-white rounded shadow-lg transition-all duration-300 hover:shadow-xl transform border border-gray-100 overflow-hidden h-[32rem] flex flex-col">
+                {% if entry.featuredImage | length %}
+                {% for myAsset in entry.featuredImage.all() %}
+                <a href="{{ entry.url }}" class="block overflow-hidden">
+                    <img src="{{ myAsset.url('square500') }}"
+                        class="mx-auto w-full object-cover h-80 bg-black hover:opacity-90 transition-opacity duration-300">
+                </a>
+                {% endfor %}
+                {% else %}
+                <a href="{{ entry.url }}" class="block overflow-hidden">
+                    <img src="/assets/images/_640x640_crop_center-center_82_line/slider-house-lg_2021-11-29-211102_fkbm.jpg"
+                        class="mx-auto w-full object-cover h-64 bg-black hover:opacity-90 transition-opacity duration-300">
+                </a>
+                {% endif %}
+                <div class="px-2 flex flex-col h-full">
+                    <div class="flex-grow">
+                        <h2 class="text-xl md:text-2xl font-medium text-green-800">
+                            <a href="{{ entry.url }}" class="hover:text-blue-600 transition-colors">
+                                {{ entry.title }}
+                            </a>
+                        </h2>
+                        <div class="border-t border-gray-100 "></div>
+                        {{ entry.textMarkdown | chop(limit=30, unit='w',append="...",allowedTags="<p>")  | retconAttr('p', { class: 'text-base py-2 mb-1 text-gray-600' }) | widont }}
+                    </div>
+                    <div class="border-t border-gray-100 pt-2 my-2 mt-auto">
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <div class="text-gray-500 italic tracking-tight">
+                                    {{ entry.newsAuthor}}
+                                </div>
+                        
+                            </div>
+                            <div>
+                                <a href="{{ entry.url }}"
+                            class="inline-flex items-center text-xs px-3 py-1 bg-blue-50 border border-blue-100 text-blue-600 font-medium hover:bg-blue-100 hover:text-blue-800 transition-all duration-200 rounded-md shadow-sm">
+                            Read More
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                            </svg>
+                        </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            {% endfor %}
+        </div>
+        </div>
+        <div class="max-w-6xl px-4 py-6 mx-auto my-20 bg-green-300 rounded-xl">
+            <p class="text-lg italic leading-normal text-gray-700">
+                Your membership dollars are critical to our economic viability and the
+                sustainability of our collections, grounds, and educational programs. You can help
+                by
+                <a href="/membership" class="text-blue-600">
+                    joining or renewing your membership
+                </a>
+                . Consider renewing at a higher level. Encourage your family, friends, neighbors,
+                and co-workers to do so as well. Give the gift of membership to the beautiful Landis
+                Arboretum!
+            </p>
+        </div>
+        {% include '_partials/_sponsors.twig' %}
+        </section>{# PurgeCSS: text-base lg:text-lg #}{% include '_partials/_footer.twig' %}
+    </body>
+
+</html>

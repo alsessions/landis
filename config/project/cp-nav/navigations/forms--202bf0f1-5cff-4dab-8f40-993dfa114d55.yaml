@@ -1,0 +1,17 @@
+currLabel: Forms
+customIcon: null
+enabled: true
+handle: forms
+icon: null
+layout: db05d377-be2b-4a96-a920-7666d07afe21 # Default
+level: 2
+newWindow: false
+parent: 067cd2ad-9708-45d6-99bc-a6f369068259
+prevLabel: Forms
+prevLevel: 2
+prevParent: 067cd2ad-9708-45d6-99bc-a6f369068259
+prevUrl: freeform/forms
+sortOrder: 0
+subnavBehaviour: null
+type: null
+url: freeform/forms

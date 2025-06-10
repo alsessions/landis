@@ -1,0 +1,19 @@
+columnSuffix: tgnfllrw
+contentColumnType: text
+fieldGroup: 60ef0d6d-98db-4d15-b7e7-a7334cbf9d9a # Events
+handle: location
+instructions: null
+name: Location
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  columnType: null
+  initialRows: 2
+  multiline: true
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

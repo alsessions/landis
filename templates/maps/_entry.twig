@@ -1,0 +1,65 @@
+{% include '_partials/_head.twig' %}
+
+<body class="ltr">
+    {% include '_partials/_header.twig' %}
+
+    <section class="max-w-none px-4 pt-10 md:mt-20 mx-auto">
+        <article class="w-full md:max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div>
+                {% for myAsset in entry.featuredImage.all() %}
+                    {% set optimizedImages = entry.featuredImage.one().collectionImages %}
+                    <picture>
+                        <source srcset="{{ optimizedImages.srcsetWebP() }}" sizes="100vw" type="image/webp" />
+                        <img src="{{ optimizedImages.src() }}" srcset="{{ optimizedImages.srcset() }}" sizes="100vw" />
+                    </picture>
+                {% endfor %}
+            </div>
+            <div>
+                <h4 class="text-gray-500 -mt-2 text-lg md:text-xl uppercase">Maps & Guides</h4>
+                <h1 class="mt-1 text-2xl md:text-3xl">{{ entry.title }}</h1>
+                {{ entry.textMarkdown | typogrify }}
+            </div>
+        </article>
+    </section>
+
+
+    <section class="mb-10 mt-20 max-w-6xl mx-auto clear-both">
+        <div class="md:flex md:justify-between">
+            {# Set parameters for prev/next elements list #}
+            {% set params = craft.entries.section('maps').orderBy('title asc') %}
+            {# Get the prev/next elements #}
+            {% set prevEntry = entry.getPrev(params) %}
+            {% set nextEntry = entry.getNext(params) %}
+            {# And make sure to only output the links if the element exists #}
+            {% if prevEntry %}
+                <a href="{{ prevEntry.url }}" class="px-2 py-1 text-center bg-green-800 rounded-md block my-4 text-white w-2/3 mx-auto md:mx-4 md:w-auto">&larr; {{ prevEntry.title }}</a>
+            {% endif %}
+            <a href="/maps" class="px-2 py-1 text-center bg-green-800 rounded-md block my-4 text-white w-2/3 mx-auto md:mx-4 md:w-auto">All Maps & Guides</a>
+            {% if nextEntry %}
+                <a href="{{ nextEntry.url }}" class="px-2 py-1 text-center bg-green-800 rounded-md block my-4 text-white w-2/3 mx-auto md:mx-4 md:w-auto">{{ nextEntry.title }} &rarr;</a>
+            {% endif %}
+        </div>
+    </section>
+
+  
+    {% include '_partials/_footer.twig' %}
+    <script src="/js/lightgallery/lightgallery.min.js"></script>
+    <script src="/js/lightgallery/plugins/zoom/lg-zoom.umd.js"></script>
+    <script src="/js/lightgallery/plugins/fullscreen/lg-fullscreen.umd.js"></script>
+    <script src="/js/lightgallery/plugins/thumbnail/lg-thumbnail.umd.js"></script>
+    <script type="text/javascript">
+        lightGallery(document.getElementById("lightgallery"), {
+            speed: 500,
+            plugins: [lgZoom, lgFullscreen],
+            showZoomInOutIcons: true,
+            actualSize: true,
+            zoom: true,
+            thumbMargin: 20,
+            thumbHeight: 120,
+            thumbWidth: 120,
+            download: true,
+            actualSizeIcons: { zoomIn: 'lg-actual-size', zoomOut: 'lg-zoom-out' }
+        });
+    </script>
+</body>
+</html>

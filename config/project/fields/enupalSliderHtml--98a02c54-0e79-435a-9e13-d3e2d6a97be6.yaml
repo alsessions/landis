@@ -1,0 +1,19 @@
+columnSuffix: kvpgmxwk
+contentColumnType: text
+fieldGroup: 9408d083-2398-4d15-9c7c-c166bacbc95b # Enupal Slider
+handle: enupalSliderHtml
+instructions: 'Override your image with custom HTML. Leave it blank to disable'
+name: Html
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  columnType: null
+  initialRows: 4
+  multiline: true
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

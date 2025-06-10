@@ -1,0 +1,11 @@
+{% include '_partials/_head.twig' %}
+
+<body class="ltr">
+	{% include '_partials/_header.twig' %}
+<main class="mx-auto md:max-w-5xl px-4 py-10">
+	<div class="prode prose-lg max-w-none">
+        {{ entry.textMarkdown }}
+    </div>
+</main>
+	{% include '_partials/_footer.twig' %}
+</body></html>

@@ -1,0 +1,25 @@
+columnSuffix: kqeoerjc
+contentColumnType: text
+fieldGroup: 60ef0d6d-98db-4d15-b7e7-a7334cbf9d9a # Events
+handle: eventFooter
+instructions: null
+name: 'Event Footer'
+searchable: false
+settings:
+  availableTransforms: '*'
+  availableVolumes: '*'
+  characterLimit: null
+  ckeConfig: a0e368cb-9d8f-427e-bb9a-fe91b8848733 # Less Simple
+  columnType: text
+  defaultTransform: null
+  purifierConfig: null
+  purifyHtml: true
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  showWordCount: false
+  sourceEditingGroups:
+    - __ADMINS__
+  wordLimit: null
+translationKeyFormat: null
+translationMethod: none
+type: craft\ckeditor\Field

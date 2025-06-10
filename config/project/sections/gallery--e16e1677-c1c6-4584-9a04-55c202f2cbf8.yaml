@@ -1,0 +1,15 @@
+defaultPlacement: beginning
+enableVersioning: true
+handle: gallery
+name: Gallery
+propagationMethod: all
+siteSettings:
+  ccdf06db-63d7-465e-8ec1-7ae2b8a1ad53: # Landis Arboretum
+    enabledByDefault: true
+    hasUrls: true
+    template: gallery/_entry
+    uriFormat: 'gallery/{slug}'
+structure:
+  maxLevels: null
+  uid: 4dd4c542-1c0f-4ade-af6b-117fd2e2a978
+type: structure

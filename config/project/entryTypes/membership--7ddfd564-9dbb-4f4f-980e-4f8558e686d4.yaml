@@ -1,0 +1,59 @@
+fieldLayouts:
+  46aa2058-6ee6-4756-b9a9-da823ccd89ff:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: a8a91bf4-5996-4d65-af5f-b53c0f883490
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 76ed9077-0f92-4dc0-b3ff-c772483f67ec # Body
+            instructions: null
+            label: 'Sidebar Content'
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 70471f35-8483-47ca-8b5a-e5dcb946efda
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 305252ae-e1de-4e59-86fe-5bf056a40d9e
+        userCondition: null
+handle: membership
+hasTitleField: false
+name: Membership
+section: 4daba908-7202-457a-9467-b7ab435d9650 # Membership
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+sortOrder: 1
+titleFormat: '{section.name|raw}'
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

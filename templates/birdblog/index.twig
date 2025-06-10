@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta charset="utf-8" />
+		<title>Landis Arboretum | Bird Blog</title>
+		<meta name="viewport"
+			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+		<meta name="referrer" content="origin-when-cross-origin" />
+		<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
+			defer></script>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Rosarivo&display=swap"
+			rel="stylesheet">
+		<link rel="stylesheet" href="/css/styles.css">
+	</head>
+
+	<body class="ltr">
+		{% include '_partials/_header.twig' %}
+		{% paginate craft.entries.section('birdblog').limit(12) as pageInfo, pageEntries %}
+		{# Fetch the entries #}
+		<section class="max-w-7xl px-4 mx-auto mt-10 mb-20 min-h-screen">
+			<h1 class="mb-12">The Bird Blog</h1>
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-10 ">
+				{% for entry in pageEntries %}
+				<div class="grid md:grid-cols-12 gap-2">
+					<div class="md:col-span-4">
+						{% for myAsset in entry.featuredImage.all() %}
+						<a href="{{ entry.url }}"><img src="{{ myAsset.url('square500') }}"
+								class=" mx-auto bg-gray-800 rounded-md  hover:opacity-50"></a>{% endfor %}
+					</div>
+					<div class="md:col-span-8 pb-2 px-2">
+						<p class="mb-0 text-base   text-gray-500 uppercase">
+							{{ entry.postDate | date("M d, Y") }}
+						</p>
+						<h4 class="mb-2 text-xl">
+							<a href="{{ entry.url }}"
+								class="text-blue-500 hover:text-blue-800">{{ entry.title }}</a>
+						</h4>
+						{{ entry.textMarkdown | chop(limit=15, unit='w',append="...")  | retconAttr('p', { class: 'text-base mb-2 lg:text-lg' }) }}
+						<a href="{{ entry.url }}"
+							class="inline-block border-b border-blue-700 hover:border-blue-900 border-dotted text-blue-500 hover:text-blue-800">Read
+							More</a>
+						{# PurgeCSS: bg-green-600 text-base md:text-lg mx-auto max-w-3xl py-4 px-6 rounded-2xl my-10 text-white px-8 #}
+					</div>
+				</div>
+				{% endfor %}
+			</div>
+			<div class="flex justify-between mt-10">
+				<p class="text-base px-4">
+					{% if pageInfo.prevUrl %}<a href="{{ pageInfo.prevUrl }}"
+						class="text-blue-800 font-semibold">&larr; Previous Page</a>{% endif %}</p>
+				<p class="text-base px-4">{% if pageInfo.nextUrl %}<a href="{{ pageInfo.nextUrl }}"
+						class="text-blue-800 font-semibold">Next Page &rarr;</a>{% endif %}</p>
+			</div>
+		</section>
+		{# PurgeCSS: text-base lg:text-lg #}
+		{% include '_partials/_footer' %}
+	</body>
+
+</html>

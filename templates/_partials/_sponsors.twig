@@ -1,0 +1,31 @@
+{% set entries = craft.entries()
+  .section('sponsors')
+
+  .all() %}
+  
+{% for entry in entries%}
+
+  {% if entry.textMarkdown %}
+{{ entry.textMarkdown }}
+{% endif %}
+<div
+
+
+    class="grid grid-cols-2 md:grid-cols-4 mt-10 mb-20 px-4 gap-10">
+        	
+
+
+
+
+{% for myAsset in entry.sponsorImages.orderBy('title').all() %}
+<div>
+	<img src="{{ myAsset.url }}" alt="sponsor business card image">
+    </div>
+{% endfor %}
+
+
+
+{% endfor %}
+
+
+</div>

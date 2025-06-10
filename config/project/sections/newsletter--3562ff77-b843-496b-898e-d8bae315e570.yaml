@@ -1,0 +1,15 @@
+defaultPlacement: end
+enableVersioning: true
+handle: newsletter
+name: Newsletter
+propagationMethod: all
+siteSettings:
+  ccdf06db-63d7-465e-8ec1-7ae2b8a1ad53: # Landis Arboretum
+    enabledByDefault: true
+    hasUrls: true
+    template: newsletters/_entry
+    uriFormat: 'newsletter/{slug}'
+structure:
+  maxLevels: null
+  uid: db3daa99-c444-4dba-87ff-f15f34f95094
+type: structure

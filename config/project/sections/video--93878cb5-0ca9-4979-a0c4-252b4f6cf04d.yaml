@@ -1,0 +1,15 @@
+defaultPlacement: end
+enableVersioning: true
+handle: video
+name: Video
+propagationMethod: all
+siteSettings:
+  ccdf06db-63d7-465e-8ec1-7ae2b8a1ad53: # Landis Arboretum
+    enabledByDefault: true
+    hasUrls: true
+    template: video/_entry
+    uriFormat: 'video/{slug}'
+structure:
+  maxLevels: null
+  uid: 7b6ed889-3444-471e-96c4-8c21f0d18cc5
+type: structure

@@ -1,0 +1,66 @@
+{% include '_partials/_head.twig' %}
+
+<body class="ltr">
+    {% include '_partials/_header.twig' %}
+    {% if entry.featuredImage | length %}
+    {% set optimizedImages = entry.featuredImage.one().optimizedHero %}
+    <div
+        style="background-image:url('{{ optimizedImages.src() }}');background-position: center center;background-size: cover; background-repeat: no-repeat; width:100%;height:100%; ">
+        {% else %}
+        <div
+            style="background-image:url('/assets/images/IMG_0432.JPG'); background-position: center center; background-size: cover; background-repeat: no-repeat; width:100%;height:100%; ">
+            {% endif %}
+            <div class="px-4 py-24 bg-black bg-opacity-50 md:py-48"
+                style="background:rgba(0,0,0,0.3);">
+                <h1
+                    class="mx-auto text-3xl font-semibold text-center text-white md:text-4xl lg:text-5xl md:max-w-5xl">
+                    {{ entry.title | widont }}
+                </h1>
+            </div>
+        </div>
+        <section class="max-w-6xl px-4 mt-10 mb-10 ">
+            <div class="flex justify-between px-4">
+            {# Set parameters for prev/next elements list #}
+            {% set category = craft.categories.group('qrCodeTours').slug('welcome').all() %}
+        {% set params = craft.entries.section('audio').relatedTo(category) %}
+        
+        {# Get the prev/next elements #}
+        {% set prevEntry = entry.getPrev(params) %}
+        {% set nextEntry = entry.getNext(params) %}
+        
+       
+        {% if prevEntry %}<a href="{{ prevEntry.url }}" class="text-blue-600">&larr; {{ prevEntry.title }}</a>{% endif %}
+        
+       
+        
+        {% if nextEntry %}<a href="{{ nextEntry.url }}" class="text-blue-600">{{ nextEntry.title }} &rarr;</a>{% endif %}
+        </div>
+        </section>
+
+        <div class="grid min-h-screen px-4 mx-auto mt-10 mb-2 max-w-7xl lg:grid-cols-12">
+           
+                    <div class="col-span-4 md:mt-10">
+                      <h2>Play Audio</h2>
+                        {% set myAsset = entry.audio.one() %}
+                        {% if myAsset %}
+                        <audio controls src="{{ myAsset.url }}" type="audio/mp3">
+                            Your browser does not support the
+                            <code>audio</code> element.
+                        </audio>
+                        {% endif %}
+                        {{ entry.textMarkdown | markdown }}
+
+                      
+                    </div>
+             
+                <div class="col-span-8 md:mt-10">
+                    <h2>{{ entry.title }}</h2>
+                   {{ entry.transcript | markdown }}
+                </div>
+            </div>
+        
+            {# PurgeCSS: text-base #}
+            {% include '_partials/_footer.twig' %}
+</body>
+
+</html>

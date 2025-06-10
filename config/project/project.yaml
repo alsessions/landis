@@ -1,0 +1,1034 @@
+dateModified: 1749588953
+elementSources:
+  Solspace\Freeform\Elements\Submission:
+    -
+      heading: Forms
+      type: heading
+    -
+      defaultSort:
+        - title
+        - asc
+      disabled: false
+      key: 'form:1'
+      tableAttributes:
+        - dateCreated
+        - form
+        - 'field:1'
+        - status
+      type: native
+    -
+      defaultSort:
+        - title
+        - asc
+      disabled: false
+      key: 'form:2'
+      tableAttributes:
+        - dateCreated
+        - 'field:7'
+        - 'field:20'
+      type: native
+    -
+      defaultSort:
+        - title
+        - asc
+      disabled: false
+      key: 'form:4'
+      tableAttributes:
+        - dateCreated
+        - 'field:22'
+        - 'field:32'
+      type: native
+    -
+      key: 'form:6'
+      type: native
+    -
+      defaultSort:
+        - title
+        - asc
+      disabled: false
+      key: '*'
+      tableAttributes:
+        - form
+        - dateCreated
+        - status
+      type: native
+  craft\elements\Asset:
+    -
+      defaultSort:
+        - dateCreated
+        - desc
+      disabled: false
+      key: 'volume:19d84302-acf0-4f82-bb97-a7391fd042ed' # Images
+      tableAttributes:
+        - filename
+        - size
+        - dateModified
+        - link
+        - usage
+      type: native
+    -
+      key: 'volume:e143b871-ce17-4247-898b-0476b2325dac' # FP Images
+      type: native
+    -
+      key: 'volume:b183c135-db13-4f16-b821-c97699593618' # Newsletters
+      type: native
+    -
+      key: 'volume:0c7956ad-a435-4d62-b1fe-afc2474a656a' # Sponsors
+      type: native
+    -
+      key: 'volume:76b4aeae-36dc-4a5e-93d7-72cb6c71a3e1' # Audio
+      type: native
+    -
+      key: 'folder:992231bd-8d9b-4c04-8206-94e65172364f'
+      type: native
+  craft\elements\Entry:
+    -
+      defaultSort:
+        - postDate
+        - desc
+      disabled: false
+      key: '*'
+      tableAttributes:
+        - section
+        - postDate
+        - link
+      type: native
+    -
+      heading: Channels
+      type: heading
+    -
+      defaultSort:
+        - postDate
+        - desc
+      disabled: false
+      key: 'section:1bd53fd1-157a-471b-a19d-caa2a0a2f0b1' # Events
+      tableAttributes:
+        - 'field:6cbeb24e-1d09-449d-8e70-95dd68e8f71d' # Date
+        - dateCreated
+        - dateUpdated
+        - link
+      type: native
+    -
+      defaultSort:
+        - postDate
+        - desc
+      disabled: false
+      key: 'section:762300b5-fa76-4ba6-ac94-33ec53c50db6' # News
+      tableAttributes:
+        - 'field:ea0f14f7-38cc-4763-a0c5-fbc6c70c1451' # Issue
+        - link
+        - dateCreated
+        - postDate
+        - 'field:9d1afefd-6011-4b8d-86c5-78b3b2fcb9d6' # Author
+      type: native
+    -
+      defaultSort:
+        - structure
+        - asc
+      disabled: false
+      key: 'section:24907884-0f61-4170-86f9-fb5e19a65286' # Pages
+      tableAttributes:
+        - postDate
+        - expiryDate
+        - link
+        - slug
+      type: native
+    -
+      key: 'section:1c5b4d35-7397-4999-a4e2-aeda50aee03f' # Bird Blog
+      tableAttributes:
+        - postDate
+        - expiryDate
+        - link
+      type: native
+    -
+      heading: 'Freestanding Pages'
+      type: heading
+    -
+      defaultSort:
+        - title
+        - asc
+      disabled: false
+      key: 'single:d88a6933-19d2-42a9-b9f0-3ce161f74d40' # Landis Arboretum (HOME)
+      tableAttributes:
+        - postDate
+        - link
+      type: native
+    -
+      key: 'single:c5865b6a-7482-4a59-8212-4273ff47b853' # Vist Landis
+      type: native
+    -
+      key: 'single:73e6f389-874a-42a1-8d01-a2b6dc9d021e' # FAQ
+      type: native
+    -
+      defaultSort:
+        - title
+        - asc
+      disabled: false
+      key: 'single:8a02040d-73e9-4f22-9894-8e4a86b1fe9b' # Rentals
+      tableAttributes:
+        - postDate
+        - expiryDate
+        - link
+      type: native
+    -
+      key: 'single:7be06789-bc7c-40fa-a931-0947a71cae01' # Audio Tour
+      type: native
+    -
+      key: 'section:1f2f0b85-84dd-4cb7-996f-cfc1f7478721' # Native Plants Tour
+      tableAttributes:
+        - postDate
+        - expiryDate
+        - link
+      type: native
+    -
+      key: 'single:a7931313-4e13-4423-ae89-3e60ed563a58' # Privacy Policy
+      type: native
+    -
+      heading: 'Forms & Payments'
+      type: heading
+    -
+      defaultSort:
+        - title
+        - asc
+      disabled: false
+      key: 'single:fa180141-1f3d-49d1-8043-21a5b08756dc' # Donate
+      tableAttributes:
+        - postDate
+        - expiryDate
+        - link
+      type: native
+    -
+      defaultSort:
+        - title
+        - asc
+      disabled: false
+      key: 'single:c5f105ef-0a21-40ef-9337-62d70722c933' # Volunteer
+      tableAttributes:
+        - postDate
+        - expiryDate
+        - link
+      type: native
+    -
+      key: 'single:4daba908-7202-457a-9467-b7ab435d9650' # Membership
+      type: native
+    -
+      key: 'single:248386fe-8099-4726-908b-b085800c794a' # Site Contact
+      type: native
+    -
+      key: 'single:ddd2d790-60f7-4746-a49b-4e4d0860afa1' # Support
+      type: native
+    -
+      heading: 'Section Indexes'
+      type: heading
+    -
+      defaultSort:
+        - title
+        - asc
+      disabled: false
+      key: 'single:888dcda0-1806-4ad3-906c-d61ea274c245' # Upcoming Events
+      tableAttributes:
+        - postDate
+        - expiryDate
+        - link
+      type: native
+    -
+      key: 'single:cbbedb40-2ecd-4ef9-87bf-1b090965c0b3' # News Index
+      type: native
+    -
+      defaultSort:
+        - title
+        - asc
+      disabled: false
+      key: 'single:2bd7afc9-7594-4e2c-a3a1-25c9fffca299' # Bird Blog Index
+      tableAttributes:
+        - postDate
+        - expiryDate
+        - link
+      type: native
+    -
+      key: 'single:cf993c21-efc8-4c82-bbe2-000deabb04ba' # Newsletter Index
+      tableAttributes:
+        - postDate
+        - expiryDate
+        - link
+      type: native
+    -
+      defaultSort:
+        - title
+        - asc
+      disabled: false
+      key: 'single:09999c37-886a-43ea-be0c-8a6105114c6b' # News Archive
+      tableAttributes:
+        - postDate
+        - expiryDate
+        - link
+      type: native
+    -
+      defaultSort:
+        - title
+        - asc
+      disabled: false
+      key: 'single:10594ad3-f572-4f30-bd7e-da05df72092c' # Video Index
+      tableAttributes:
+        - postDate
+        - expiryDate
+        - link
+      type: native
+    -
+      key: 'single:5e8484d8-801c-49d6-a6bb-e5786bfa1fa3' # Gallery Index
+      type: native
+    -
+      heading: Sections
+      type: heading
+    -
+      key: 'section:45b6bf49-7b18-41ba-bb19-f451420a19f3' # Collections
+      tableAttributes:
+        - postDate
+        - expiryDate
+        - link
+      type: native
+    -
+      key: 'section:93878cb5-0ca9-4979-a0c4-252b4f6cf04d' # Video
+      type: native
+    -
+      key: 'section:e16e1677-c1c6-4584-9a04-55c202f2cbf8' # Gallery
+      type: native
+    -
+      key: 'single:433b6d9e-7282-4d08-aecf-76961050bbdd' # Maps
+      type: native
+    -
+      heading: 'Partials (embedded content)'
+      type: heading
+    -
+      key: 'single:af5c675a-209c-402a-9952-31e471fce849' # Sponsors
+      type: native
+    -
+      key: 'section:9766c279-db5b-4aca-9d06-4de7b21ac315' # Audio
+      tableAttributes:
+        - postDate
+        - link
+        - 'field:351fbeb8-08ab-4123-83e1-0ab7948deb4c' # Category
+        - 'field:6be3c218-cb3f-4fe6-b053-d244f17578ba' # Audio
+      type: native
+    -
+      defaultSort:
+        - structure
+        - asc
+      disabled: false
+      key: 'section:3562ff77-b843-496b-898e-d8bae315e570' # Newsletter
+      tableAttributes:
+        - postDate
+        - 'field:c2355853-0b3a-451c-bc58-915c397e7a06' # Volume
+        - 'field:18b2da16-3aa7-4cfc-abb2-84832d2cf5f5' # Number
+        - link
+        - 'field:ba270839-1b30-4d37-a57a-c2571fd86fa5' # PDF Image
+      type: native
+email:
+  fromEmail: info@landisarboretum.org
+  fromName: 'Landis Arboretum'
+  replyToEmail: info@landisarboretum.org
+  template: null
+  transportSettings:
+    host: smtp.ipower.com
+    password: '548EArbor?'
+    port: '587'
+    useAuthentication: '1'
+    username: info@landisarboretum.org
+  transportType: craft\mail\transportadapters\Smtp
+fs:
+  audio:
+    hasUrls: true
+    name: Audio
+    settings:
+      path: '@webroot/assets/audio'
+    type: craft\fs\Local
+    url: '@web/assets/audio'
+  fpImages:
+    hasUrls: true
+    name: 'FP Images'
+    settings:
+      path: '@webroot/assets/fpimages'
+    type: craft\fs\Local
+    url: '@web/assets/fpimages'
+  images:
+    hasUrls: true
+    name: Images
+    settings:
+      path: '@webroot/assets/images'
+    type: craft\fs\Local
+    url: '@web/assets/images'
+  newsletters:
+    hasUrls: true
+    name: Newsletters
+    settings:
+      path: '@webroot/assets/newsletters'
+    type: craft\fs\Local
+    url: '@web/assets/newsletters'
+  sponsors:
+    hasUrls: true
+    name: Sponsors
+    settings:
+      path: '@webroot/assets/sponsors'
+    type: craft\fs\Local
+    url: '@web/assets/sponsors'
+meta:
+  __names__:
+    0a1453f3-9367-4cb7-8883-fa726d1bbda2: Link # Link
+    0b2bb70b-2642-4c25-9530-f0e35bc68a02: Image # Image
+    0c47ea1d-c165-41bd-bf47-5adbf47458e2: Heading # Heading
+    0c7956ad-a435-4d62-b1fe-afc2474a656a: Sponsors # Sponsors
+    0eb73179-957c-4167-af47-81d8e8c339fb: Subtitle # Subtitle
+    0ec10247-de60-40f9-a891-f06dc34d99d5: Bookings # Bookings
+    0f368f05-6c07-47a0-ba95-53d57584765d: Text # Text
+    1a3c75ec-5449-408a-90b3-92144c5b8ae1: Simple # Simple
+    1bd53fd1-157a-471b-a19d-caa2a0a2f0b1: Events # Events
+    1c5b4d35-7397-4999-a4e2-aeda50aee03f: 'Bird Blog' # Bird Blog
+    1ed8c75c-1b8a-48c3-aa76-2be72964d57b: Link # Link
+    1f2f0b85-84dd-4cb7-996f-cfc1f7478721: 'Native Plants Tour' # Native Plants Tour
+    1f62b34e-1130-4f4d-ac2d-18aea79cd550: FAQ # FAQ
+    1f417d95-1bb6-4dcf-be82-51d9c8e69684: Timer # Timer
+    1fcccec1-a064-4464-a85c-df3e3870e5bd: Bookings # Bookings
+    2a5bee3a-d890-4b1b-bec3-5866081f7eda: 'Open Link In' # Open Link In
+    2bd7afc9-7594-4e2c-a3a1-25c9fffca299: 'Bird Blog Index' # Bird Blog Index
+    2cc319de-e826-4dd2-8d36-d9a76b76c8e7: 'Slide Body' # Slide Body
+    2e6cab1b-36c2-4f7a-8170-52cf126ef42c: 'Two Columns' # Two Columns
+    3a1670b2-e503-440b-a0e1-5be644ce11e1: Text # Text
+    3a2782dc-f02e-4ba5-90c9-b7c8e0a4f2c6: 'Vist Landis' # Vist Landis
+    3ac2e256-40fd-4b34-b810-13b77f2770c3: 'Max Width 1200' # Max Width 1200
+    3c0c0905-47df-4869-9123-0b79178ddef0: 'Left Content' # Left Content
+    3c72b2cb-3e5f-45c7-8040-02ba9d46a8f1: Text # Text
+    3ca5a63a-b996-41a1-b731-ab249d196559: Default # Default
+    3d4d795a-2baa-4dbe-b785-0c2d1f3f0c95: Timer # Timer
+    3ea7e00b-85d5-4f71-80e8-8f6dad4ac60f: 'Page Images' # Page Images
+    3fbe7d49-5f30-46be-9ac4-68522fd80c50: Default # Default
+    4c10b646-a697-4ca9-b54a-f3e9974beff6: Sponsors # Sponsors
+    4daba908-7202-457a-9467-b7ab435d9650: Membership # Membership
+    4db8ea88-c5b5-4f92-a9ec-5c89da922670: 'Background Image' # Background Image
+    5d0ee4cd-9057-429c-a007-961de734922f: Header # Header
+    5e8484d8-801c-49d6-a6bb-e5786bfa1fa3: 'Gallery Index' # Gallery Index
+    6afbff93-6329-40f7-82d3-2c47f4f2b94d: 'Public Schema' # Public Schema
+    6be3c218-cb3f-4fe6-b053-d244f17578ba: Audio # Audio
+    6cbeb24e-1d09-449d-8e70-95dd68e8f71d: Date # Date
+    06d7b5cb-3803-4f07-8c6f-cd8b4f253f40: 'Right Content' # Right Content
+    6dc0ab06-9a5a-4c21-9921-9c98ac48db98: Donate # Donate
+    6e2eab7f-e833-4f1e-aeb9-df90935bd557: 'CTA Button' # CTA Button
+    6e84d1fc-35d0-4de0-b386-1cc89dae0293: Text # Text
+    06e1153b-9c85-4d0b-81af-e913253a7be9: Volunteer # Volunteer
+    6ee38eeb-8713-4aeb-b531-049d233c78fe: Answer # Answer
+    6efe8901-fa7b-43a2-ae01-3ca9e385858b: 'Tour Intro' # Tour Intro
+    06f53f9c-c9f2-4452-89d4-8cfe045a5cef: 'Page Builder' # Page Builder
+    7a7bebc2-1aca-4545-a5a5-4b49382db799: 'Front Page Hero' # Front Page Hero
+    07b9f3c3-13eb-471c-86f6-7672d4dfebf7: Link # Link
+    7b53cb51-2c46-4eb9-887a-50b0ece85a8b: 'Video Date' # Video Date
+    7be06789-bc7c-40fa-a931-0947a71cae01: 'Audio Tour' # Audio Tour
+    7d1f53be-fac3-4734-b463-26a876e35a5f: Header # Header
+    7ddfd564-9dbb-4f4f-980e-4f8558e686d4: Membership # Membership
+    7e12476d-61a5-493d-b2f2-364e3b534a9a: Header # Header
+    7eb9288d-a2b2-43f4-9081-c2c32b6e8a39: Rentals # Rentals
+    7ed4a4fa-7488-449f-84d4-d9f6df31767d: 'Bird Blog Index' # Bird Blog Index
+    8a02040d-73e9-4f22-9894-8e4a86b1fe9b: Rentals # Rentals
+    8d7b8773-ed1d-47bd-9e1e-11cf57d4ff45: 'Home Triptych' # Home Triptych
+    8d323edf-63ff-4316-8676-0c545984fa78: 'You Tube Embed' # You Tube Embed
+    9afd4d0c-09d0-4382-82c4-df2b2ff26cd0: 'Article 640' # Article 640
+    9d00a830-216b-4f32-8860-c1eddd638719: 'Featured Image' # Featured Image
+    9d1afefd-6011-4b8d-86c5-78b3b2fcb9d6: Author # Author
+    9eaabe94-5978-461f-879d-c030b12da858: Title # Title
+    12d2cbac-c1f0-4a53-a563-a9a158162cba: 'Button Link' # Button Link
+    12ed2295-5836-4fca-8152-1279d8770d2f: Support # Support
+    18b2da16-3aa7-4cfc-abb2-84832d2cf5f5: Number # Number
+    19d84302-acf0-4f82-bb97-a7391fd042ed: Images # Images
+    29acab52-57b0-44f7-9773-fc6f24993768: Text # Text
+    32d6a11e-bf26-4a5a-82ba-3fa5348d8be7: 'Audio Tour' # Audio Tour
+    41c1d536-7cc0-4837-814d-a237f85db1f9: Newsletters # Newsletters
+    45b6bf49-7b18-41ba-bb19-f451420a19f3: Collections # Collections
+    51e871f9-41cb-4f8f-ad4c-29c51858aa74: Caption # Caption
+    52a61a11-339d-4463-a7d7-1b98ba3256a8: Default # Default
+    53d976ba-eaea-401d-bc07-d048828c44a6: Header # Header
+    60ef0d6d-98db-4d15-b7e7-a7334cbf9d9a: Events # Events
+    69b33981-0e8a-46c9-9e26-668d0ea9a5db: 'Audio Tour' # Audio Tour
+    70a55079-a544-47a5-811a-a6509d86e165: 'QR Code Tours' # QR Code Tours
+    70c5c096-4ae4-48cf-ba86-ddf5ddb57606: 'CTA Link' # CTA Link
+    73e6f389-874a-42a1-8d01-a2b6dc9d021e: FAQ # FAQ
+    76b4aeae-36dc-4a5e-93d7-72cb6c71a3e1: Audio # Audio
+    76ed9077-0f92-4dc0-b3ff-c772483f67ec: Body # Body
+    080a8953-e1e2-46e6-8872-b248d20a5273: 'Slide Image' # Slide Image
+    81f4f832-7c04-42af-9192-dc125d097512: 'CTA Button Text' # CTA Button Text
+    84f82d45-6199-4d0f-ac30-00f3dc140ab9: Default # Default
+    86adeda8-b420-4ce5-8c05-8e46931ebd51: Maps # Maps
+    95fbc062-8ec3-4bce-b7e3-d7d24072f4d6: Default # Default
+    98a02c54-0e79-435a-9e13-d3e2d6a97be6: Html # Html
+    99bda947-506c-477b-8cdc-bf6ea2d0ff8d: Body # Body
+    112c8fa9-b7b2-4740-8404-4a40fb17eb55: 'News Archive' # News Archive
+    143f81b0-d6eb-4d09-8d8c-ccf521028653: 'square 300' # square 300
+    0225b6d8-ebe9-42c0-9b48-517ce7e2901d: Heading # Heading
+    298a1978-3d11-450a-b447-e48b89e9e508: 'News Index' # News Index
+    351fbeb8-08ab-4123-83e1-0ab7948deb4c: Category # Category
+    433b6d9e-7282-4d08-aecf-76961050bbdd: Maps # Maps
+    462fb273-74f3-4570-bd84-03a9098c5e31: FAQ # FAQ
+    520cd042-b924-4a07-96c2-d771903e24a8: Image # Image
+    546a6d4d-a07e-4e7f-8280-1ebfc5dfba2f: Body # Body
+    624d4351-1181-4547-b6d7-39dd7928a2cd: Donation # Donation
+    876c86b2-cb6f-4641-8c5b-30c64d43f934: 'Left Column' # Left Column
+    888dcda0-1806-4ad3-906c-d61ea274c245: 'Upcoming Events' # Upcoming Events
+    962d6eb5-bd48-427a-b80e-fb61b587cc16: 'Left Column' # Left Column
+    0979c525-68a2-44e5-95a2-1a5385cad4fa: Video # Video
+    3562ff77-b843-496b-898e-d8bae315e570: Newsletter # Newsletter
+    06629c38-9bd8-4454-a5d2-b7b987e88cd3: Default # Default
+    007394ea-f95b-4d5d-a291-eda4df8659e0: Question # Question
+    7469dd6b-45d6-4034-9c59-9351553737c8: Image # Image
+    9107c545-c726-47b7-8637-37caff064f9f: 'Left Column' # Left Column
+    9408d083-2398-4d15-9c7c-c166bacbc95b: 'Enupal Slider' # Enupal Slider
+    9766c279-db5b-4aca-9d06-4de7b21ac315: Audio # Audio
+    09999c37-886a-43ea-be0c-8a6105114c6b: 'News Archive' # News Archive
+    10594ad3-f572-4f30-bd7e-da05df72092c: 'Video Index' # Video Index
+    29496a6c-2d9b-4895-8c36-2039cd24b17e: 'Right Column' # Right Column
+    40356b56-7226-42f2-9e8a-980fb5062e86: Question # Question
+    63087f66-bf86-47c5-bab3-a40e6106e03f: 'Landis Arboretum' # Landis Arboretum
+    63669ea8-0e6b-4627-b37e-e9e06fb5abef: 'Optimized Hero' # Optimized Hero
+    93878cb5-0ca9-4979-a0c4-252b4f6cf04d: Video # Video
+    248386fe-8099-4726-908b-b085800c794a: 'Site Contact' # Site Contact
+    511297b0-ffe8-4eb3-8bf8-1255f1cd2729: 'Article 400 Wide' # Article 400 Wide
+    762300b5-fa76-4ba6-ac94-33ec53c50db6: News # News
+    795332e7-f37b-4fb7-8b7c-4d06ae676444: 'Gallery Index' # Gallery Index
+    818868ff-8958-4554-ae24-e5ce8daa6451: 'Full Width CTA' # Full Width CTA
+    24907884-0f61-4170-86f9-fb5e19a65286: Pages # Pages
+    31059278-fbc1-4257-bc3e-db4adaf39246: 'Newsletter PDF' # Newsletter PDF
+    31172786-ddd2-45a8-8f50-dceb8550a656: 'Two Columns' # Two Columns
+    38818040-89c6-431f-a5c9-0ae9248834f9: Text # Text
+    74870446-f329-4ded-808a-f9f53b1eb98f: Image # Image
+    a0e368cb-9d8f-427e-bb9a-fe91b8848733: 'Less Simple' # Less Simple
+    a6fe533c-58d5-4f0d-9fb2-a9d84939983d: 'Event Footer' # Event Footer
+    a7e0a2f3-7ee6-4cf3-bdba-d1ab4925f5a4: Default # Default
+    a9ca2ff0-0116-44ce-9c8b-7559b0da835b: Transcript # Transcript
+    a588c41c-3ec4-4bbb-8d7f-a389ba747a3e: Sponsors # Sponsors
+    a8936e76-9a16-4826-bed0-89f9e810cba9: 'Collection Images' # Collection Images
+    a7931313-4e13-4423-ae89-3e60ed563a58: 'Privacy Policy' # Privacy Policy
+    af5c675a-209c-402a-9952-31e471fce849: Sponsors # Sponsors
+    b09d30a2-6a31-4725-89bf-5a94292a5de3: 'Right Column' # Right Column
+    b9caa3e5-5a2f-483e-ad1f-36f35c3f74ed: Default # Default
+    b83f5b79-6c63-4a8c-98ae-0661d6fe8965: 'Right Column' # Right Column
+    b183c135-db13-4f16-b821-c97699593618: Newsletters # Newsletters
+    ba270839-1b30-4d37-a57a-c2571fd86fa5: 'PDF Image' # PDF Image
+    bb19f09a-fdab-425d-b337-08fb64e513a3: 'Video Index' # Video Index
+    bd97e256-62e2-450a-abc3-41aad0fa0ccb: Text # Text
+    c0202351-7f7a-483f-b04d-68ca50a0a35b: 'Square 500' # Square 500
+    c060adfd-ad0d-44ee-9598-933e4f598995: Common # Common
+    c5f105ef-0a21-40ef-9337-62d70722c933: Volunteer # Volunteer
+    c8e69821-c0b1-46fa-b608-c0e2c1ebe6d3: Issue # Issue
+    c11a70d2-ab50-462e-8058-835449ec25c2: 'Sponsor Images' # Sponsor Images
+    c39d5013-d880-4e7a-be34-c0d4fc4e08d5: 'Home Triptych' # Home Triptych
+    c5865b6a-7482-4a59-8212-4273ff47b853: 'Vist Landis' # Vist Landis
+    c2355853-0b3a-451c-bc58-915c397e7a06: Volume # Volume
+    ca89dc0b-b0b3-44a2-9afc-d3657df6da5a: 'CTA Button' # CTA Button
+    cbb16297-051c-4562-81b3-4310f0cb9da0: Link # Link
+    cbbedb40-2ecd-4ef9-87bf-1b090965c0b3: 'News Index' # News Index
+    cbf66916-b8c6-486e-8a1e-940f98194059: 'Optimized Image' # Optimized Image
+    ccdf06db-63d7-465e-8ec1-7ae2b8a1ad53: 'Landis Arboretum' # Landis Arboretum
+    cf993c21-efc8-4c82-bbe2-000deabb04ba: 'Newsletter Index' # Newsletter Index
+    d00e6366-aa0d-4267-afd1-81d0938bff8d: 'Privacy Policy' # Privacy Policy
+    d0953044-7462-4cdc-9525-9c8bf47f2680: 'Front Page Hero' # Front Page Hero
+    d3ddbe67-66e9-431f-8412-0c27e6706065: 'PayPal Button Code' # PayPal Button Code
+    d82b3de6-16cd-433b-a8bb-2ec7424afc41: Location # Location
+    d88a6933-19d2-42a9-b9f0-3ce161f74d40: 'Landis Arboretum (HOME)' # Landis Arboretum (HOME)
+    d866b8d6-1eab-473e-84ef-a97f7bad68e6: 'Article(cropped 640x400)' # Article(cropped 640x400)
+    db05d377-be2b-4a96-a920-7666d07afe21: Default # Default
+    ddd2d790-60f7-4746-a49b-4e4d0860afa1: Support # Support
+    e3dcc06f-87f9-432c-bbcb-301d3c05a1af: Default # Default
+    e8f2f648-3c3d-4ad4-a522-d8f4d8569369: 'Slide Title' # Slide Title
+    e16e1677-c1c6-4584-9a04-55c202f2cbf8: Gallery # Gallery
+    e37d4558-d408-47a3-84e4-06388305158e: Heading # Heading
+    e143b871-ce17-4247-898b-0476b2325dac: 'FP Images' # FP Images
+    ea0f14f7-38cc-4763-a0c5-fbc6c70c1451: Issue # Issue
+    ec8db3dd-722f-49bf-afad-71df543ff537: 'Newsletter Index' # Newsletter Index
+    eea3ae5c-c585-4a49-9b1f-3e0daa89a438: Columns # Columns
+    eeca32c2-8e52-4400-88eb-983c61727aa9: Text # Text
+    ef7e8ec6-9528-478f-9d96-cacc3be7a39d: 'Slide Image' # Slide Image
+    f3df398a-d517-4cbe-b154-bbb0230746da: 'Full Width CTA' # Full Width CTA
+    f8ac5d32-2887-465f-8550-6201cf643f54: 'Landis Arboretum (HOME)' # Landis Arboretum (HOME)
+    f9f88998-20d8-4ede-ab79-545fa8f900fb: 'Upcoming Events' # Upcoming Events
+    f41dee84-6cee-49f5-b914-af0b4ed3dc88: Slider # Slider
+    fa180141-1f3d-49d1-8043-21a5b08756dc: Donate # Donate
+    fb4c1616-9377-4fbb-8863-b8e1f86c1c32: 'FP Images' # FP Images
+    fb7a658c-3e62-4f91-b7bd-b3d43ce36326: Default # Default
+    fb54f643-0fca-4cd4-af27-ab9bc32c5997: 'Site Contact' # Site Contact
+    fbb2efa0-366e-4b12-9981-03525862552e: Text # Text
+plugins:
+  assetusage:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.0.0
+  ckeditor:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.0.0.0
+  cp-clearcache:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  cp-nav:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.0.11
+    settings:
+      originalNavHash:
+        __assoc__:
+          -
+            - 6c562a2c-e195-47dc-a6b1-be1e91e020ab
+            - W3sibGFiZWwiOiJEYXNoYm9hcmQiLCJ1cmwiOiJkYXNoYm9hcmQiLCJmb250SWNvbiI6ImdhdWdlIn0seyJsYWJlbCI6IkVudHJpZXMiLCJ1cmwiOiJlbnRyaWVzIiwiZm9udEljb24iOiJzZWN0aW9uIn0seyJsYWJlbCI6IkNhdGVnb3JpZXMiLCJ1cmwiOiJjYXRlZ29yaWVzIiwiZm9udEljb24iOiJjYXRlZ29yaWVzIn0seyJsYWJlbCI6IkFzc2V0cyIsInVybCI6ImFzc2V0cyIsImZvbnRJY29uIjoiYXNzZXRzIn0seyJsYWJlbCI6IkZyZWVmb3JtIiwidXJsIjoiZnJlZWZvcm0iLCJpY29uIjoiL3Zhci93d3cvbGFuZGlzYXJib3JldHVtLm9yZy92ZW5kb3Ivc29sc3BhY2UvY3JhZnQtZnJlZWZvcm0vcGFja2FnZXMvcGx1Z2luL3NyYy9pY29uLW1hc2suc3ZnIiwiYmFkZ2VDb3VudCI6NCwic3VibmF2Ijp7ImRhc2hib2FyZCI6eyJsYWJlbCI6IkRhc2hib2FyZCIsInVybCI6ImZyZWVmb3JtL2Rhc2hib2FyZCJ9LCJzdWJtaXNzaW9ucyI6eyJsYWJlbCI6IlN1Ym1pc3Npb25zIiwidXJsIjoiZnJlZWZvcm0vc3VibWlzc2lvbnMifSwic3BhbSI6eyJsYWJlbCI6IlNwYW0iLCJ1cmwiOiJmcmVlZm9ybS9zcGFtIiwiYmFkZ2VDb3VudCI6MX0sImZvcm1zIjp7ImxhYmVsIjoiRm9ybXMiLCJ1cmwiOiJmcmVlZm9ybS9mb3JtcyJ9LCJmaWVsZHMiOnsibGFiZWwiOiJGaWVsZHMiLCJ1cmwiOiJmcmVlZm9ybS9maWVsZHMifSwibm90aWZpY2F0aW9ucyI6eyJsYWJlbCI6IkVtYWlsIE5vdGlmaWNhdGlvbnMiLCJ1cmwiOiJmcmVlZm9ybS9ub3RpZmljYXRpb25zIn0sImV4cG9ydFByb2ZpbGVzIjp7ImxhYmVsIjoiRXhwb3J0IiwidXJsIjoiZnJlZWZvcm0vZXhwb3J0LXByb2ZpbGVzIn0sInNldHRpbmdzIjp7ImxhYmVsIjoiU2V0dGluZ3MiLCJ1cmwiOiJmcmVlZm9ybS9zZXR0aW5ncyJ9LCJyZXNvdXJjZXMiOnsibGFiZWwiOiJSZXNvdXJjZXMiLCJ1cmwiOiJmcmVlZm9ybS9yZXNvdXJjZXMifX19LHsibGFiZWwiOiJTRU9tYXRpYyIsInVybCI6InNlb21hdGljIiwiaWNvbiI6Ii92YXIvd3d3L2xhbmRpc2FyYm9yZXR1bS5vcmcvdmVuZG9yL255c3R1ZGlvMTA3L2NyYWZ0LXNlb21hdGljL3NyYy9pY29uLW1hc2suc3ZnIiwic3VibmF2Ijp7ImRhc2hib2FyZCI6eyJsYWJlbCI6IkRhc2hib2FyZCIsInVybCI6InNlb21hdGljL2Rhc2hib2FyZCJ9LCJnbG9iYWwiOnsibGFiZWwiOiJHbG9iYWwgU0VPIiwidXJsIjoic2VvbWF0aWMvZ2xvYmFsL2dlbmVyYWwifSwiY29udGVudCI6eyJsYWJlbCI6IkNvbnRlbnQgU0VPIiwidXJsIjoic2VvbWF0aWMvY29udGVudCJ9LCJzaXRlIjp7ImxhYmVsIjoiU2l0ZSBTZXR0aW5ncyIsInVybCI6InNlb21hdGljL3NpdGUvaWRlbnRpdHkifSwidHJhY2tpbmciOnsibGFiZWwiOiJUcmFja2luZyBTY3JpcHRzIiwidXJsIjoic2VvbWF0aWMvdHJhY2tpbmcvZ3RhZyJ9LCJwbHVnaW4iOnsibGFiZWwiOiJQbHVnaW4gU2V0dGluZ3MiLCJ1cmwiOiJzZW9tYXRpYy9wbHVnaW4ifX19LHsidXJsIjoidXRpbGl0aWVzIiwibGFiZWwiOiJVdGlsaXRpZXMiLCJmb250SWNvbiI6InRvb2wiLCJiYWRnZUNvdW50IjoyfSx7InVybCI6InNldHRpbmdzIiwibGFiZWwiOiJTZXR0aW5ncyIsImZvbnRJY29uIjoic2V0dGluZ3MifSx7InVybCI6InBsdWdpbi1zdG9yZSIsImxhYmVsIjoiUGx1Z2luIFN0b3JlIiwiZm9udEljb24iOiJwbHVnaW4ifV0=
+  expanded-singles:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  freeform:
+    edition: pro
+    enabled: true
+    licenseKey: OCU2AH2L5VOWK3HV2HUJV760
+    schemaVersion: 5.4.2
+    settings:
+      alertNotificationRecipients: fultonchain@gmail.com
+      allowDashesInFieldHandles: false
+      allowFileTemplateEdit: true
+      autoScroll: true
+      autoScrollToErrors: true
+      badgeType: all
+      blockedEmails: ''
+      blockedEmailsError: 'Invalid Email Address'
+      blockedIpAddresses: ''
+      blockedKeywords: ''
+      blockedKeywordsError: 'Invalid Entry Data'
+      bypassSpamCheckOnLoggedInUsers: '1'
+      clientDigestFrequency: '5'
+      clientDigestRecipients: info@landisarboretum.org
+      defaultFromEmail: '{{ craft.app.projectConfig.get(''email.fromEmail'') }}'
+      defaultFromName: '{{ craft.app.projectConfig.get(''email.fromName'') }}'
+      defaultView: dashboard
+      defaults:
+        __assoc__:
+          -
+            - previewHtml
+            - true
+          -
+            - twigInHtml
+            - true
+          -
+            - twigIsolation
+            - true
+          -
+            - includeSampleTemplates
+            - true
+          -
+            - notifications
+            -
+              __assoc__:
+                -
+                  - admin
+                  -
+                    __assoc__:
+                      -
+                        - template
+                        -
+                          __assoc__:
+                            -
+                              - locked
+                              - false
+                            -
+                              - value
+                              - ''
+                -
+                  - conditional
+                  -
+                    __assoc__:
+                      -
+                        - template
+                        -
+                          __assoc__:
+                            -
+                              - locked
+                              - false
+                            -
+                              - value
+                              - ''
+                -
+                  - userSelect
+                  -
+                    __assoc__:
+                      -
+                        - template
+                        -
+                          __assoc__:
+                            -
+                              - locked
+                              - false
+                            -
+                              - value
+                              - ''
+                -
+                  - emailField
+                  -
+                    __assoc__:
+                      -
+                        - template
+                        -
+                          __assoc__:
+                            -
+                              - locked
+                              - false
+                            -
+                              - value
+                              - ''
+          -
+            - settings
+            -
+              __assoc__:
+                -
+                  - general
+                  -
+                    __assoc__:
+                      -
+                        - formType
+                        -
+                          __assoc__:
+                            -
+                              - locked
+                              - false
+                            -
+                              - value
+                              - Solspace\Freeform\Form\Types\Regular
+                      -
+                        - submissionTitle
+                        -
+                          __assoc__:
+                            -
+                              - locked
+                              - false
+                            -
+                              - value
+                              - '{{ dateCreated|date("Y-m-d H:i:s") }}'
+                      -
+                        - formattingTemplate
+                        -
+                          __assoc__:
+                            -
+                              - locked
+                              - false
+                            -
+                              - value
+                              - tailwind-3/index.twig
+                -
+                  - dataStorage
+                  -
+                    __assoc__:
+                      -
+                        - storeData
+                        -
+                          __assoc__:
+                            -
+                              - locked
+                              - false
+                            -
+                              - value
+                              - '1'
+                      -
+                        - defaultStatus
+                        -
+                          __assoc__:
+                            -
+                              - locked
+                              - false
+                            -
+                              - value
+                              - '2'
+                      -
+                        - collectIp
+                        -
+                          __assoc__:
+                            -
+                              - locked
+                              - false
+                            -
+                              - value
+                              - '1'
+                -
+                  - processing
+                  -
+                    __assoc__:
+                      -
+                        - ajax
+                        -
+                          __assoc__:
+                            -
+                              - locked
+                              - false
+                            -
+                              - value
+                              - '1'
+                      -
+                        - showIndicator
+                        -
+                          __assoc__:
+                            -
+                              - locked
+                              - false
+                            -
+                              - value
+                              - '1'
+                      -
+                        - showText
+                        -
+                          __assoc__:
+                            -
+                              - locked
+                              - false
+                            -
+                              - value
+                              - '1'
+                      -
+                        - processingText
+                        -
+                          __assoc__:
+                            -
+                              - locked
+                              - false
+                            -
+                              - value
+                              - Processing...
+                -
+                  - successAndErrors
+                  -
+                    __assoc__:
+                      -
+                        - successBehavior
+                        -
+                          __assoc__:
+                            -
+                              - locked
+                              - false
+                            -
+                              - value
+                              - reload
+                      -
+                        - returnUrl
+                        -
+                          __assoc__:
+                            -
+                              - locked
+                              - false
+                            -
+                              - value
+                              - ''
+                      -
+                        - successTemplate
+                        -
+                          __assoc__:
+                            -
+                              - locked
+                              - false
+                            -
+                              - value
+                              - ''
+                      -
+                        - successMessage
+                        -
+                          __assoc__:
+                            -
+                              - locked
+                              - false
+                            -
+                              - value
+                              - 'Form has been submitted successfully!'
+                      -
+                        - errorMessage
+                        -
+                          __assoc__:
+                            -
+                              - locked
+                              - false
+                            -
+                              - value
+                              - 'Sorry, there was an error submitting the form. Please try again.'
+                -
+                  - limits
+                  -
+                    __assoc__:
+                      -
+                        - duplicateCheck
+                        -
+                          __assoc__:
+                            -
+                              - locked
+                              - false
+                            -
+                              - value
+                              - no_limit
+      digestFrequency: '5'
+      digestOnlyOnProduction: '1'
+      digestRecipients: info@landisarboretum.org
+      displayFeed: '1'
+      emailTemplateDefault: database
+      emailTemplateDirectory: null
+      emailTemplateStorageType: files_database
+      exportHandlesAsNames: false
+      exportLabels: false
+      fillWithGet: false
+      footerScripts: false
+      formFieldShowOnlyAllowedForms: false
+      formSubmitDisable: true
+      formSubmitExpiration: ''
+      formTemplateDirectory: null
+      formattingTemplate: tailwind-3/index.twig
+      minimumSubmitTime: '10'
+      pluginName: ''
+      purgableSpamAgeInDays: '14'
+      purgableSubmissionAgeInDays: null
+      purgableUnfinalizedAssetAgeInMinutes: 180
+      queuePriority: null
+      rememberPageSubmitOrder: true
+      removeNewlines: false
+      renderFormHtmlInCpViews: '1'
+      saveFormSessionLimit: 10
+      saveFormTtl: 30
+      scriptInsertLocation: footer
+      scriptInsertType: pointers
+      sessionContext: session
+      sessionContextCount: 100
+      sessionContextSecret: ''
+      sessionContextTimeToLiveMinutes: 180
+      sessionEntryMaxCount: 50
+      sessionEntryTTL: 10800
+      showErrorsForBlockedEmails: ''
+      showErrorsForBlockedKeywords: ''
+      sitesEnabled: false
+      spamFolderEnabled: '1'
+      spamProtectionBehavior: simulate_success
+      submissionThrottlingCount: '1'
+      submissionThrottlingTimeFrame: m
+      successTemplateDirectory: null
+      updateSearchIndexes: true
+      useQueueForEmailNotifications: false
+      useQueueForIntegrations: false
+  image-optimize:
+    edition: standard
+    enabled: true
+    licenseKey: 7KKXMBXM9ZFL4O5NT05RO3KN
+    schemaVersion: 1.0.0
+    settings:
+      allowUpScaledImageVariants: true
+      assetVolumeSubFolders: true
+      autoSharpenScaledImages: true
+      capSilhouetteSvgSize: true
+      createColorPalette: false
+      createPlaceholderSilhouettes: true
+      imageTransformTypeSettings:
+        __assoc__:
+          -
+            - nystudio107\imageoptimizeimgix\imagetransforms\ImgixImageTransform
+            -
+              __assoc__:
+                -
+                  - domain
+                  - ''
+                -
+                  - apiKey
+                  - ''
+                -
+                  - securityToken
+                  - ''
+                -
+                  - unsharpMask
+                  - '20'
+          -
+            - nystudio107\imageoptimizesharp\imagetransforms\SharpImageTransform
+            -
+              __assoc__:
+                -
+                  - baseUrl
+                  - ''
+          -
+            - nystudio107\imageoptimizethumbor\imagetransforms\ThumborImageTransform
+            -
+              __assoc__:
+                -
+                  - baseUrl
+                  - ''
+                -
+                  - securityKey
+                  - ''
+      lowerQualityRetinaImageVariants: true
+      sharpenScaledImagePercentage: 70
+      transformClass: nystudio107\imageoptimize\imagetransforms\CraftImageTransform
+  redactor:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.3.0
+  retcon:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  seomatic:
+    edition: standard
+    enabled: true
+    licenseKey: MH9QX6NJ379VQWYXB6E0P76W
+    schemaVersion: 3.0.13
+    settings:
+      addHrefLang: true
+      addPaginatedHreflang: true
+      addXDefaultHrefLang: true
+      alwaysIncludeCanonicalUrls: false
+      cpTitlePrefix: '⚙ '
+      cspNonce: ''
+      cspScriptSrcPolicies:
+        -
+          __assoc__:
+            -
+              - policy
+              - '''self'''
+      devModeCpTitlePrefix: '&#x1f6a7;⚙ '
+      devModeTitlePrefix: ''
+      displayAnalysisSidebar: true
+      displayPreviewSidebar: true
+      enableJsonLdEndpoint: false
+      enableMetaContainerEndpoint: false
+      enableSeoFileLinkEndpoint: false
+      environment: live
+      excludeNonCanonicalUrls: false
+      generatorEnabled: true
+      headersEnabled: true
+      includeHomepageInBreadcrumbs: true
+      lowercaseCanonicalUrl: true
+      manuallySetEnvironment: true
+      maxDescriptionLength: 155
+      maxTitleLength: 70
+      metaCacheDuration: 0
+      pluginName: SEOmatic
+      regenerateSitemapsAutomatically: true
+      renderEnabled: true
+      separatorChar: '|'
+      sidebarDisplayPreviewTypes:
+        - google
+        - twitter
+        - facebook
+      siteGroupsSeparate: '1'
+      siteUrlOverride: ''
+      sitemapsEnabled: true
+      socialMediaPreviewTarget: true
+      submitSitemaps: true
+      truncateDescriptionTags: '1'
+      truncateTitleTags: '1'
+  wordsmith:
+    edition: standard
+    enabled: true
+    schemaVersion: 0.0.0.0
+system:
+  edition: solo
+  live: true
+  name: 'Landis Arboretum'
+  retryDuration: null
+  schemaVersion: 4.15.0.0
+  timeZone: America/New_York
+users:
+  allowPublicRegistration: false
+  deactivateByDefault: false
+  defaultGroup: null
+  photoSubpath: null
+  photoVolumeUid: null
+  requireEmailVerification: true

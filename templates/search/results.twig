@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+		<meta charset="utf-8"/>
+		<title>Landis Arboretum | Search Results</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"/>
+		<meta name="referrer" content="origin-when-cross-origin"/>
+		<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+
+		   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Rosarivo&display=swap" rel="stylesheet"> 
+
+		<link rel="stylesheet" href="/css/styles.css">
+
+	</head>
+
+	<body class="ltr">
+		{% include '_partials/_header.twig' %}
+
+
+		<section class="max-w-7xl px-4 mx-auto mt-10  min-h-screen">
+
+
+
+<h1>Search Results</h1>
+<div class="grid md:grid-cols-2 gap-10">
+	<div>
+{% set searchQuery = craft.app.request.getParam('q') %}
+{% set entries = craft.entries()
+  .search(searchQuery)
+  .orderBy('score')
+  .all() %}
+
+{% if entries|length %}
+  <p>{{ entries|length }} results:</p>
+
+  <ul>
+    {% for entry in entries %}
+      <li><a href="{{ entry.url }}" class="text-blue-500 hover:underline text-lg">{{ entry.title }}</a><br>{% if entry.textMarkdown | length %}
+	  	{{ entry.textMarkdown | chop(limit=15, unit='w',append="...")  | retconAttr('p', { class: 'text-sm pl-6' }) }}
+	  {% endif %}</li>
+    {% endfor %}
+  </ul>
+{% else %}
+  <p>Your search for “{{ searchQuery }}” didn’t return any results.</p>
+{% endif %}
+</div>
+   <div>
+	   <h3>Search Again</h3>
+	<form action="{{ url('search/results') }}">
+		<div class="flex items-center justify-start ">
+			<div class="flex border-2 border-gray-200 rounded">
+				<input class="px-4 py-2 w-80" type="search" name="q" aria-label="Search" placeholder="Search...">
+				<button type="submit" class="px-4 text-white bg-blue-600 border-2 border-blue-500 ">
+					Search
+				</button>
+			</div>
+		</div>
+	  </form>
+
+	</div>
+</div>
+</section>
+
+		{% include '_partials/_footer' %}
+	</body>
+</html>

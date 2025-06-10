@@ -1,0 +1,32 @@
+columnSuffix: dgaznprx
+contentColumnType: text
+fieldGroup: c060adfd-ad0d-44ee-9598-933e4f598995 # Common
+handle: textMarkdown
+instructions: null
+name: Body
+searchable: true
+settings:
+  availableTransforms:
+    - 9afd4d0c-09d0-4382-82c4-df2b2ff26cd0 # Article 640
+    - d866b8d6-1eab-473e-84ef-a97f7bad68e6 # Article(cropped 640x400)
+    - 3ac2e256-40fd-4b34-b810-13b77f2770c3 # Max Width 1200
+    - 143f81b0-d6eb-4d09-8d8c-ccf521028653 # square 300
+    - c0202351-7f7a-483f-b04d-68ca50a0a35b # Square 500
+  availableVolumes:
+    - 19d84302-acf0-4f82-bb97-a7391fd042ed # Images
+    - e143b871-ce17-4247-898b-0476b2325dac # FP Images
+  characterLimit: null
+  ckeConfig: a0e368cb-9d8f-427e-bb9a-fe91b8848733 # Less Simple
+  columnType: text
+  defaultTransform: 9afd4d0c-09d0-4382-82c4-df2b2ff26cd0 # Article 640
+  purifierConfig: null
+  purifyHtml: true
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  showWordCount: true
+  sourceEditingGroups:
+    - __ADMINS__
+  wordLimit: null
+translationKeyFormat: null
+translationMethod: none
+type: craft\ckeditor\Field

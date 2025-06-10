@@ -1,0 +1,59 @@
+fieldLayouts:
+  27bc7400-cbf1-4d73-8c91-43b4c851616c:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 7fedfe8a-52f5-428a-bb90-fd97b9f820c4
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 76ed9077-0f92-4dc0-b3ff-c772483f67ec # Body
+            instructions: null
+            label: 'Sidebar Text'
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 1cee06b2-04e2-4cbf-a0b1-4ea1ce16b79f
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: bdbaf72c-1dc8-471e-95ec-1870423b3096
+        userCondition: null
+handle: volunteer
+hasTitleField: false
+name: Volunteer
+section: c5f105ef-0a21-40ef-9337-62d70722c933 # Volunteer
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+sortOrder: 1
+titleFormat: '{section.name|raw}'
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

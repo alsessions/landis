@@ -1,0 +1,40 @@
+{% include '_partials/_head.twig' %}
+
+<body class="ltr">
+	{% include '_partials/_header.twig' %}
+	<main class="grid gap-4 px-4 py-10 mx-auto mb-40 max-w-7xl md:grid-cols-5">
+		<div class="md:col-span-2">
+			<h2 class="mt-0">{{ entry.title }}</h2>
+			<p class="text-lg italic leading-tight">In order to help stop the
+				spread of the COVID-19 virus, many things have been cancelled at the Arboretum. If
+				you enjoy this performance and can afford to, please consider <a href="/donate"
+					class="text-blue-500 hover:underline">donating</a> or <a href="/membership"
+					class="text-blue-500 hover:underline">joining</a> Landis &mdash; any donation is
+				sincerely appreciated and tax-deductable!
+			{{ entry.textMarkdown }}
+			</p>
+		</div>
+		<div class=" md:col-span-3">
+		
+
+		
+			<div class="aspect-w-16 aspect-h-9">
+				{{ entry.embedCode | raw }}
+			</div>
+		
+		</div>
+
+
+	</main>
+	{% set params = craft.entries.section('video').orderBy('postDate asc') %}
+	{% set prevEntry = entry.getPrev(params) %} {% set nextEntry = entry.getNext(params) %}
+	<div class="flex justify-between px-4 mx-auto mb-10 md:mb-24 max-w-7xl"> {% if prevEntry %}<a href="{{ prevEntry.url }}"
+			class="font-semibold text-blue-600">&larr; Previous</a>{% endif %}
+			<a href="/video"
+			class="font-semibold text-blue-600">All Video</a>
+		</a> {% if nextEntry %}<a href="{{ nextEntry.url }}"
+			class="font-semibold text-blue-600">Next &rarr;</a>{% endif %} </div>
+	{% include '_partials/_footer' %}
+</body>
+
+</html>

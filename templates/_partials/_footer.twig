@@ -1,0 +1,158 @@
+<button class="scrollToTopBtn rounded-lg">&uarr;</button>
+{% if footer_full_width is defined and footer_full_width %}
+<footer class="clear-both w-full pt-12 pb-6 text-white bg-green-900">
+{% else %}
+<footer class="clear-both w-full pt-12 pb-6 mx-auto text-white bg-green-900">
+{% endif %}
+    <div
+        class="flex flex-wrap justify-between gap-y-12 md:px-10 max-w-7xl px-6 mx-auto">
+        <div>
+            <h4 class="mb-6 text-base font-semibold text-white">About</h4>
+            <ul>
+                <li class="text-base leading-snug list-none "><a href="/overview">Overview</a></li>
+                <li class="text-base leading-snug list-none "><a href="/history">History</a></li>
+                <li class="text-base leading-snug list-none "><a href="/faq">FAQ</a></li>
+                <li class="text-base leading-snug list-none "><a href="/people">Who We Are</a></li>
+                <li class="text-base leading-snug list-none "><a href="/scouting">Scouting at
+                        Landis</a></li>
+                <li class="text-base leading-snug list-none "><a href="/sales">Plant Sales</a></li>
+                <li class="text-base leading-snug list-none "><a href="/rentals">Rentals</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4 class="mb-6 text-base font-semibold text-white">Discover</h4>
+            <ul>
+                <li class="text-base leading-snug list-none "><a href="/collections">Collections</a>
+                </li>
+                <li class="text-base leading-snug list-none "><a href="/maps">Maps &amp; Guides</a>
+                </li>
+                <li class="text-base leading-snug list-none "><a
+                        href="/sculpture-at-landis">Sculpture at Landis</a></li>
+                <li class="text-base leading-snug list-none "><a href="/shanti-vun">Shanti-Vun
+                        Meditation Garden</a></li>
+                        <!--
+                <li class="text-base leading-snug list-none "><a href="/gallery">Photo Gallery</a>
+                </li>-->
+                <li class="text-base leading-snug list-none "><a href="/video">Video from Landis</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4 class="mb-6 text-base font-semibold text-white">Get Involved</h4>
+            <ul>
+                <li class="text-base leading-snug list-none "><a href="/support">How to Help</a>
+                </li>
+                <li class="text-base leading-snug list-none "><a href="/membership">Become a Member</a>
+                </li>
+                <li class="text-base leading-snug list-none "><a href="/donate">Donate</a></li>
+                <li class="text-base leading-snug list-none "><a href="/volunteer">Volunteer</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4 class="mb-6 text-base font-semibold text-white">Stay Informed</h4>
+            <ul>
+                <li class="text-base leading-snug list-none "><a href="/news">News</a></li>
+                <li class="text-base leading-snug list-none "><a href="/events">Events</a></li>
+                <li class="text-base leading-snug list-none "><a href="/newsletters">Newsletters
+                       </a></li>
+
+                       
+                
+
+            </ul>
+
+            	<!-- BEGIN MODAL-->
+	<div x-data="{ open: false }">
+        <div class="flex  items-center relative">
+            <button class="text-white rounded py-2" @click="open = !open">Subscribe Now!</button>
+        </div>
+        <div x-show="open" x-cloak="" class="fixed inset-0 z-50 flex justify-center items-center max-w-5xl mx-auto">
+            <div class="bg-green-300 rounded shadow-lg p-8 relative">
+                <button class="absolute right-0 text-xl top-0 px-3 py-1" @click="open = false">x</button>
+                									<!-- Begin Constant Contact Inline Form Code -->
+<div class="ctct-inline-form" data-form-id="ee8156e7-8d1f-4ab2-9f63-9623bc04d66a"></div>
+<!-- End Constant Contact Inline Form Code -->
+            </div>
+        </div>
+    </div>
+
+	<!-- END MODAL -->
+
+            <h4 class="mt-6 mb-2 text-base font-semibold text-white">Get in Touch</h4>
+            <ul>
+               
+                <li class="text-base leading-snug list-none ">PO Box 186<br>174 Lape Rd.<br>
+                Esperance, NY 12066</li>
+                <li class="text-base leading-snug list-none "><a href="tel:5188756935">(518) 875-6935</a></li>
+                <li class="text-base leading-snug list-none "><a href="/contact">Map and Directions</a>
+                </li>
+            </ul>
+            <h4 class="mt-6 mb-2 text-base font-semibold text-white">Follow Us</h4>
+            <p class="text-base text-white ">
+                <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                    class="inline w-6 h-6 mr-3 text-white fill-current">
+                    <title>Facebook</title>
+                    <path
+                        d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                </svg>
+                <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                    class="inline w-6 h-6 mr-3 text-white fill-current">
+                    <title>Twitter</title>
+                    <path
+                        d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
+                </svg>
+                <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                    class="inline w-6 h-6 mr-3 text-white fill-current">
+                    <title>YouTube</title>
+                    <path
+                        d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                </svg>
+            </p>
+        </div>
+        {# Icons from simpleicons.org  #}
+    </div>
+    <p class="mt-20 text-base text-center text-gray-200">
+        All content &copy; Landis Arboretum 2019-2022 | <a href="/privacy">Privacy Policy</a>
+    </p>
+</footer>
+<link type="text/css" rel="stylesheet" href="/js/lightgallery/css/lightgallery.css" />
+<link type="text/css" rel="stylesheet" href="/js/lightgallery/css/lg-fullscreen.css" />
+<link type="text/css" rel="stylesheet" href="/js/lightgallery/css/lg-thumbnail.css" />
+<script>
+    // We select the element we want to target
+var target = document.querySelector("footer");
+
+var scrollToTopBtn = document.querySelector(".scrollToTopBtn");
+var rootElement = document.documentElement;
+
+// Next we want to create a function that will be called when that element is intersected
+function callback(entries, observer) {
+  // The callback will return an array of entries, even if you are only observing a single item
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      // Show button
+      scrollToTopBtn.classList.add("showBtn");
+    } else {
+      // Hide button
+      scrollToTopBtn.classList.remove("showBtn");
+    }
+  });
+}
+
+function scrollToTop() {
+  rootElement.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+}
+scrollToTopBtn.addEventListener("click", scrollToTop);
+
+// Next we instantiate the observer with the function we created above. This takes an optional configuration
+// object that we will use in the other examples.
+let observer = new IntersectionObserver(callback);
+// Finally start observing the target element
+observer.observe(target);
+</script>
+<!-- Begin Constant Contact Active Forms -->
+<script> var _ctct_m = "e54617559d973db745ae0e5ec8529a15"; </script>
+<script id="signupScript" src="//static.ctctcdn.com/js/signup-form-widget/current/signup-form-widget.min.js" async defer></script>
+<!-- End Constant Contact Active Forms -->

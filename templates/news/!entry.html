@@ -1,0 +1,81 @@
+{% include '_partials/_header.html' %}
+
+<body>
+  {% include '_partials/_nav2.html' %}
+  <div class="mx-auto">
+
+    {% for asset in entry.heroImage.all() %}
+
+    <div class="py-10 text-center text-white md:py-20" style="background-image:  linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+      ),url('{{ asset.url }}'); background-size: cover; background-position: center center;">
+
+      {% endfor %}
+
+      <div class="py-32 hero-content">
+
+
+        <h1 class="px-2 md:px-8 md:text-6xl">
+          {{ entry.title }}
+        </h1>
+        <h3 class="max-w-3xl px-4 mx-auto md:text-4xl">
+          {{ entry.postDate | date("M d, Y") }}
+        </h3>
+
+      </div>
+    </div>
+  </div>
+  <!-- Begin main container -->
+
+  <div class="max-w-screen-xl min-h-screen px-2 py-12 mx-auto content">
+    <div class="flex flex-wrap">
+      <main class="w-full px-4 content md:w-2/3">
+
+
+        {{ entry.body | retconAttr('img', { class: 'text-center border border-gray-600 rounded mx-auto mt-6' }) |
+        retconAttr('img', { alt: 'Post body image' }) | retconAttr('figcaption', { class: 'italic text-center
+        text-gray-700 pb-4 pt-2'}) }}
+
+        {% if entry.isEditable() %}
+        <p class="my-6">
+          <a href="{{ entry.cpEditUrl }}">Edit entry</a></button>
+        </p>
+        {% endif %}
+
+        <!-- close main container -->
+      </main>
+
+
+      <!-- Begin sidebar -->
+
+      <aside class="w-full px-2 md:w-1/3 md:px-0 content">
+
+        <h2>Other News</h2>
+
+        {% set myEntryQuery = craft.entries()
+        .section('news')
+        .limit(5)
+        .id('not ' ~ entry.id) %}
+
+        {% set entries = myEntryQuery.all() %}
+
+
+        {% for entry in entries %}
+        <article class="mb-4">
+          <span class="pb-0 mb-0 uppercase ">{{ entry.postDate | date("M d, Y") }}</span>
+          <h4 class="pt-0 mt-0 mb-0"><a href="{{ entry.url }}" title="blog entry">{{ entry.title }}</a></h4>
+          {{ entry.body | chop(limit=20, unit='w') }} ...
+
+
+
+        </article>
+        {% endfor %}
+
+      </aside>
+
+    </div>
+
+  </div>
+  {% include '_partials/_footer.html' %}
+</body>

@@ -1,0 +1,15 @@
+defaultPlacement: end
+enableVersioning: true
+handle: collections
+name: Collections
+propagationMethod: all
+siteSettings:
+  ccdf06db-63d7-465e-8ec1-7ae2b8a1ad53: # Landis Arboretum
+    enabledByDefault: true
+    hasUrls: true
+    template: collections/_entry
+    uriFormat: 'collections/{slug}'
+structure:
+  maxLevels: null
+  uid: 1ab90158-dadd-45e8-9c75-6940f3fbc080
+type: structure

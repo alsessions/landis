@@ -1,0 +1,16 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: c060adfd-ad0d-44ee-9598-933e4f598995 # Common
+handle: rightSide
+instructions: null
+name: 'Right Column'
+searchable: false
+settings:
+  contentTable: '{{%matrixcontent_rightside}}'
+  maxBlocks: null
+  minBlocks: null
+  propagationKeyFormat: null
+  propagationMethod: all
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

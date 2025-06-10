@@ -1,0 +1,117 @@
+{% include '_partials/_head.twig' %}
+
+<body class="ltr">
+	{% include '_partials/_header.twig' %}
+
+	{% if entry.featuredImage | length %}
+
+		{% set optimizedImages = entry.featuredImage.one().optimizedHero %}
+		<div
+			style="
+				        background-image:url('{{ optimizedImages.src() }}');
+				        background-position: center center;
+				        background-size: cover;
+				        background-repeat: no-repeat;
+				        width:100%;
+				        height:100%;
+				        ">
+
+		{% endif %}
+<div class="pb-40 md:pb-60" style="background:rgba(0,0,0,0.1);">
+    <h1  class="pt-40  md:pt-60 text-white text-4xl md:text-5xl text-center mt-0 font-semibold">{{ entry.title }}</h1>
+	<h2 class="text-2xl md:text-3xl text-center  text-white  font-semibold">{{ entry.subtitle }}</h2>
+	<h3 class="text-lg md:text-xl text-center mt-6"><a href="/issue/summer-2025" class="text-blue-200 hover:text-white border rounded py-1 px-2 ">Current Issue - Winter 2024-25</a></h3>
+	
+
+	<!-- BEGIN MODAL-->
+	<div x-data="{ open: false }">
+        <div class="flex justify-center items-center relative mt-4">
+            <button class="bg-blue-900 text-white rounded px-4 py-2 ml-3" @click="open = !open">Subscribe Now!</button>
+        </div>
+        <div x-show="open" x-cloak="" class="fixed inset-0 z-50 flex justify-center items-center max-w-5xl mx-auto">
+            <div class="bg-green-300 rounded shadow-lg p-8 relative">
+                <button class="absolute right-0 text-xl top-0 px-3 py-1" @click="open = false">x</button>
+                									<!-- Begin Constant Contact Inline Form Code -->
+<div class="ctct-inline-form" data-form-id="ee8156e7-8d1f-4ab2-9f63-9623bc04d66a"></div>
+<!-- End Constant Contact Inline Form Code -->
+            </div>
+        </div>
+    </div>
+
+	<!-- END MODAL -->
+
+
+
+	</div>
+
+
+
+    </div>
+
+
+
+
+	<section class="px-4 py-10 mx-auto max-w-4xl lg:max-w-5xl min-h-screen"> 
+
+	
+
+	
+			{{ entry.textMarkdown | markdown }}
+
+
+<h2 class=""my-10">Online Archive</h2>	
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-20">
+	{# Create a category query with the 'group' parameter #}
+{% set myCategoryQuery = craft.categories()
+  .group('category') %}
+
+{# Fetch the categories #}
+{% set categories = myCategoryQuery.all() %}
+
+{# Display the navigation #}
+
+  {% nav category in categories %}
+<div>
+   <p class="mb-0"><a href="{{ category.url }}" class="text-blue-600">{{ category.title }}</a></p>
+        {% if category.volume | length %}
+        <p class="text-base">Volume {{ category.volume }}, Number {{ category.number }}</p>
+	
+{% endif %}
+ </div>   
+  
+     
+    
+  {% endnav %}
+
+</div>
+
+<h2>Pre-2014 PDF Archive</h2>
+<a id="top"></a>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+
+{% paginate craft.entries.section('newsletter').limit(36).orderBy('lft desc') as pageInfo, pageEntries %}
+		{% for entry in pageEntries %}
+        <div>
+        <p class="mb-0"><a href="{{ entry.url }}" class="text-blue-800">{{ entry.title }}</a></p>
+        {% if entry.volume | length %}
+        <p class="text-base">Volume {{ entry.volume }}, Number {{ entry.number }}</p>
+{% endif %}
+        </div>
+        {% endfor %}
+</div>
+  <div class="flex justify-between my-10 max-w-4xl">
+  <p class="text-base px-4"> 
+{% if pageInfo.prevUrl %}<a href="{{ pageInfo.prevUrl }}" class="text-blue-800">&larr; Newer</a>{% endif %}</p>
+<p class="text-base px-4">{% if pageInfo.nextUrl %}<a href="{{ pageInfo.nextUrl }}/#top" class="text-blue-800">Older &rarr;</a>{% endif %}</p>
+</div>
+
+
+
+{% include '_partials/_share.twig' %}
+</section>
+{# PurgeCSS: text-base #}
+
+	{% include '_partials/_footer.twig' %}
+
+</body>
+</html>

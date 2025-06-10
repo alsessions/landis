@@ -1,0 +1,95 @@
+fieldLayouts:
+  3c03381b-b49e-4670-954e-93d89219fc3f:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 9d00a830-216b-4f32-8860-c1eddd638719 # Featured Image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 0c783eb3-2aba-4e2b-833e-c746e066871c
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 0c9682fa-bb58-4bf9-a99f-6283909f07ba
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 9d1afefd-6011-4b8d-86c5-78b3b2fcb9d6 # Author
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 15a64483-42d3-45fe-96f3-1d5cb4efbf2f
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 76ed9077-0f92-4dc0-b3ff-c772483f67ec # Body
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: dec86aea-1854-4023-9ae4-cae0879d4ca9
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 3ea7e00b-85d5-4f71-80e8-8f6dad4ac60f # Page Images
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 381d8f86-4ae2-422e-9326-16549772ec00
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 219d5e16-ee69-46a3-b364-8213fde5c925
+        userCondition: null
+handle: default
+hasTitleField: true
+name: Default
+section: 1c5b4d35-7397-4999-a4e2-aeda50aee03f # Bird Blog
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+sortOrder: 1
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

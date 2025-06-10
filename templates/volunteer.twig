@@ -1,0 +1,68 @@
+{% include '_partials/_head.twig' %}
+
+<body class="ltr">
+	{% include '_partials/_header.twig' %}
+<main class="mx-auto md:max-w-5xl lg:max-w-7xl">
+	<section class="py-10 mx-auto  grid md:grid-cols-2 gap-6">
+        <article class="px-4">
+           
+            <h1 class="mt-4 mb-4">Volunteer at Landis Arboretum</h1>
+        {{ entry.textMarkdown }}
+            
+        <div class="flex justify-between my-6 md:my-20">
+        <div>
+        <strong>Mailing Address:</strong><br>
+
+        The Landis Arboretum<br>
+        PO Box 186<br>
+        Esperance, NY 12066<br>
+        </div>
+
+        <div>
+        <strong>Email:</strong><br>
+        
+        <a href="mailto:info@landisarboretum" class="text-blue-500">info@landisarboretum.org</a><br>
+        
+        
+        <strong>Phone:</strong><br>
+        <a href="tel:5188756935" class="text-blue-500">518.875.6935</a>
+        </div>
+        </div>
+
+
+
+        
+    </article>
+		<div class=" px-4 my-10 md:my-20 ">
+			
+		
+
+
+
+	
+
+
+		<!-- From builder
+		{{ craft.freeform.form("siteContact").render }}
+-->
+		<!-- Form Begin -->
+
+		<style>
+    .required::after {
+        content: "*";
+        color: #d00;
+        margin-left: 5px;
+    }
+</style>
+
+{{ craft.freeform.form("volunteer").render() }}
+<!-- rounded-md border-1 text-gray-600 border-gray-300 font-medium mb-2 font-normal my-2 p-2 h-2 w-2 -->
+
+		</div>
+			
+		
+		</section>
+		</main>
+
+	{% include '_partials/_footer.twig' %}
+</body></html>

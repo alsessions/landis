@@ -1,0 +1,61 @@
+{% include '_partials/_head.twig' %}
+
+<body class="ltr">
+	{% include '_partials/_header.twig' %}
+         {% if entry.featuredImage | length %}
+	{% for myAsset in entry.featuredImage.all() %}
+    <div style="
+        background-image:url('{{ myAsset.url }}');
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        "
+        class="bg-opacity-90 bg-black bg-fixed"
+    >
+
+	{% endfor %}
+	{% endif %}
+
+    <h1  class="pb-40 pt-40 md:pb-60 md:pt-60 text-4xl md:text-5xl text-white text-center mt-0">{{ entry.title }}</h1>
+    </div>
+
+	<div class="mx-auto max-w-6xl min-h-screen px-4 mt-10 mb-20">
+ 
+    <div class="prose prose-lg max-w-none">
+
+
+			{{ entry.textMarkdown | markdown }}
+	
+
+
+
+{% for block in entry.faq.all() %}
+	       {% if block|length %}
+	{% switch block.type %}
+
+		{% case "question" %}
+		<details class="mb-4 max-w-3xl p-1 bg-green-100">
+			<summary class="pb-2 text-lg md:text-xl text-black rounded p-2">
+			{{ block.question }}
+			</summary>
+
+			<div class="text-base px-6 py-2">{{ block.answer | markdown }} </div>
+		</details>
+		{% default %}
+			...
+
+	{% endswitch %}
+	{% endif %}
+{% endfor %}
+
+
+</div>
+
+
+</div>
+{# PurgeCSS: text-base #}
+
+	{% include '_partials/_footer.twig' %}
+
+</body>
+</html>

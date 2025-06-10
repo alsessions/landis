@@ -1,0 +1,15 @@
+defaultPlacement: end
+enableVersioning: true
+handle: page
+name: Pages
+propagationMethod: all
+siteSettings:
+  ccdf06db-63d7-465e-8ec1-7ae2b8a1ad53: # Landis Arboretum
+    enabledByDefault: true
+    hasUrls: true
+    template: pages/_entry
+    uriFormat: '{slug}'
+structure:
+  maxLevels: null
+  uid: 0701de70-07a8-4cf2-8174-954813cd02ea
+type: structure

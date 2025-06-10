@@ -1,0 +1,19 @@
+columnSuffix: lgodjopz
+contentColumnType: text
+fieldGroup: 32d6a11e-bf26-4a5a-82ba-3fa5348d8be7 # Audio Tour
+handle: transcript
+instructions: null
+name: Transcript
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  columnType: null
+  initialRows: 4
+  multiline: true
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

@@ -1,0 +1,12 @@
+defaultPlacement: end
+enableVersioning: false
+handle: newsArchive
+name: 'News Archive'
+propagationMethod: all
+siteSettings:
+  ccdf06db-63d7-465e-8ec1-7ae2b8a1ad53: # Landis Arboretum
+    enabledByDefault: true
+    hasUrls: true
+    template: news/archive.twig
+    uriFormat: news/archive
+type: single

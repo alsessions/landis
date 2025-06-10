@@ -1,0 +1,110 @@
+{% include '_partials/_head.twig' %}
+
+<body class="ltr">
+    {% include '_partials/_header.twig' %}
+    {% if entry.featuredImage | length %}
+
+    {% set optimizedImages = entry.featuredImage.one().optimizedHero %}
+    <div style="
+        background-image:url('{{ optimizedImages.src() }}');
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width:100%;
+        height:100%;
+        ">
+
+    {% endif %}
+        <div class="bg-black bg-opacity-50 px-14" style="background:rgba(0,0,0,0.5);">
+            <h1 class="pt-40 mt-0 text-4xl font-semibold text-center text-white md:pt-60 md:text-5xl">{{ entry.title }}
+            </h1>
+            <h2 class="pb-40 font-serif text-3xl font-semibold text-center text-white md:text-4xl md:pb-60">{{
+                entry.subtitle }}</h2>
+        </div>
+    </div>
+
+
+    <div class="max-w-6xl min-h-screen px-4 mx-auto mt-10 mb-20">
+        {{ entry.textMarkdown }}
+        <hr class="my-10">
+        <div class="flex flex-wrap gap-10 max-w-none">
+
+
+            {% set category = craft.categories.group('qrCodeTours').slug('welcome').one() %}
+            {% set myEntryQuery = craft.entries()
+            .section('audio')
+            .limit(5)
+            .relatedTo (category) %}
+            {% set entries = myEntryQuery.all() %}
+            {% for entry in entries %}
+            <div class="md:mt-4">
+                <h4 class="pb-1 text-xl text-green-700"><a href="{{ entry.url }}">{{ entry.title }}</a></h4>
+                {% set myAsset = entry.audio.one() %}
+                {% if myAsset %}
+                <audio controls src="{{ myAsset.url }}" type="audio/mp3" class="w-full rounded-xl">
+                    Your browser does not support the
+                    <code>audio</code> element.
+                </audio>
+                {% endif %}
+
+
+                <div class="text-sm italic text-gray-600">{{ entry.textMarkdown }}</div>
+
+            </div>
+            {% endfor %}
+            </div>
+
+                <hr class="my-10">
+                <a id="native-start"></a>
+                <h2 class="mt-10 text-3xl">Self-Guided Tour of the Native Plant Trail</h2>
+                {{ entry.tourIntro }}
+               
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-none">
+
+
+                {% set myEntryQuery = craft.entries()
+                .section('nativePlantsTour')
+                .limit(20)
+                %}
+                {% set entries = myEntryQuery.all() %}
+                {% for entry in entries %}
+                <div class="md:mt-4">
+                <h4 class="pb-1 mb-2 text-xl md:text-2xl text-green-700"><a href="{{ entry.url }}">{{ entry.title }}</a>
+                </h4>
+                <!-- {% set myAsset = entry.audio.one() %}
+    {% if myAsset %}
+    <audio
+    controls
+    src="{{ myAsset.url }}" type="audio/mp3" class="w-full rounded">
+    Your browser does not support the
+    <code>audio</code> element.
+    </audio>
+    {% endif %}
+
+-->
+                <a href="{{ entry.url }}">
+                    <button
+                        class="inline-flex items-center px-8 py-2  text-white bg-blue-800 rounded-2xl  hover:bg-indigo-900 font-semibold shadow-2xl">
+                        <span class="text-sm tracking-wide">Listen Now</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
+                        </svg>
+
+                    </button>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+
+
+    </div>
+    {# PurgeCSS: text-base #}
+
+    {% include '_partials/_footer.twig' %}
+
+</body>
+
+</html>
