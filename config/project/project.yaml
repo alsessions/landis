@@ -1,4 +1,4 @@
-dateModified: 1749588953
+dateModified: 1750960580
 elementSources:
   Solspace\Freeform\Elements\Submission:
     -
@@ -583,7 +583,7 @@ plugins:
     edition: pro
     enabled: true
     licenseKey: OCU2AH2L5VOWK3HV2HUJV760
-    schemaVersion: 5.4.2
+    schemaVersion: 5.6.1
     settings:
       alertNotificationRecipients: fultonchain@gmail.com
       allowDashesInFieldHandles: false
@@ -866,6 +866,7 @@ plugins:
       displayFeed: '1'
       emailTemplateDefault: database
       emailTemplateDirectory: null
+      emailTemplateMethod: global
       emailTemplateStorageType: files_database
       exportHandlesAsNames: false
       exportLabels: false
