@@ -40,7 +40,6 @@ fields:
       availableVolumes:
         - 19d84302-acf0-4f82-bb97-a7391fd042ed # Images
         - e143b871-ce17-4247-898b-0476b2325dac # FP Images
-      characterLimit: null
       ckeConfig: a0e368cb-9d8f-427e-bb9a-fe91b8848733 # Less Simple
       columnType: text
       defaultTransform: 9afd4d0c-09d0-4382-82c4-df2b2ff26cd0 # Article 640
