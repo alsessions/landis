@@ -55,18 +55,18 @@
             <div class="flex justify-between max-w-7xl mx-auto my-20">
                 <div>
                     {% if prevEntry %}
-                        <a href="{{ prevEntry.url }}" class="inline-flex items-center px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-md shadow-sm hover:bg-blue-700 transition-colors duration-300">
+                        <a href="{{ prevEntry.url }}" class="inline-flex items-center px-4 py-2 bg-green-600 text-white text-sm font-medium rounded-md shadow-sm hover:bg-green-700 transition-colors duration-300">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
                             Previous
                         </a>
                     {% endif %}
                 </div>
                 <div>
-                    <a href="{{ category.url }}" class="inline-flex items-center px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-md shadow-sm hover:bg-blue-700 transition-colors duration-300">{{ category.title }}</a>
+                    <a href="{{ category.url }}" class="inline-flex items-center px-4 py-2 bg-green-600 text-white text-sm font-medium rounded-md shadow-sm hover:bg-green-700 transition-colors duration-300">{{ category.title }}</a>
                 </div>
                 <div>
                     {% if nextEntry %}
-                        <a href="{{ nextEntry.url }}" class="inline-flex items-center px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-md shadow-sm hover:bg-blue-700 transition-colors duration-300">
+                        <a href="{{ nextEntry.url }}" class="inline-flex items-center px-4 py-2 bg-green-600 text-white text-sm font-medium rounded-md shadow-sm hover:bg-green-700 transition-colors duration-300">
                             Next
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" /></svg>
                         </a>
@@ -117,7 +117,7 @@
                 <div class="flex flex-col md:px-0">
                     <p class="mb-0 text-sm text-gray-500">
                         {{ entry.postDate | date("M d, Y") }}
-                        {% if entry.newsAuthor | length %} | {{ entry.newsAuthor }}{% endif %}
+                        {% if entry.newsAuthor | length %} | {{ entry.newsAuthor | slice(0, 30) }}{% if entry.newsAuthor | length > 30 %}...{% endif %}{% endif %}
                     </p>
                     <h4 class="mb-1 text-lg font-medium ">
                         <a href="{{ entry.url }}" class="text-blue-500 hover:text-blue-800">
@@ -131,7 +131,7 @@
                 </div>
             {% endfor %}
             <p class="mt-4 mb-6 text-sm">
-                <a href="/news" class="btn-blue-small"> News Archive </a>
+                <a href="/news" class="inline-block px-2 py-1 mt-2 mb-2 text-sm font-medium tracking-wide text-white bg-green-600 rounded shadow-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75"> News Archive </a>
             </p>
         </div>
     </section>

@@ -10,7 +10,7 @@
 
 		   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Rosarivo&display=swap" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Rosarivo&display=swap" rel="stylesheet">
 
 		<link rel="stylesheet" href="/css/styles.css">
 
@@ -19,7 +19,7 @@
 	<body class="ltr">
 		{% include '_partials/_header.twig' %}
 
-		
+
 
 
 
@@ -72,7 +72,7 @@
 									<span class="text-sm text-gray-600">{{ entry.location }}</span>
 								</div>
 							{% endif %}
-							
+
 							<div class="flex items-center my-2">
 								<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-blue-500 mr-2" viewbox="0 0 20 20" fill="currentColor">
 									<path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
@@ -80,18 +80,18 @@
 								<a href="{{ entry.url }}" class="text-sm text-blue-500 hover:text-blue-800 transition-colors duration-300">Details and Registration</a>
 							</div>
 <!--
-					
+
 -->
 						</div>
 
 					</div>
-				
+
 				{% endfor %}
-				
+
 			</div>
 			<div class="flex justify-between max-w-7xl mx-auto my-8">
-				<div>{% if pageInfo.prevUrl %}<a href="{{ pageInfo.prevUrl }}" class="inline-flex items-center px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-md shadow-sm hover:bg-blue-700 transition-colors duration-300"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>Previous Events</a>{% endif %}</div>
-				<div>{% if pageInfo.nextUrl %}<a href="{{ pageInfo.nextUrl }}" class="inline-flex items-center px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-md shadow-sm hover:bg-blue-700 transition-colors duration-300">More Events<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" /></svg></a>{% endif %}</div>
+				<div>{% if pageInfo.prevUrl %}<a href="{{ pageInfo.prevUrl }}" class="inline-flex items-center px-4 py-2 bg-green-600 text-white text-sm font-medium rounded-md shadow-sm hover:bg-green-700 transition-colors duration-300"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>Previous Events</a>{% endif %}</div>
+				<div>{% if pageInfo.nextUrl %}<a href="{{ pageInfo.nextUrl }}" class="inline-flex items-center px-4 py-2 bg-green-600 text-white text-sm font-medium rounded-md shadow-sm hover:bg-green-700 transition-colors duration-300">More Events<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" /></svg></a>{% endif %}</div>
 				</div>
 		</section>
 <!---
@@ -103,8 +103,8 @@
     .all() %}
 	<h2 class="mb-4 leading-tight max-w-7xl mx-auto px-4 mt-20">Previous Events @ Landis</h2>
 		<section class=" mx-auto  max-w-7xl md:columns-2 px-4 pb-20 ">
-		
-		
+
+
 				{% for entry in events %}
 
 
@@ -116,18 +116,18 @@
 							{% if entry.date %}
 								<p class="my-0 text-gray-500 text-sm mb-4">
 
-								
+
 
 									{{ entry.date | date('M j, Y') }}
 								</p>
-							
+
 							{% endif %}
 
-						
+
 
 						</div>
 
-				
+
 
 				{% endfor %}
 			</div>

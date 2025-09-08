@@ -23,22 +23,22 @@
             {# Set parameters for prev/next elements list #}
             {% set category = craft.categories.group('qrCodeTours').slug('welcome').all() %}
         {% set params = craft.entries.section('audio').relatedTo(category) %}
-        
+
         {# Get the prev/next elements #}
         {% set prevEntry = entry.getPrev(params) %}
         {% set nextEntry = entry.getNext(params) %}
-        
-       
-        {% if prevEntry %}<a href="{{ prevEntry.url }}" class="text-blue-600">&larr; {{ prevEntry.title }}</a>{% endif %}
-        
-       
-        
-        {% if nextEntry %}<a href="{{ nextEntry.url }}" class="text-blue-600">{{ nextEntry.title }} &rarr;</a>{% endif %}
+
+
+        {% if prevEntry %}<a href="{{ prevEntry.url }}" class="inline-flex items-center px-4 py-2 bg-green-600 text-white text-sm font-medium rounded-md shadow-sm hover:bg-green-700 transition-colors duration-300"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>{{ prevEntry.title }}</a>{% endif %}
+
+
+
+        {% if nextEntry %}<a href="{{ nextEntry.url }}" class="inline-flex items-center px-4 py-2 bg-green-600 text-white text-sm font-medium rounded-md shadow-sm hover:bg-green-700 transition-colors duration-300">{{ nextEntry.title }}<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" /></svg></a>{% endif %}
         </div>
         </section>
 
         <div class="grid min-h-screen px-4 mx-auto mt-10 mb-2 max-w-7xl lg:grid-cols-12">
-           
+
                     <div class="col-span-4 md:mt-10">
                       <h2>Play Audio</h2>
                         {% set myAsset = entry.audio.one() %}
@@ -50,15 +50,15 @@
                         {% endif %}
                         {{ entry.textMarkdown | markdown }}
 
-                      
+
                     </div>
-             
+
                 <div class="col-span-8 md:mt-10">
                     <h2>{{ entry.title }}</h2>
                    {{ entry.transcript | markdown }}
                 </div>
             </div>
-        
+
             {# PurgeCSS: text-base #}
             {% include '_partials/_footer.twig' %}
 </body>

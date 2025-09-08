@@ -5,8 +5,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta charset="utf-8" />
 	<title>Landis Arboretum</title>
-	<meta name="viewport"
-		content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
 	<meta name="referrer" content="origin-when-cross-origin" />
 	<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"></script>
 	<script>
@@ -53,8 +52,7 @@
 	</script>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Rosarivo&display=swap"
-		rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Rosarivo&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="/css/styles.css">
 	<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
 	<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
@@ -82,16 +80,7 @@
 				{% switch block.type %}
 					{% case "slideImage" %}
 						{% set image = block.slideImage.one().optimizedHero %}
-						<div class="swiper-slide flex flex-row"
-							style="background-image:linear-gradient(
-								to left,
-								rgba(0, 0, 0, 0.0),
-								rgba(0, 0, 0, 0.7)
-							),url('{{ image.src() }}');
-							background-size: cover;
-							background-repeat: no-repeat;
-							background-position: center center;">
-
+						<div class="swiper-slide flex flex-row" style="background-image:linear-gradient(to left, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.7)), url('{{ image.src() }}'); background-size: cover; background-repeat: no-repeat; background-position: center center;">
 							<div class="swiper-text absolute top-0 px-4 md:px-10 py-10 max-w-3xl" style="text-shadow: 0 1px 3px rgba(0,0,0,0.5);">
 								<h2 class="text-2xl md:text-4xl font-bold text-white mb-4">
 									{{ block.slideTitle }}
@@ -112,10 +101,7 @@
 
 								{% if block.timer | length %}
 									<div>
-										<div
-											x-data="countdownTimer('{{ block.timer | date('F j, Y H:i:s', 'America/New_York') }}')"
-											x-init="init()"
-											class="countdown-timer rounded-lg shadow-md max-w-xl my-8 bg-black bg-opacity-30 backdrop-blur-sm p-3 text-white">
+										<div x-data="countdownTimer('{{ block.timer | date('F j, Y H:i:s', 'America/New_York') }}')" x-init="init()" class="countdown-timer rounded-lg shadow-md max-w-xl my-8 bg-black bg-opacity-30 backdrop-blur-sm p-3 text-white">
 											<div class="grid grid-cols-4 gap-3 text-center max-w-md">
 												<div class="countdown-segment bg-gradient-to-b from-green-700 to-green-800 rounded-lg p-2 text-white shadow-inner">
 													<div x-text="padZero(days)" class="text-2xl font-bold text-white">00</div>
@@ -176,7 +162,7 @@
 		});
 	</script>
 
-	<section class="px-6 py-10 mx-auto md:py-20 bg-gradient-to-b from-white to-green-50">
+	<section class="px-4 md:px-6 py-10 mx-auto md:py-20 bg-gradient-to-b from-white to-green-50">
 		<div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto">
 			{% set triptychBlocks = entry.homeTriptych.all() %}
 			{% for block in triptychBlocks|reverse %}
@@ -222,11 +208,8 @@
 			{% endfor %}
 		</div>
 	</section>
-	<section class="w-full px-4 py-10 sm:py-20 md:py-32 bg-fixed" style="
-									background-image: url('/assets/images/landis-big-view.jpg');
-									background-size: cover;
-									background-repeat: no-repeat;
-									background-position: center center">
+
+	<section class="w-full px-4 py-10 sm:py-20 md:py-32 bg-fixed" style="background-image: url('/assets/images/landis-big-view.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center center">
 		<div class="px-8 py-5 md:px-10 md:py-6 not-prose md:w-2/3 lg:w-3/5 mx-auto bg-black rounded-lg bg-opacity-40 backdrop-filter backdrop-blur-sm shadow-xl border border-white border-opacity-10 transition-all duration-300 hover:shadow-2xl">
 			<h2 class="mx-auto mt-0 mb-2 text-xl font-bold text-center text-white md:text-3xl tracking-wide">
 				Weddings &amp; Rentals
@@ -236,19 +219,18 @@
 				<span class="font-bold text-green-200">panoramic view</span> of the Schoharie valley.
 			</p>
 			<div class="mx-auto text-center">
-				<a href="/rentals"
-					class="btn btn-blue inline-block px-8 py-3 text-white bg-blue-600 hover:bg-blue-700 rounded-md shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+				<a href="/rentals" class="inline-block px-8 py-3 text-white bg-green-600 hover:bg-green-700 rounded-md shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
 					Details & Info
 				</a>
 			</div>
 		</div>
 	</section>
 
-	<section class="px-6 py-10 mx-auto md:py-20 xl:px-20 bg-white">
+	<section class="py-10 px-4 md:px-6 mx-auto md:py-20 xl:px-20 bg-white">
 		<div class="max-w-7xl mx-auto">
-			<div class="grid gap-8 py-10 mx-auto md:py-10 lg:grid-cols-3">
-				<div class="bg-white p-6 rounded-md shadow-lg transform transition-all duration-300 hover:shadow-xl border-t-4 border-green-800 col-span-1">
-					<h2 class="text-2xl md:text-3xl  font-medium text-center uppercase text-green-800 mb-4">Support the Arboretum</h2>
+			<div class="grid gap-8 py-10 mx-auto md:py-10  md:grid-cols-3">
+				<div class="bg-white p-6 rounded-md shadow-lg transform transition-all duration-300 hover:shadow-xl border-t-4 border-green-800 md:col-span-1">
+					<h2 class="text-2xl md:text-3xl font-medium text-center uppercase text-green-800 mb-4">Support the Arboretum</h2>
 					<p class="mb-4 text-gray-600">
 						Your membership dollars, donations and volunteer efforts are critical to our economic
 						viability and the sustainability of our collections, grounds, and educational programs.
@@ -258,7 +240,7 @@
 						deductible to the full extent of the law.
 					</p>
 					<div class="w-full h-auto">
-						<a href="/support" class="btn btn-green inline-block px-6 py-2 text-white bg-green-700 rounded-sm hover:bg-green-900 transition-colors duration-300">Learn More</a>
+						<a href="/support" class="inline-block px-6 py-2 text-white bg-green-600 hover:bg-green-700 rounded-sm transition-colors duration-300">Learn More</a>
 					</div>
 					<!-- <h2 class="mb-2 text-lg font-semibold md:text-2xl">Take A Tour</h2>
 					<p class="text-gray-700">Take a self-paced tour of Landis from Uniguide.
@@ -274,20 +256,15 @@
 					</div>-->
 				</div>
 
-				<div class="bg-white p-6 rounded-md shadow-lg transform transition-all duration-300 hover:shadow-xl  border-t-4 border-green-800 col-span-2">
+				<div class="bg-white p-6 rounded-md shadow-lg transform transition-all duration-300 hover:shadow-xl border-t-4 border-green-800 md:col-span-2">
 					<h2 class="text-2xl md:text-3xl font-medium text-center uppercase text-green-800 mb-4">Visit Landis</h2>
 					<p class="mb-6 text-gray-600">
 						The Arboretum is open daily, dawn to dusk for hiking,
 						walking, cross country skiing and biking. Please take a moment and review
-						our <a href="/visit" class="text-blue-500 hover:text-blue-800 hover:underline">visitor
-							guidelines</a>.
+						our <a href="/visit" class="text-blue-500 hover:text-blue-800 hover:underline">visitor guidelines</a>.
 					</p>
 					<div class="overflow-hidden aspect-w-16 aspect-h-9 rounded-sm shadow-md">
-						<iframe
-							src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d108234.6969020929!2d-74.23463617655747!3d42.798198685381124!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89de86d74e56a575%3A0xac42bc5610e31de6!2s174%20Lape%20Rd%2C%20Esperance%2C%20NY%2012066!5e0!3m2!1sen!2sus!4v1632142178261!5m2!1sen!2sus"
-							style="border:0;"
-							allowfullscreen=""
-							loading="lazy">
+						<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d108234.6969020929!2d-74.23463617655747!3d42.798198685381124!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89de86d74e56a575%3A0xac42bc5610e31de6!2s174%20Lape%20Rd%2C%20Esperance%2C%20NY%2012066!5e0!3m2!1sen!2sus!4v1632142178261!5m2!1sen!2sus" style="border:0;" allowfullscreen="" loading="lazy">
 						</iframe>
 					</div>
 				</div>
@@ -315,8 +292,7 @@
 		</div>
 	</section>
 
-	<section class="px-4 py-10 sm:py-20 md:py-32"
-		style="background-image:url('/assets/images/Plants/Flowers/_1920x1569_crop_center-center_82_line/goldenrod.jpg.webp?mtime=1750967773');">
+	<section class="px-4 py-10 sm:py-20 md:py-32" style="background-image:url('/assets/images/Plants/Flowers/_1920x1569_crop_center-center_82_line/goldenrod.jpg.webp?mtime=1750967773');">
 		<div class="px-4 py-2 mx-auto bg-white border-8 border-gray-200 rounded-sm sm:w-2/3 lg:w-1/2 bg-opacity-90">
 			<h2 class="mx-auto mb-2 text-xl font-semibold text-center md:text-3xl">
 				Keep in Touch
@@ -327,8 +303,7 @@
 			<!-- BEGIN MODAL -->
 			<div x-data="{ open: false }">
 				<div class="flex items-center justify-center relative mx-auto">
-					<button class="bg-green-500 hover:bg-green-600 text-white rounded py-2 px-4 text-center transition-colors duration-300" @click="open = !open">Subscribe Now!</button>
-
+					<button class="bg-green-600 hover:bg-green-700 text-white rounded py-2 px-4 text-center transition-colors duration-300" @click="open = !open">Subscribe Now!</button>
 				</div>
 				<p class="text-sm italic text-center mt-2">As per our <a href="/privacy" class="text-blue-500 hover:text-blue-800 hover:underline">privacy policy</a>, we'll never share your information.</p>
 				<div x-show="open" x-cloak="" class="fixed inset-0 z-50 flex justify-center items-center max-w-5xl mx-auto">
@@ -384,7 +359,7 @@
 					</div>
 				{% endfor %}
 				<p class="px-4 mt-2 mb-6 text-sm text-right">
-					<a href="/news" class="btn-blue-small">All News</a>
+					<a href="/news" class="inline-flex items-center px-4 py-2 bg-green-600 text-white text-sm font-medium rounded-md shadow-sm hover:bg-green-700 transition-colors duration-300">All News</a>
 				</p>
 			</div>
 			<div>
@@ -401,9 +376,7 @@
 							{% if entry.date %}
 								<div class="flex items-center mb-2">
 									<svg xmlns="https://www.w3.org/2000/svg" class="w-4 h-4" viewbox="0 0 20 20" fill="currentColor">
-										<path fill-rule="evenodd"
-											d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
-											clip-rule="evenodd" />
+										<path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd" />
 									</svg>
 									<p class="m-0 ml-2 text-xs text-gray-500 lg:text-sm">
 										{{ entry.date | date('M j, Y') }}
@@ -430,7 +403,7 @@
 					</div>
 				{% endfor %}
 				<p class="px-4 mt-2 mb-6 text-sm text-right">
-					<a href="/events" class="btn-blue-small">All Events</a>
+					<a href="/events" class="inline-flex items-center px-4 py-2 bg-green-600 text-white text-sm font-medium rounded-md shadow-sm hover:bg-green-700 transition-colors duration-300">All Events</a>
 				</p>
 			</div>
 		</div>
