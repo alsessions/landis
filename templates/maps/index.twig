@@ -30,7 +30,7 @@
 
 
 
-	<section class="max-w-4xl min-h-screen px-4 py-10 mx-auto lg:max-w-5xl"> 
+	<section class="max-w-4xl min-h-screen px-4 py-10 mx-auto lg:max-w-5xl">
 
 		<article class="mx-auto">
 
@@ -42,8 +42,8 @@
 
 
 		<section class="px-4 mx-auto mt-10 max-w-7xl">
-			
-			<div class="grid grid-cols-1 md:grid-cols-2 md:gap-4">
+
+			<div class="grid grid-cols-1 md:grid-cols-2 md:gap-y-20 md:gap-x-6">
 
 				{% set myEntryQuery = craft.entries()
 					.section('mapItem')
@@ -51,35 +51,37 @@
 
 				{% for entry in myEntryQuery %}
 
-					<div class="flex flex-wrap md:mb-8 bg-white rounded-lg shadow-sm hover:shadow transition-shadow duration-300">
-						<div class="w-3/12 flex flex-col items-center pt-4">
+					<div class="flex bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 h-full ">
+						<div class="w-1/3 flex flex-col ">
 							{% if entry.featuredImage | length %}
 							{% for myAsset in entry.featuredImage.all() %}
-								<a href="{{ entry.url }}" class="flex flex-col">
-									<img src="{{ myAsset.url('square500') }}" class="w-32 mx-auto bg-gray-100 rounded-lg shadow-sm md:w-52 hover:opacity-90 transition-opacity duration-300">
+								<a href="{{ entry.url }}" class="flex">
+									<img src="{{ myAsset.url('square500') }}" class="w-32 md:w-40 aspect-square object-cover rounded-l-lg shadow-sm hover:opacity-90 transition-opacity duration-300">
 								</a>
 							{% endfor %}
-							
+
 							{% endif %}
 						</div>
 
-						<div class="w-9/12 pl-4 md:pl-6 py-4">
-							<h4 class="text-lg font-medium leading-tight md:text-xl mb-3">
-								{% set firstAsset = entry.featuredImage.one() %}
-								<a href="{{ firstAsset ? firstAsset.url() : '#' }}" class="text-blue-500 hover:text-blue-800 transition-colors duration-300">{{ entry.title }}</a>
-							</h4>
-							<p class="text-sm md:text-base leading-relaxed mb-3">
-								{{ entry.textMarkdown  }}
-							</p>
-							<p class="mt-2 text-sm">
-								<a href="{{ entry.resourceLink }}" class="text-white bg-blue-500 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 py-1 px-2 text-sm  rounded-sm">
+						<div class="w-2/3 pl-4 md:pl-6 pt-4  flex flex-col justify-between">
+							<div>
+								<h4 class="text-lg font-medium leading-tight md:text-xl mb-2">
+
+									<a href="{{ entry.url}}" class="text-blue-500 hover:text-blue-800 transition-colors duration-300">{{ entry.title }}</a>
+								</h4>
+								<p class="text-sm md:text-base leading-relaxed mb-2">
+									{{ entry.textMarkdown  }}
+								</p>
+							</div>
+							<p class="text-sm">
+								<a href="{{ entry.resourceLink }}" class="text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 py-1 px-2 text-sm rounded-md">
 									View/Download
 								</a>
 							</p>
 						</div>
 
 					</div>
-				
+
 			{% endfor %}
 
 			</div>
@@ -93,7 +95,7 @@
 	{% include '_partials/_footer.twig' %}
     				<script src="/js/lightgallery/lightgallery.min.js"></script>
                 				<script src="/js/lightgallery/plugins/zoom/lg-zoom.umd.js"></script>
-								
+
 									<script src="/js/lightgallery/plugins/fullscreen/lg-fullscreen.umd.js"></script>
 									<script src="/js/lightgallery/plugins/thumbnail/lg-thumbnail.umd.js"></script>
 
@@ -111,7 +113,7 @@
   actualSizeIcons: { zoomIn: 'lg-actual-size', zoomOut: 'lg-zoom-out' }
 });
 
-  
+
 
 			</script>
 </body>

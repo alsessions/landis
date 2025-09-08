@@ -1,4 +1,4 @@
-dateModified: 1757338904
+dateModified: 1757355560
 elementSources:
   Solspace\Freeform\Elements\Submission:
     -
@@ -122,6 +122,16 @@ elementSources:
         - 'field:9d1afefd-6011-4b8d-86c5-78b3b2fcb9d6' # Author
       type: native
     -
+      key: 'section:1c5b4d35-7397-4999-a4e2-aeda50aee03f' # Bird Blog
+      tableAttributes:
+        - postDate
+        - expiryDate
+        - link
+      type: native
+    -
+      key: 'section:61b46e8f-a3fa-4e30-a8ea-8b8b4125b77d' # Maps
+      type: native
+    -
       defaultSort:
         - structure
         - asc
@@ -132,13 +142,6 @@ elementSources:
         - expiryDate
         - link
         - slug
-      type: native
-    -
-      key: 'section:1c5b4d35-7397-4999-a4e2-aeda50aee03f' # Bird Blog
-      tableAttributes:
-        - postDate
-        - expiryDate
-        - link
       type: native
     -
       heading: 'Freestanding Pages'
@@ -187,6 +190,9 @@ elementSources:
       heading: 'Forms & Payments'
       type: heading
     -
+      key: 'single:4daba908-7202-457a-9467-b7ab435d9650' # Membership
+      type: native
+    -
       defaultSort:
         - title
         - asc
@@ -198,6 +204,9 @@ elementSources:
         - link
       type: native
     -
+      key: 'single:0ec10247-de60-40f9-a891-f06dc34d99d5' # Bookings
+      type: native
+    -
       defaultSort:
         - title
         - asc
@@ -207,9 +216,6 @@ elementSources:
         - postDate
         - expiryDate
         - link
-      type: native
-    -
-      key: 'single:4daba908-7202-457a-9467-b7ab435d9650' # Membership
       type: native
     -
       key: 'single:248386fe-8099-4726-908b-b085800c794a' # Site Contact
@@ -230,6 +236,7 @@ elementSources:
         - postDate
         - expiryDate
         - link
+        - section
       type: native
     -
       key: 'single:cbbedb40-2ecd-4ef9-87bf-1b090965c0b3' # News Index
@@ -247,6 +254,17 @@ elementSources:
       type: native
     -
       key: 'single:cf993c21-efc8-4c82-bbe2-000deabb04ba' # Newsletter Index
+      tableAttributes:
+        - postDate
+        - expiryDate
+        - link
+      type: native
+    -
+      defaultSort:
+        - id
+        - asc
+      disabled: false
+      key: 'single:433b6d9e-7282-4d08-aecf-76961050bbdd' # Maps Index
       tableAttributes:
         - postDate
         - expiryDate
@@ -294,9 +312,6 @@ elementSources:
       key: 'section:e16e1677-c1c6-4584-9a04-55c202f2cbf8' # Gallery
       type: native
     -
-      key: 'single:433b6d9e-7282-4d08-aecf-76961050bbdd' # Maps
-      type: native
-    -
       heading: 'Partials (embedded content)'
       type: heading
     -
@@ -323,6 +338,9 @@ elementSources:
         - link
         - 'field:ba270839-1b30-4d37-a57a-c2571fd86fa5' # PDF Image
       type: native
+    -
+      heading: ''
+      type: heading
 email:
   fromEmail: info@landisarboretum.org
   fromName: 'Landis Arboretum'
@@ -433,6 +451,7 @@ meta:
     9d00a830-216b-4f32-8860-c1eddd638719: 'Featured Image' # Featured Image
     9d1afefd-6011-4b8d-86c5-78b3b2fcb9d6: Author # Author
     9eaabe94-5978-461f-879d-c030b12da858: Title # Title
+    10e35e39-7452-4a57-8197-eaa5f8fed064: Default # Default
     12d2cbac-c1f0-4a53-a563-a9a158162cba: 'Button Link' # Button Link
     12ed2295-5836-4fca-8152-1279d8770d2f: Support # Support
     18b2da16-3aa7-4cfc-abb2-84832d2cf5f5: Number # Number
@@ -445,6 +464,7 @@ meta:
     52a61a11-339d-4463-a7d7-1b98ba3256a8: Default # Default
     53d976ba-eaea-401d-bc07-d048828c44a6: Header # Header
     60ef0d6d-98db-4d15-b7e7-a7334cbf9d9a: Events # Events
+    61b46e8f-a3fa-4e30-a8ea-8b8b4125b77d: Maps # Maps
     69b33981-0e8a-46c9-9e26-668d0ea9a5db: 'Audio Tour' # Audio Tour
     70a55079-a544-47a5-811a-a6509d86e165: 'QR Code Tours' # QR Code Tours
     70c5c096-4ae4-48cf-ba86-ddf5ddb57606: 'CTA Link' # CTA Link
@@ -454,16 +474,17 @@ meta:
     080a8953-e1e2-46e6-8872-b248d20a5273: 'Slide Image' # Slide Image
     81f4f832-7c04-42af-9192-dc125d097512: 'CTA Button Text' # CTA Button Text
     84f82d45-6199-4d0f-ac30-00f3dc140ab9: Default # Default
-    86adeda8-b420-4ce5-8c05-8e46931ebd51: Maps # Maps
+    86adeda8-b420-4ce5-8c05-8e46931ebd51: 'Maps Index' # Maps Index
     95fbc062-8ec3-4bce-b7e3-d7d24072f4d6: Default # Default
     98a02c54-0e79-435a-9e13-d3e2d6a97be6: Html # Html
     99bda947-506c-477b-8cdc-bf6ea2d0ff8d: Body # Body
     112c8fa9-b7b2-4740-8404-4a40fb17eb55: 'News Archive' # News Archive
     143f81b0-d6eb-4d09-8d8c-ccf521028653: 'square 300' # square 300
     0225b6d8-ebe9-42c0-9b48-517ce7e2901d: Heading # Heading
+    232d0659-2c1a-4294-a59a-345b78dcd1b3: 'Resource Link' # Resource Link
     298a1978-3d11-450a-b447-e48b89e9e508: 'News Index' # News Index
     351fbeb8-08ab-4123-83e1-0ab7948deb4c: Category # Category
-    433b6d9e-7282-4d08-aecf-76961050bbdd: Maps # Maps
+    433b6d9e-7282-4d08-aecf-76961050bbdd: 'Maps Index' # Maps Index
     462fb273-74f3-4570-bd84-03a9098c5e31: FAQ # FAQ
     520cd042-b924-4a07-96c2-d771903e24a8: Image # Image
     546a6d4d-a07e-4e7f-8280-1ebfc5dfba2f: Body # Body

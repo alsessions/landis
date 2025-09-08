@@ -1,21 +1,9 @@
 fieldLayouts:
-  3c42c393-b5fd-4349-8db6-c3ddd7e8efc5:
+  276d6d5e-7c29-4bac-ae53-fcec8900239a:
     tabs:
       -
         elementCondition: null
         elements:
-          -
-            elementCondition: null
-            fieldUid: 9d00a830-216b-4f32-8860-c1eddd638719 # Featured Image
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: f7690d2c-83e4-44d1-9e39-fb4ff3397276
-            userCondition: null
-            warning: null
-            width: 100
           -
             autocapitalize: true
             autocomplete: false
@@ -39,31 +27,19 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: f78ff8ec-22da-4013-8754-8889f07c9fe6
+            uid: ac9e967b-5298-4c02-9d54-e6b8688d848f
             userCondition: null
             warning: null
             width: 100
           -
             elementCondition: null
-            fieldUid: 0eb73179-957c-4167-af47-81d8e8c339fb # Subtitle
+            fieldUid: 9d00a830-216b-4f32-8860-c1eddd638719 # Featured Image
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: df63ba10-6324-4818-aeaa-6301b1faaaa8
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            elementCondition: null
-            fieldUid: 76ed9077-0f92-4dc0-b3ff-c772483f67ec # Body
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: d1f464e1-0e6d-4353-bc56-6311584db0a7
+            uid: e7cee913-b0e8-47e2-bc53-d3f6852bcfe6
             userCondition: null
             warning: null
             width: 100
@@ -75,21 +51,33 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: a2faa93e-edd6-4ec6-b985-61892997a816
+            uid: 730e6725-0e21-4cc3-a931-549c9f4cca2e
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 76ed9077-0f92-4dc0-b3ff-c772483f67ec # Body
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 6f10b940-dc15-4def-8620-0c3ddb1c5026
             userCondition: null
             warning: null
             width: 100
         name: Content
-        uid: ba68e361-b34a-48c2-a58c-315fb7ab6fe4
+        uid: 6e0436cd-3558-4eb3-984a-ecf0ff46fd79
         userCondition: null
-handle: maps
+handle: default
 hasTitleField: true
-name: 'Maps Index'
-section: 433b6d9e-7282-4d08-aecf-76961050bbdd # Maps Index
+name: Default
+section: 61b46e8f-a3fa-4e30-a8ea-8b8b4125b77d # Maps
 showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
 sortOrder: 1
-titleFormat: '{section.name|raw}'
+titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
