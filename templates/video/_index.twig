@@ -2,11 +2,11 @@
 
 <body class="ltr">
 	{% include '_partials/_header.twig' %}
-	
+
 	{% paginate craft.entries.section('video').limit(12) as pageInfo, pageEntries %}
 
 	{# Fetch the entries #}
-	
+
 
 <section class="max-w-7xl px-4 mx-auto mt-10 min-h-screen">
 <h1 class="mb-12">Video from Landis</h1>
@@ -14,7 +14,7 @@
     <div class="grid grid-cols-1 md:grid-cols-3 mx-auto md:gap-4 my-10">
 		{% for entry in pageEntries %}
         	<div class="">
-		
+
 
 			<div class="aspect-w-16 aspect-h-9 mt-2">
 				{{ entry.embedCode | raw }}
@@ -25,15 +25,12 @@
 			</div>
 	</div>
 		{% endfor %}
-	
+
 </div>
 
-<div class="flex justify-between mt-10">
-	<p class="text-base px-4">
-		{% if pageInfo.prevUrl %}<a href="{{ pageInfo.prevUrl }}"
-			class="text-blue-800 font-semibold">&larr; Previous Page</a>{% endif %}</p>
-	<p class="text-base px-4">{% if pageInfo.nextUrl %}<a href="{{ pageInfo.nextUrl }}"
-			class="text-blue-800 font-semibold">Next Page &rarr;</a>{% endif %}</p>
+<div class="flex justify-between max-w-7xl mx-auto my-8">
+	<div>{% if pageInfo.prevUrl %}<a href="{{ pageInfo.prevUrl }}" class="inline-flex items-center px-4 py-2 bg-green-600 text-white text-sm font-medium rounded-md shadow-sm hover:bg-green-700 transition-colors duration-300">&larr; Previous Page</a>{% endif %}</div>
+	<div>{% if pageInfo.nextUrl %}<a href="{{ pageInfo.nextUrl }}" class="inline-flex items-center px-4 py-2 bg-green-600 text-white text-sm font-medium rounded-md shadow-sm hover:bg-green-700 transition-colors duration-300">Next Page &rarr;</a>{% endif %}</div>
 </div>
     </section>
 	{% include '_partials/_footer' %}
