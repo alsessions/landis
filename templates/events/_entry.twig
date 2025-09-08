@@ -33,6 +33,9 @@
                     {{ entry.donation | nl2br }}
                 </p>
             {% endif %}
+
+
+
             <hr class="mb-6 w-4/5 mx-auto text-black">
             {% if entry.timer %}
             <div>
@@ -64,6 +67,7 @@
                     {{ entry.paypalButtonCode | raw }}
                 </div>
             {% endif %}
+                            {% include '_partials/_share.twig' %}
         </div>
 
         <div class="pt-12">
@@ -79,9 +83,7 @@
         </div>
     </section>
 
-    <div class="mx-auto max-w-7xl px-4">
-        {% include '_partials/_share.twig' %}
-    </div>
+
 
     <section class="my-10 max-w-7xl mx-auto clear-both">
         <div class="flex justify-between flex-wrap px-4">
