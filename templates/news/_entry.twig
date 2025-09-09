@@ -37,7 +37,7 @@
                         <span class="hidden mr-1 md:inline"> Click </span>
                         <span class="mr-1 md:hidden"> Tap </span> to view full size
                     </p>
-                    <div class="grid clear-both max-w-6xl grid-cols-2 gap-4 py-5 mx-auto md:grid-cols-3">
+                    <div id="lightgallery" class="grid clear-both max-w-6xl grid-cols-2 gap-4 py-5 mx-auto md:grid-cols-3">
                         {% for myAsset in entry.pageImages %}
                             <a href="{{ myAsset.url }}" class="block overflow-hidden rounded-lg shadow-lg" data-lg-size="{{ myAsset.width }}-{{ myAsset.height }}" data-src="{{ myAsset.url }}">
                                 <img src="{{ myAsset.url }}" alt="{{ myAsset.title }}" class="object-cover w-full h-full transition-transform duration-300 transform hover:scale-105" />
@@ -144,19 +144,24 @@
     <script src="/js/lightgallery/plugins/fullscreen/lg-fullscreen.umd.js"></script>
     <script src="/js/lightgallery/plugins/thumbnail/lg-thumbnail.umd.js"></script>
     <script type="text/javascript">
-        lightGallery(document.getElementById("lightgallery"), {
-            speed: 500,
-            plugins: [lgFullscreen],
-            showZoomInOutIcons: false,
-            actualSize: true,
-            zoom: true,
-            thumbMargin: 20,
-            thumbHeight: 120,
-            thumbWidth: 120,
-            download: true,
-            actualSizeIcons: {
-                zoomIn: 'lg-actual-size',
-                zoomOut: 'lg-zoom-out'
+        document.addEventListener('DOMContentLoaded', function() {
+            const galleryElement = document.getElementById('lightgallery');
+            if (galleryElement) {
+                lightGallery(galleryElement, {
+                    speed: 500,
+                    plugins: [lgZoom, lgFullscreen, lgThumbnail],
+                    showZoomInOutIcons: false,
+                    actualSize: true,
+                    zoom: true,
+                    thumbMargin: 20,
+                    thumbHeight: 120,
+                    thumbWidth: 120,
+                    download: true,
+                    actualSizeIcons: {
+                        zoomIn: 'lg-actual-size',
+                        zoomOut: 'lg-zoom-out'
+                    }
+                });
             }
         });
     </script>
