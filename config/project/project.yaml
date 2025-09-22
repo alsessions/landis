@@ -1,4 +1,4 @@
-dateModified: 1757363381
+dateModified: 1758041997
 elementSources:
   Solspace\Freeform\Elements\Submission:
     -
@@ -604,7 +604,7 @@ plugins:
     edition: pro
     enabled: true
     licenseKey: OCU2AH2L5VOWK3HV2HUJV760
-    schemaVersion: 5.6.7
+    schemaVersion: 5.7.0
     settings:
       alertNotificationRecipients: fultonchain@gmail.com
       allowBuilderTemplateCreation: true
@@ -621,6 +621,7 @@ plugins:
       bypassSpamCheckOnLoggedInUsers: '1'
       clientDigestFrequency: '5'
       clientDigestRecipients: info@landisarboretum.org
+      csrfRefresh: none
       defaultFromEmail: '{{ craft.app.projectConfig.get(''email.fromEmail'') }}'
       defaultFromName: '{{ craft.app.projectConfig.get(''email.fromName'') }}'
       defaultView: dashboard
@@ -889,6 +890,7 @@ plugins:
       digestOnlyOnProduction: '1'
       digestRecipients: info@landisarboretum.org
       displayFeed: '1'
+      emailNotificationToolbarConfiguration: 'blocks bold italic underline forecolor backcolor | align numlist bullist | link image table | removeformat code'
       emailTemplateDefault: database
       emailTemplateDirectory: null
       emailTemplateMethod: global
@@ -903,7 +905,7 @@ plugins:
       formTemplateDirectory: null
       formattingTemplate: tailwind-3/index.twig
       loggingLevel: error
-      minimumSubmitTime: '10'
+      minimumSubmitTime: '5'
       pluginName: ''
       purgableSpamAgeInDays: '0'
       purgableSubmissionAgeInDays: null
