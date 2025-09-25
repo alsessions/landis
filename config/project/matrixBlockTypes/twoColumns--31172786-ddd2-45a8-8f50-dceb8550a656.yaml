@@ -44,7 +44,6 @@ fields:
     settings:
       availableTransforms: '*'
       availableVolumes: '*'
-      characterLimit: null
       ckeConfig: a0e368cb-9d8f-427e-bb9a-fe91b8848733 # Less Simple
       columnType: text
       defaultTransform: null
@@ -70,7 +69,6 @@ fields:
     settings:
       availableTransforms: '*'
       availableVolumes: '*'
-      characterLimit: null
       ckeConfig: a0e368cb-9d8f-427e-bb9a-fe91b8848733 # Less Simple
       columnType: text
       defaultTransform: null

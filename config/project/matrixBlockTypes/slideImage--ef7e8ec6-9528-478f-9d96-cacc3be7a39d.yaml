@@ -110,7 +110,6 @@ fields:
     settings:
       availableTransforms: '*'
       availableVolumes: '*'
-      characterLimit: null
       ckeConfig: 1a3c75ec-5449-408a-90b3-92144c5b8ae1 # Simple
       columnType: text
       defaultTransform: null
@@ -130,7 +129,7 @@ fields:
     contentColumnType: text
     fieldGroup: null
     handle: ctaLink
-    instructions: 'If desired a call to action button. Full url only or path to page, e.g: "/news/someitem".'
+    instructions: 'If desired ,a call to action button. Full url only.'
     name: 'CTA Link'
     searchable: false
     settings:

@@ -67,25 +67,13 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-          -
-            elementCondition: null
-            fieldUid: 232d0659-2c1a-4294-a59a-345b78dcd1b3 # Resource Link
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: a2faa93e-edd6-4ec6-b985-61892997a816
-            userCondition: null
-            warning: null
-            width: 100
         name: Content
         uid: ba68e361-b34a-48c2-a58c-315fb7ab6fe4
         userCondition: null
 handle: maps
 hasTitleField: true
-name: 'Maps Index'
-section: 433b6d9e-7282-4d08-aecf-76961050bbdd # Maps Index
+name: Maps
+section: 433b6d9e-7282-4d08-aecf-76961050bbdd # Maps
 showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
