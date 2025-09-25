@@ -1,0 +1,14 @@
+columnSuffix: jggeahun
+contentColumnType: string(255)
+fieldGroup: c060adfd-ad0d-44ee-9598-933e4f598995 # Common
+handle: resourceLink
+instructions: null
+name: 'Resource Link'
+searchable: false
+settings:
+  maxLength: 255
+  types:
+    - url
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Url

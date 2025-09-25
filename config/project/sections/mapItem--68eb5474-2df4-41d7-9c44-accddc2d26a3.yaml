@@ -1,12 +1,15 @@
 defaultPlacement: end
 enableVersioning: true
-handle: maps
-name: Maps
+handle: mapItem
+name: 'Map Item'
 propagationMethod: all
 siteSettings:
   ccdf06db-63d7-465e-8ec1-7ae2b8a1ad53: # Landis Arboretum
     enabledByDefault: true
     hasUrls: true
-    template: maps2.twig
-    uriFormat: maps2
-type: single
+    template: maps/_entry.twig
+    uriFormat: 'maps/{slug}'
+structure:
+  maxLevels: null
+  uid: d0126bb9-f203-45b4-8fd6-08d5484108c7
+type: structure
