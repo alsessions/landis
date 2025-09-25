@@ -14,6 +14,10 @@ git pull origin "$BRANCH"
 
 # Install or update Composer dependencies.
 # The "--no-dev" flag ensures only production dependencies are installed.
+echo "Deleting composer.lock file and vendor directory..."
+rm -f composer.lock
+rm -rf vendor
+
 echo "Installing Composer dependencies..."
 composer install --no-interaction --no-progress --no-dev
 
