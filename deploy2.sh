@@ -12,11 +12,14 @@ echo "--- Starting Git & Craft CMS deployment ---"
 echo "Pulling latest code from Git branch '$BRANCH'..."
 git pull origin "$BRANCH"
 
-# Install or update Composer dependencies.
-# The "--no-dev" flag ensures only production dependencies are installed.
+# Delete vendor and composer.lock to assure purity.
+
 echo "Deleting composer.lock file and vendor directory..."
 rm -f composer.lock
 rm -rf vendor
+
+# Install or update Composer dependencies.
+# The "--no-dev" flag ensures only production dependencies are installed.
 
 echo "Installing Composer dependencies..."
 composer install --no-interaction --no-progress --no-dev
