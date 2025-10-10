@@ -6,8 +6,8 @@
 /.env.local
 /.env.production
 
-/.deploy.sh
-/.deploy2.sh
+.deploy.sh
+.deploy2.sh
 
 # COMPOSER
 /vendor
