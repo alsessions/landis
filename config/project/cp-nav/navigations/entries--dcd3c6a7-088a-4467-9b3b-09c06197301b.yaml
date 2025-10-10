@@ -8,10 +8,10 @@ level: 1
 newWindow: false
 parent: null
 prevLabel: Entries
-prevLevel: null
+prevLevel: 1
 prevParent: null
 prevUrl: entries
-sortOrder: 1
+sortOrder: 2
 subnavBehaviour: null
 type: craft
 url: entries

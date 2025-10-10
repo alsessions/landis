@@ -1,4 +1,4 @@
-dateModified: 1758826949
+dateModified: 1760101450
 elementSources:
   Solspace\Freeform\Elements\Submission:
     -
@@ -573,11 +573,7 @@ plugins:
     enabled: true
     schemaVersion: 2.0.11
     settings:
-      originalNavHash:
-        __assoc__:
-          -
-            - 6c562a2c-e195-47dc-a6b1-be1e91e020ab
-            - W3sibGFiZWwiOiJEYXNoYm9hcmQiLCJ1cmwiOiJkYXNoYm9hcmQiLCJmb250SWNvbiI6ImdhdWdlIn0seyJsYWJlbCI6IkVudHJpZXMiLCJ1cmwiOiJlbnRyaWVzIiwiZm9udEljb24iOiJzZWN0aW9uIn0seyJsYWJlbCI6IkNhdGVnb3JpZXMiLCJ1cmwiOiJjYXRlZ29yaWVzIiwiZm9udEljb24iOiJjYXRlZ29yaWVzIn0seyJsYWJlbCI6IkFzc2V0cyIsInVybCI6ImFzc2V0cyIsImZvbnRJY29uIjoiYXNzZXRzIn0seyJsYWJlbCI6IkZyZWVmb3JtIiwidXJsIjoiZnJlZWZvcm0iLCJpY29uIjoiL3Zhci93d3cvbGFuZGlzYXJib3JldHVtLm9yZy92ZW5kb3Ivc29sc3BhY2UvY3JhZnQtZnJlZWZvcm0vcGFja2FnZXMvcGx1Z2luL3NyYy9pY29uLW1hc2suc3ZnIiwiYmFkZ2VDb3VudCI6NCwic3VibmF2Ijp7ImRhc2hib2FyZCI6eyJsYWJlbCI6IkRhc2hib2FyZCIsInVybCI6ImZyZWVmb3JtL2Rhc2hib2FyZCJ9LCJzdWJtaXNzaW9ucyI6eyJsYWJlbCI6IlN1Ym1pc3Npb25zIiwidXJsIjoiZnJlZWZvcm0vc3VibWlzc2lvbnMifSwic3BhbSI6eyJsYWJlbCI6IlNwYW0iLCJ1cmwiOiJmcmVlZm9ybS9zcGFtIiwiYmFkZ2VDb3VudCI6MX0sImZvcm1zIjp7ImxhYmVsIjoiRm9ybXMiLCJ1cmwiOiJmcmVlZm9ybS9mb3JtcyJ9LCJmaWVsZHMiOnsibGFiZWwiOiJGaWVsZHMiLCJ1cmwiOiJmcmVlZm9ybS9maWVsZHMifSwibm90aWZpY2F0aW9ucyI6eyJsYWJlbCI6IkVtYWlsIE5vdGlmaWNhdGlvbnMiLCJ1cmwiOiJmcmVlZm9ybS9ub3RpZmljYXRpb25zIn0sImV4cG9ydFByb2ZpbGVzIjp7ImxhYmVsIjoiRXhwb3J0IiwidXJsIjoiZnJlZWZvcm0vZXhwb3J0LXByb2ZpbGVzIn0sInNldHRpbmdzIjp7ImxhYmVsIjoiU2V0dGluZ3MiLCJ1cmwiOiJmcmVlZm9ybS9zZXR0aW5ncyJ9LCJyZXNvdXJjZXMiOnsibGFiZWwiOiJSZXNvdXJjZXMiLCJ1cmwiOiJmcmVlZm9ybS9yZXNvdXJjZXMifX19LHsibGFiZWwiOiJTRU9tYXRpYyIsInVybCI6InNlb21hdGljIiwiaWNvbiI6Ii92YXIvd3d3L2xhbmRpc2FyYm9yZXR1bS5vcmcvdmVuZG9yL255c3R1ZGlvMTA3L2NyYWZ0LXNlb21hdGljL3NyYy9pY29uLW1hc2suc3ZnIiwic3VibmF2Ijp7ImRhc2hib2FyZCI6eyJsYWJlbCI6IkRhc2hib2FyZCIsInVybCI6InNlb21hdGljL2Rhc2hib2FyZCJ9LCJnbG9iYWwiOnsibGFiZWwiOiJHbG9iYWwgU0VPIiwidXJsIjoic2VvbWF0aWMvZ2xvYmFsL2dlbmVyYWwifSwiY29udGVudCI6eyJsYWJlbCI6IkNvbnRlbnQgU0VPIiwidXJsIjoic2VvbWF0aWMvY29udGVudCJ9LCJzaXRlIjp7ImxhYmVsIjoiU2l0ZSBTZXR0aW5ncyIsInVybCI6InNlb21hdGljL3NpdGUvaWRlbnRpdHkifSwidHJhY2tpbmciOnsibGFiZWwiOiJUcmFja2luZyBTY3JpcHRzIiwidXJsIjoic2VvbWF0aWMvdHJhY2tpbmcvZ3RhZyJ9LCJwbHVnaW4iOnsibGFiZWwiOiJQbHVnaW4gU2V0dGluZ3MiLCJ1cmwiOiJzZW9tYXRpYy9wbHVnaW4ifX19LHsidXJsIjoidXRpbGl0aWVzIiwibGFiZWwiOiJVdGlsaXRpZXMiLCJmb250SWNvbiI6InRvb2wiLCJiYWRnZUNvdW50IjoyfSx7InVybCI6InNldHRpbmdzIiwibGFiZWwiOiJTZXR0aW5ncyIsImZvbnRJY29uIjoic2V0dGluZ3MifSx7InVybCI6InBsdWdpbi1zdG9yZSIsImxhYmVsIjoiUGx1Z2luIFN0b3JlIiwiZm9udEljb24iOiJwbHVnaW4ifV0=
+      defaultSubnavBehaviour: default
   expanded-singles:
     edition: standard
     enabled: true
@@ -603,6 +599,7 @@ plugins:
       bypassSpamCheckOnLoggedInUsers: '1'
       clientDigestFrequency: '5'
       clientDigestRecipients: info@landisarboretum.org
+      csrfRefresh: none
       defaultFromEmail: '{{ craft.app.projectConfig.get(''email.fromEmail'') }}'
       defaultFromName: '{{ craft.app.projectConfig.get(''email.fromName'') }}'
       defaultView: dashboard
@@ -871,6 +868,7 @@ plugins:
       digestOnlyOnProduction: '1'
       digestRecipients: info@landisarboretum.org
       displayFeed: '1'
+      emailNotificationToolbarConfiguration: 'blocks bold italic underline forecolor backcolor | align numlist bullist | link image table | removeformat code'
       emailTemplateDefault: database
       emailTemplateDirectory: null
       emailTemplateMethod: global
@@ -885,7 +883,7 @@ plugins:
       formTemplateDirectory: null
       formattingTemplate: tailwind-3/index.twig
       loggingLevel: error
-      minimumSubmitTime: '10'
+      minimumSubmitTime: '5'
       pluginName: ''
       purgableSpamAgeInDays: '0'
       purgableSubmissionAgeInDays: null

@@ -6,12 +6,12 @@ icon: null
 layout: db05d377-be2b-4a96-a920-7666d07afe21 # Default
 level: 2
 newWindow: false
-parent: 067cd2ad-9708-45d6-99bc-a6f369068259
+parent: 42f60538-2194-4b64-b3ae-ae1aa9890cb4
 prevLabel: 'Import / Export'
 prevLevel: 2
-prevParent: 067cd2ad-9708-45d6-99bc-a6f369068259
+prevParent: 42f60538-2194-4b64-b3ae-ae1aa9890cb4
 prevUrl: freeform/export/profiles
-sortOrder: 0
+sortOrder: 11
 subnavBehaviour: null
-type: null
+type: plugin
 url: freeform/export/profiles

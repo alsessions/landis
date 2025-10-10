@@ -1,17 +1,17 @@
-currLabel: Categories
+currLabel: 'Plugin Store'
 customIcon: null
 enabled: true
-handle: categories
-icon: categories
+handle: plugin-store
+icon: plugin
 layout: db05d377-be2b-4a96-a920-7666d07afe21 # Default
 level: 1
 newWindow: false
 parent: null
-prevLabel: Categories
-prevLevel: null
+prevLabel: 'Plugin Store'
+prevLevel: 1
 prevParent: null
-prevUrl: categories
-sortOrder: 2
+prevUrl: plugin-store
+sortOrder: 23
 subnavBehaviour: null
 type: craft
-url: categories
+url: plugin-store

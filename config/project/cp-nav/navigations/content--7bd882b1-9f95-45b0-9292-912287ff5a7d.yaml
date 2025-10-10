@@ -1,0 +1,17 @@
+currLabel: 'Content SEO'
+customIcon: null
+enabled: true
+handle: content
+icon: null
+layout: db05d377-be2b-4a96-a920-7666d07afe21 # Default
+level: 2
+newWindow: false
+parent: 264c781c-283f-4445-9041-51491c928fbb
+prevLabel: 'Content SEO'
+prevLevel: 2
+prevParent: 264c781c-283f-4445-9041-51491c928fbb
+prevUrl: seomatic/content
+sortOrder: 16
+subnavBehaviour: null
+type: plugin
+url: seomatic/content

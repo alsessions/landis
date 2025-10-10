@@ -2,16 +2,16 @@ currLabel: SEOmatic
 customIcon: null
 enabled: true
 handle: seomatic
-icon: /var/www/landis/vendor/nystudio107/craft-seomatic/src/icon-mask.svg
+icon: /var/www/html/vendor/nystudio107/craft-seomatic/src/icon-mask.svg
 layout: db05d377-be2b-4a96-a920-7666d07afe21 # Default
 level: 1
 newWindow: false
 parent: null
 prevLabel: SEOmatic
-prevLevel: null
+prevLevel: 1
 prevParent: null
 prevUrl: seomatic
-sortOrder: 6
+sortOrder: 13
 subnavBehaviour: null
 type: plugin
 url: seomatic

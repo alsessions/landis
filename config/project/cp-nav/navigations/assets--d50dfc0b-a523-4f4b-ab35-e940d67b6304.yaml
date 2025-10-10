@@ -1,17 +1,17 @@
-currLabel: Utilities
+currLabel: Assets
 customIcon: null
 enabled: true
-handle: utilities
-icon: tool
+handle: assets
+icon: asset
 layout: db05d377-be2b-4a96-a920-7666d07afe21 # Default
 level: 1
 newWindow: false
 parent: null
-prevLabel: Utilities
-prevLevel: null
+prevLabel: Assets
+prevLevel: 1
 prevParent: null
-prevUrl: utilities
-sortOrder: 7
+prevUrl: assets
+sortOrder: 4
 subnavBehaviour: null
 type: craft
-url: utilities
+url: assets
