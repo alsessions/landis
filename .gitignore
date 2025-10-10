@@ -6,6 +6,8 @@
 /.env.local
 /.env.production
 
+/.deploy.sh
+/.deploy2.sh
 
 # COMPOSER
 /vendor
@@ -50,5 +52,3 @@ dbdump*
 Thumbs.db
 .php_cs.cache
 __MACOSX
-
-
