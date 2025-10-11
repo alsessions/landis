@@ -110,6 +110,7 @@ fields:
     settings:
       availableTransforms: '*'
       availableVolumes: '*'
+      characterLimit: null
       ckeConfig: 1a3c75ec-5449-408a-90b3-92144c5b8ae1 # Simple
       columnType: text
       defaultTransform: null
