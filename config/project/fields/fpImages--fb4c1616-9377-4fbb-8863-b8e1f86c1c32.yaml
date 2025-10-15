@@ -1,39 +1,51 @@
 columnSuffix: uzbypkgr
-contentColumnType: text
+contentColumnType: string
 fieldGroup: c060adfd-ad0d-44ee-9598-933e4f598995 # Common
 handle: fpImages
 instructions: null
 name: 'FP Images'
 searchable: false
 settings:
-  displayDominantColorPalette: false
-  displayLazyLoadPlaceholderImages: false
-  displayOptimizedImageVariants: true
-  variants:
-    -
-      __assoc__:
+  errorMessage: 'Component class ''nystudio107\imageoptimize\fields\OptimizedImages'' belongs to a disabled plugin (ImageOptimize).'
+  expectedType: nystudio107\imageoptimize\fields\OptimizedImages
+  settings:
+    __assoc__:
+      -
+        - displayDominantColorPalette
+        - ''
+      -
+        - displayLazyLoadPlaceholderImages
+        - ''
+      -
+        - displayOptimizedImageVariants
+        - '1'
+      -
+        - variants
         -
-          - width
-          - '576'
-        -
-          - useAspectRatio
-          - '1'
-        -
-          - aspectRatioX
-          - '4'
-        -
-          - aspectRatioY
-          - '3'
-        -
-          - retinaSizes
           -
-            - '1'
-        -
-          - quality
-          - '82'
-        -
-          - format
-          - jpg
+            __assoc__:
+              -
+                - width
+                - '576'
+              -
+                - useAspectRatio
+                - '1'
+              -
+                - aspectRatioX
+                - '4'
+              -
+                - aspectRatioY
+                - '3'
+              -
+                - retinaSizes
+                -
+                  - '1'
+              -
+                - quality
+                - '82'
+              -
+                - format
+                - jpg
 translationKeyFormat: null
 translationMethod: none
-type: nystudio107\imageoptimize\fields\OptimizedImages
+type: craft\fields\MissingField
