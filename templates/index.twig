@@ -7,7 +7,7 @@
 	<title>Landis Arboretum</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
 	<meta name="referrer" content="origin-when-cross-origin" />
-	<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"></script>
+	<script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 	<script>
 		// Alpine.js v2 component initialization
 		function countdownTimer(targetDate) {
@@ -292,7 +292,7 @@
 		</div>
 	</section>
 
-	<section class="px-4 py-10 sm:py-20 md:py-32" style="background-image:url('/assets/images/Plants/Flowers/_1920x1569_crop_center-center_82_line/goldenrod.jpg.webp?mtime=1750967773');">
+	<section x-data="{ open: false }" class="px-4 py-10 sm:py-20 md:py-32" style="background-image:url('/assets/images/Plants/Flowers/_1920x1569_crop_center-center_82_line/goldenrod.jpg.webp?mtime=1750967773');">
 		<div class="px-4 py-2 mx-auto bg-white border-8 border-gray-200 rounded-sm sm:w-2/3 lg:w-1/2 bg-opacity-90">
 			<h2 class="mx-auto mb-2 text-xl font-semibold text-center md:text-3xl">
 				Keep in Touch
@@ -301,17 +301,31 @@
 				Subscribe to our quarterly email newsletter<br>and never miss a thing.
 			</p>
 			<!-- BEGIN MODAL -->
-			<div x-data="{ open: false }">
+			<div>
 				<div class="flex items-center justify-center relative mx-auto">
-					<button class="bg-green-600 hover:bg-green-700 text-white rounded py-2 px-4 text-center transition-colors duration-300" @click="open = !open">Subscribe Now!</button>
+					<button type="button" class="bg-green-600 hover:bg-green-700 text-white rounded py-2 px-4 text-center transition-colors duration-300" @click.stop="open = true">Subscribe Now!</button>
 				</div>
-				<p class="text-sm italic text-center mt-2">As per our <a href="/privacy" class="text-blue-500 hover:text-blue-800 hover:underline">privacy policy</a>, we'll never share your information.</p>
-				<div x-show="open" x-cloak="" class="fixed inset-0 z-50 flex justify-center items-center max-w-5xl mx-auto">
-					<div class="bg-green-300 rounded shadow-lg p-8 relative">
+
+				<div x-show="open" x-cloak x-transition.opacity x-transition:enter="transition ease-out duration-150" x-transition:leave="transition ease-in duration-100" class="fixed inset-0 z-[1000] flex items-center justify-center bg-black/50" aria-hidden="false">
+					<div x-transition.scale.opacity class="bg-white rounded-lg shadow-lg w-full max-w-xl p-4 sm:p-6 md:p-8 mx-4 relative" @mousedown.outside="open = false" @click.stop @keydown.escape.window="open = false" role="dialog" aria-modal="true">
 						<button class="absolute right-0 text-xl top-0 px-3 py-1" @click="open = false">x</button>
 						<!-- Begin Constant Contact Inline Form Code -->
-						<div class="ctct-inline-form" data-form-id="ee8156e7-8d1f-4ab2-9f63-9623bc04d66a"></div>
-						<!-- End Constant Contact Inline Form Code -->
+<!--
+<div class="ctct-inline-form" data-form-id="ee8156e7-8d1f-4ab2-9f63-9623bc04d66a"></div>
+<script id="signupScript" src="https://static.ctctcdn.com/js/signup-form-widget/current/signup-form-widget.min.js" async defer></script>
+-->
+<form class="space-y-4" @submit.prevent>
+  <div>
+    <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+    <input type="text" id="name" name="name" class="mt-1 block w-full rounded-md border-gray-300 focus:border-green-600 focus:ring-green-600" placeholder="Your name">
+  </div>
+  <div>
+    <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+    <input type="email" id="email" name="email" required class="mt-1 block w-full rounded-md border-gray-300 focus:border-green-600 focus:ring-green-600" placeholder="you@example.com">
+  </div>
+  <button type="submit" class="w-full bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-4 rounded transition-colors duration-300">Subscribe</button>
+</form>
+<!-- End Constant Contact Inline Form Code -->
 					</div>
 				</div>
 			</div>
@@ -409,7 +423,7 @@
 		</div>
 	</section>
 
-	{% include '_partials/_footer.twig' %}
+	{% include '_partials/_footer.twig'  %}
 </body>
 
 </html>

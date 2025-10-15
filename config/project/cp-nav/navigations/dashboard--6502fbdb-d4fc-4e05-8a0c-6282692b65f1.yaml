@@ -8,10 +8,10 @@ level: 1
 newWindow: false
 parent: null
 prevLabel: Dashboard
-prevLevel: 1
+prevLevel: null
 prevParent: null
 prevUrl: dashboard
-sortOrder: 1
+sortOrder: 0
 subnavBehaviour: null
 type: craft
 url: dashboard

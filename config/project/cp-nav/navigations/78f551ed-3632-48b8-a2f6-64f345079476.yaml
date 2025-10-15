@@ -1,17 +1,17 @@
-currLabel: Utilities
+currLabel: 'Plugin Store'
 customIcon: null
 enabled: true
-handle: utilities
-icon: tool
+handle: plugin-store
+icon: plugin
 layout: db05d377-be2b-4a96-a920-7666d07afe21 # Default
 level: 1
 newWindow: false
 parent: null
-prevLabel: Utilities
-prevLevel: 1
+prevLabel: 'Plugin Store'
+prevLevel: null
 prevParent: null
-prevUrl: utilities
-sortOrder: 21
+prevUrl: plugin-store
+sortOrder: 9
 subnavBehaviour: null
 type: craft
-url: utilities
+url: plugin-store

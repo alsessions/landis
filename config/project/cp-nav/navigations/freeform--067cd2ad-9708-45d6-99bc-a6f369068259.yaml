@@ -2,13 +2,13 @@ currLabel: Freeform
 customIcon: null
 enabled: true
 handle: freeform
-icon: /var/www/html/vendor/solspace/craft-freeform/packages/plugin/src/icon-mask.svg
+icon: /var/www/landis/vendor/solspace/craft-freeform/packages/plugin/src/icon-mask.svg
 layout: db05d377-be2b-4a96-a920-7666d07afe21 # Default
 level: 1
 newWindow: false
 parent: null
 prevLabel: Freeform
-prevLevel: 1
+prevLevel: null
 prevParent: null
 prevUrl: freeform
 sortOrder: 5

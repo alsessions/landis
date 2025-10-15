@@ -38,10 +38,10 @@
 
         <nav
             :class="{'flex': open, 'hidden': !open}"
-            class="flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row">
+            class="flex-col flex-grow pb-4 md:pb-0 md:flex md:justify-end md:flex-row">
 
             <div
-                @click.away="open = false"
+                @click.outside="open = false"
                 class="relative"
                 x-data="{ open: false }"
                 @mouseenter="window.innerWidth >= 768 && (open = true)"
@@ -122,8 +122,8 @@
                             href="/faq">
                             FAQ
                         </a>
-                    
-                      
+
+
                         <a
                             class="block px-4 py-2 mt-2 bg-transparent md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
                             href="/sales">
@@ -135,15 +135,15 @@
                         href="/scouting">
                         Scouting at Landis
                     </a>
-                     
-                      
+
+
 
                     </div>
                 </div>
             </div>
 
             <div
-                @click.away="open = false"
+                @click.outside="open = false"
                 class="relative"
                 x-data="{ open: false }"
                 @mouseenter="window.innerWidth >= 768 && (open = true)"
@@ -240,7 +240,7 @@
 
 
              <div
-                @click.away="open = false"
+                @click.outside="open = false"
                 class="relative"
                 x-data="{ open: false }"
                 @mouseenter="window.innerWidth >= 768 && (open = true)"
@@ -288,7 +288,7 @@
                             href="/news">
                             News From Landis
                         </a>
-                          
+
                           </a>
                             <a
                             class="block px-4 py-2 mt-2 bg-transparent md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
@@ -304,7 +304,7 @@
                 href="/rentals">
                 Weddings &amp; Rentals
             </a>
-      
+
             <a
                 class="py-2 pr-2 mt-2 font-semibold text-green-700 uppercase bg-transparent md:pl-2 md:mt-0 hover:text-gray-400 focus:text-gray-400 focus:outline-none focus:shadow-outline"
                 href="/visit">
@@ -316,7 +316,7 @@
                 Contact Us
             </a>
             <div
-                @click.away="open = false"
+                @click.outside="open = false"
                 class="relative"
                 x-data="{ open: false }"
                 @mouseenter="window.innerWidth >= 768 && (open = true)"

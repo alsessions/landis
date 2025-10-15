@@ -1,17 +1,17 @@
-currLabel: Settings
+currLabel: 'Clear Caches'
 customIcon: null
 enabled: true
-handle: settings
-icon: settings
+handle: mmikkel/cpclearcache
+icon: trash
 layout: db05d377-be2b-4a96-a920-7666d07afe21 # Default
 level: 1
 newWindow: false
 parent: null
-prevLabel: Settings
+prevLabel: 'Clear Caches'
 prevLevel: 1
 prevParent: null
-prevUrl: settings
-sortOrder: 22
+prevUrl: mmikkel/cpclearcache
+sortOrder: 10
 subnavBehaviour: null
-type: craft
-url: settings
+type: null
+url: mmikkel/cpclearcache

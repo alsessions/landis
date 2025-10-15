@@ -1,4 +1,4 @@
-dateModified: 1760215642
+dateModified: 1760546534
 elementSources:
   Solspace\Freeform\Elements\Submission:
     -
@@ -294,7 +294,7 @@ elementSources:
       key: 'section:e16e1677-c1c6-4584-9a04-55c202f2cbf8' # Gallery
       type: native
     -
-      key: 'single:433b6d9e-7282-4d08-aecf-76961050bbdd'
+      key: 'single:433b6d9e-7282-4d08-aecf-76961050bbdd' # Maps
       type: native
     -
       heading: 'Partials (embedded content)'
@@ -399,7 +399,6 @@ meta:
     3c72b2cb-3e5f-45c7-8040-02ba9d46a8f1: Text # Text
     3ca5a63a-b996-41a1-b731-ab249d196559: Default # Default
     3d4d795a-2baa-4dbe-b785-0c2d1f3f0c95: Timer # Timer
-    3e73de84-059d-4ef8-9c53-18257b6f3698: 'Maps Index' # Maps Index
     3ea7e00b-85d5-4f71-80e8-8f6dad4ac60f: 'Page Images' # Page Images
     3fbe7d49-5f30-46be-9ac4-68522fd80c50: Default # Default
     4c10b646-a697-4ca9-b54a-f3e9974beff6: Sponsors # Sponsors
@@ -446,7 +445,6 @@ meta:
     52a61a11-339d-4463-a7d7-1b98ba3256a8: Default # Default
     53d976ba-eaea-401d-bc07-d048828c44a6: Header # Header
     60ef0d6d-98db-4d15-b7e7-a7334cbf9d9a: Events # Events
-    68eb5474-2df4-41d7-9c44-accddc2d26a3: 'Map Item' # Map Item
     69b33981-0e8a-46c9-9e26-668d0ea9a5db: 'Audio Tour' # Audio Tour
     70a55079-a544-47a5-811a-a6509d86e165: 'QR Code Tours' # QR Code Tours
     70c5c096-4ae4-48cf-ba86-ddf5ddb57606: 'CTA Link' # CTA Link
@@ -456,6 +454,7 @@ meta:
     080a8953-e1e2-46e6-8872-b248d20a5273: 'Slide Image' # Slide Image
     81f4f832-7c04-42af-9192-dc125d097512: 'CTA Button Text' # CTA Button Text
     84f82d45-6199-4d0f-ac30-00f3dc140ab9: Default # Default
+    86adeda8-b420-4ce5-8c05-8e46931ebd51: Maps # Maps
     95fbc062-8ec3-4bce-b7e3-d7d24072f4d6: Default # Default
     98a02c54-0e79-435a-9e13-d3e2d6a97be6: Html # Html
     99bda947-506c-477b-8cdc-bf6ea2d0ff8d: Body # Body
@@ -464,6 +463,7 @@ meta:
     0225b6d8-ebe9-42c0-9b48-517ce7e2901d: Heading # Heading
     298a1978-3d11-450a-b447-e48b89e9e508: 'News Index' # News Index
     351fbeb8-08ab-4123-83e1-0ab7948deb4c: Category # Category
+    433b6d9e-7282-4d08-aecf-76961050bbdd: Maps # Maps
     462fb273-74f3-4570-bd84-03a9098c5e31: FAQ # FAQ
     520cd042-b924-4a07-96c2-d771903e24a8: Image # Image
     546a6d4d-a07e-4e7f-8280-1ebfc5dfba2f: Body # Body
@@ -491,7 +491,6 @@ meta:
     762300b5-fa76-4ba6-ac94-33ec53c50db6: News # News
     795332e7-f37b-4fb7-8b7c-4d06ae676444: 'Gallery Index' # Gallery Index
     818868ff-8958-4554-ae24-e5ce8daa6451: 'Full Width CTA' # Full Width CTA
-    995900ea-bf4b-445c-ad83-520e60fd468d: 'Resource Link' # Resource Link
     24907884-0f61-4170-86f9-fb5e19a65286: Pages # Pages
     31059278-fbc1-4257-bc3e-db4adaf39246: 'Newsletter PDF' # Newsletter PDF
     31172786-ddd2-45a8-8f50-dceb8550a656: 'Two Columns' # Two Columns
@@ -501,7 +500,6 @@ meta:
     a6fe533c-58d5-4f0d-9fb2-a9d84939983d: 'Event Footer' # Event Footer
     a7e0a2f3-7ee6-4cf3-bdba-d1ab4925f5a4: Default # Default
     a9ca2ff0-0116-44ce-9c8b-7559b0da835b: Transcript # Transcript
-    a9f7c50b-d2eb-42c9-8013-d3409932d038: 'Map Item' # Map Item
     a588c41c-3ec4-4bbb-8d7f-a389ba747a3e: Sponsors # Sponsors
     a8936e76-9a16-4826-bed0-89f9e810cba9: 'Collection Images' # Collection Images
     a7931313-4e13-4423-ae89-3e60ed563a58: 'Privacy Policy' # Privacy Policy
@@ -535,7 +533,6 @@ meta:
     d866b8d6-1eab-473e-84ef-a97f7bad68e6: 'Article(cropped 640x400)' # Article(cropped 640x400)
     db05d377-be2b-4a96-a920-7666d07afe21: Default # Default
     ddd2d790-60f7-4746-a49b-4e4d0860afa1: Support # Support
-    e0a3586b-8902-4729-bab4-28a28dea7f20: 'Maps Index' # Maps Index
     e3dcc06f-87f9-432c-bbcb-301d3c05a1af: Default # Default
     e8f2f648-3c3d-4ad4-a522-d8f4d8569369: 'Slide Title' # Slide Title
     e16e1677-c1c6-4584-9a04-55c202f2cbf8: Gallery # Gallery
@@ -570,10 +567,14 @@ plugins:
     schemaVersion: 1.0.0
   cp-nav:
     edition: standard
-    enabled: true
+    enabled: false
     schemaVersion: 2.0.11
     settings:
-      defaultSubnavBehaviour: default
+      originalNavHash:
+        __assoc__:
+          -
+            - 6c562a2c-e195-47dc-a6b1-be1e91e020ab
+            - W3sibGFiZWwiOiJEYXNoYm9hcmQiLCJ1cmwiOiJkYXNoYm9hcmQiLCJmb250SWNvbiI6ImdhdWdlIn0seyJsYWJlbCI6IkVudHJpZXMiLCJ1cmwiOiJlbnRyaWVzIiwiZm9udEljb24iOiJzZWN0aW9uIn0seyJsYWJlbCI6IkNhdGVnb3JpZXMiLCJ1cmwiOiJjYXRlZ29yaWVzIiwiZm9udEljb24iOiJjYXRlZ29yaWVzIn0seyJsYWJlbCI6IkFzc2V0cyIsInVybCI6ImFzc2V0cyIsImZvbnRJY29uIjoiYXNzZXRzIn0seyJsYWJlbCI6IkZyZWVmb3JtIiwidXJsIjoiZnJlZWZvcm0iLCJpY29uIjoiL3Zhci93d3cvbGFuZGlzYXJib3JldHVtLm9yZy92ZW5kb3Ivc29sc3BhY2UvY3JhZnQtZnJlZWZvcm0vcGFja2FnZXMvcGx1Z2luL3NyYy9pY29uLW1hc2suc3ZnIiwiYmFkZ2VDb3VudCI6NCwic3VibmF2Ijp7ImRhc2hib2FyZCI6eyJsYWJlbCI6IkRhc2hib2FyZCIsInVybCI6ImZyZWVmb3JtL2Rhc2hib2FyZCJ9LCJzdWJtaXNzaW9ucyI6eyJsYWJlbCI6IlN1Ym1pc3Npb25zIiwidXJsIjoiZnJlZWZvcm0vc3VibWlzc2lvbnMifSwic3BhbSI6eyJsYWJlbCI6IlNwYW0iLCJ1cmwiOiJmcmVlZm9ybS9zcGFtIiwiYmFkZ2VDb3VudCI6MX0sImZvcm1zIjp7ImxhYmVsIjoiRm9ybXMiLCJ1cmwiOiJmcmVlZm9ybS9mb3JtcyJ9LCJmaWVsZHMiOnsibGFiZWwiOiJGaWVsZHMiLCJ1cmwiOiJmcmVlZm9ybS9maWVsZHMifSwibm90aWZpY2F0aW9ucyI6eyJsYWJlbCI6IkVtYWlsIE5vdGlmaWNhdGlvbnMiLCJ1cmwiOiJmcmVlZm9ybS9ub3RpZmljYXRpb25zIn0sImV4cG9ydFByb2ZpbGVzIjp7ImxhYmVsIjoiRXhwb3J0IiwidXJsIjoiZnJlZWZvcm0vZXhwb3J0LXByb2ZpbGVzIn0sInNldHRpbmdzIjp7ImxhYmVsIjoiU2V0dGluZ3MiLCJ1cmwiOiJmcmVlZm9ybS9zZXR0aW5ncyJ9LCJyZXNvdXJjZXMiOnsibGFiZWwiOiJSZXNvdXJjZXMiLCJ1cmwiOiJmcmVlZm9ybS9yZXNvdXJjZXMifX19LHsibGFiZWwiOiJTRU9tYXRpYyIsInVybCI6InNlb21hdGljIiwiaWNvbiI6Ii92YXIvd3d3L2xhbmRpc2FyYm9yZXR1bS5vcmcvdmVuZG9yL255c3R1ZGlvMTA3L2NyYWZ0LXNlb21hdGljL3NyYy9pY29uLW1hc2suc3ZnIiwic3VibmF2Ijp7ImRhc2hib2FyZCI6eyJsYWJlbCI6IkRhc2hib2FyZCIsInVybCI6InNlb21hdGljL2Rhc2hib2FyZCJ9LCJnbG9iYWwiOnsibGFiZWwiOiJHbG9iYWwgU0VPIiwidXJsIjoic2VvbWF0aWMvZ2xvYmFsL2dlbmVyYWwifSwiY29udGVudCI6eyJsYWJlbCI6IkNvbnRlbnQgU0VPIiwidXJsIjoic2VvbWF0aWMvY29udGVudCJ9LCJzaXRlIjp7ImxhYmVsIjoiU2l0ZSBTZXR0aW5ncyIsInVybCI6InNlb21hdGljL3NpdGUvaWRlbnRpdHkifSwidHJhY2tpbmciOnsibGFiZWwiOiJUcmFja2luZyBTY3JpcHRzIiwidXJsIjoic2VvbWF0aWMvdHJhY2tpbmcvZ3RhZyJ9LCJwbHVnaW4iOnsibGFiZWwiOiJQbHVnaW4gU2V0dGluZ3MiLCJ1cmwiOiJzZW9tYXRpYy9wbHVnaW4ifX19LHsidXJsIjoidXRpbGl0aWVzIiwibGFiZWwiOiJVdGlsaXRpZXMiLCJmb250SWNvbiI6InRvb2wiLCJiYWRnZUNvdW50IjoyfSx7InVybCI6InNldHRpbmdzIiwibGFiZWwiOiJTZXR0aW5ncyIsImZvbnRJY29uIjoic2V0dGluZ3MifSx7InVybCI6InBsdWdpbi1zdG9yZSIsImxhYmVsIjoiUGx1Z2luIFN0b3JlIiwiZm9udEljb24iOiJwbHVnaW4ifV0=
   expanded-singles:
     edition: standard
     enabled: true
@@ -582,7 +583,7 @@ plugins:
     edition: pro
     enabled: true
     licenseKey: OCU2AH2L5VOWK3HV2HUJV760
-    schemaVersion: 5.7.0
+    schemaVersion: 5.4.2
     settings:
       alertNotificationRecipients: fultonchain@gmail.com
       allowBuilderTemplateCreation: true
@@ -599,7 +600,6 @@ plugins:
       bypassSpamCheckOnLoggedInUsers: '1'
       clientDigestFrequency: '5'
       clientDigestRecipients: info@landisarboretum.org
-      csrfRefresh: none
       defaultFromEmail: '{{ craft.app.projectConfig.get(''email.fromEmail'') }}'
       defaultFromName: '{{ craft.app.projectConfig.get(''email.fromName'') }}'
       defaultView: dashboard
@@ -868,7 +868,6 @@ plugins:
       digestOnlyOnProduction: '1'
       digestRecipients: info@landisarboretum.org
       displayFeed: '1'
-      emailNotificationToolbarConfiguration: 'blocks bold italic underline forecolor backcolor | align numlist bullist | link image table | removeformat code'
       emailTemplateDefault: database
       emailTemplateDirectory: null
       emailTemplateMethod: global
@@ -883,7 +882,7 @@ plugins:
       formTemplateDirectory: null
       formattingTemplate: tailwind-3/index.twig
       loggingLevel: error
-      minimumSubmitTime: '5'
+      minimumSubmitTime: '10'
       pluginName: ''
       purgableSpamAgeInDays: '0'
       purgableSubmissionAgeInDays: null
@@ -916,7 +915,7 @@ plugins:
       useQueueForIntegrations: false
   image-optimize:
     edition: standard
-    enabled: true
+    enabled: false
     licenseKey: 7KKXMBXM9ZFL4O5NT05RO3KN
     schemaVersion: 1.0.0
     settings:
@@ -976,7 +975,7 @@ plugins:
     edition: standard
     enabled: true
     licenseKey: MH9QX6NJ379VQWYXB6E0P76W
-    schemaVersion: 3.0.13
+    schemaVersion: 3.0.12
     settings:
       addHrefLang: true
       addPaginatedHreflang: true
