@@ -1,75 +1,63 @@
 columnSuffix: xcmzgfmm
-contentColumnType: string
+contentColumnType: text
 fieldGroup: c060adfd-ad0d-44ee-9598-933e4f598995 # Common
 handle: optimizedHero
 instructions: null
 name: 'Optimized Hero'
 searchable: false
 settings:
-  errorMessage: 'Component class ''nystudio107\imageoptimize\fields\OptimizedImages'' belongs to a disabled plugin (ImageOptimize).'
-  expectedType: nystudio107\imageoptimize\fields\OptimizedImages
-  settings:
-    __assoc__:
-      -
-        - displayDominantColorPalette
-        - '1'
-      -
-        - displayLazyLoadPlaceholderImages
-        - '1'
-      -
-        - displayOptimizedImageVariants
-        - '1'
-      -
-        - variants
+  displayDominantColorPalette: true
+  displayLazyLoadPlaceholderImages: true
+  displayOptimizedImageVariants: true
+  variants:
+    -
+      __assoc__:
         -
+          - width
+          - '1920'
+        -
+          - useAspectRatio
+          - ''
+        -
+          - aspectRatioX
+          - '16'
+        -
+          - aspectRatioY
+          - '9'
+        -
+          - retinaSizes
           -
-            __assoc__:
-              -
-                - width
-                - '1920'
-              -
-                - useAspectRatio
-                - ''
-              -
-                - aspectRatioX
-                - '16'
-              -
-                - aspectRatioY
-                - '9'
-              -
-                - retinaSizes
-                -
-                  - '1'
-              -
-                - quality
-                - '82'
-              -
-                - format
-                - jpg
+            - '1'
+        -
+          - quality
+          - '82'
+        -
+          - format
+          - jpg
+    -
+      __assoc__:
+        -
+          - width
+          - '576'
+        -
+          - useAspectRatio
+          - ''
+        -
+          - aspectRatioX
+          - '4'
+        -
+          - aspectRatioY
+          - '3'
+        -
+          - retinaSizes
           -
-            __assoc__:
-              -
-                - width
-                - '576'
-              -
-                - useAspectRatio
-                - ''
-              -
-                - aspectRatioX
-                - '4'
-              -
-                - aspectRatioY
-                - '3'
-              -
-                - retinaSizes
-                -
-                  - '1'
-              -
-                - quality
-                - '82'
-              -
-                - format
-                - jpg
+            - '1'
+        -
+          - quality
+          - '82'
+        -
+          - format
+          - jpg
 translationKeyFormat: null
 translationMethod: none
-type: craft\fields\MissingField
+type: nystudio107\imageoptimize\fields\OptimizedImages

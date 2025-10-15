@@ -1,58 +1,44 @@
 columnSuffix: prwpkwlo
-contentColumnType: string
+contentColumnType: text
 fieldGroup: c060adfd-ad0d-44ee-9598-933e4f598995 # Common
 handle: collectionImages
 instructions: null
 name: 'Collection Images'
 searchable: false
 settings:
-  errorMessage: 'Component class ''nystudio107\imageoptimize\fields\OptimizedImages'' belongs to a disabled plugin (ImageOptimize).'
-  expectedType: nystudio107\imageoptimize\fields\OptimizedImages
-  settings:
+  displayDominantColorPalette: false
+  displayLazyLoadPlaceholderImages: false
+  displayOptimizedImageVariants: true
+  fieldVolumeSettings:
     __assoc__:
       -
-        - displayDominantColorPalette
-        - ''
-      -
-        - displayLazyLoadPlaceholderImages
-        - ''
-      -
-        - displayOptimizedImageVariants
-        - '1'
-      -
-        - fieldVolumeSettings
+        - images
+        - '*'
+  variants:
+    -
+      __assoc__:
         -
-          __assoc__:
-            -
-              - images
-              - '*'
-      -
-        - variants
+          - width
+          - '576'
         -
+          - useAspectRatio
+          - '1'
+        -
+          - aspectRatioX
+          - '3'
+        -
+          - aspectRatioY
+          - '4'
+        -
+          - retinaSizes
           -
-            __assoc__:
-              -
-                - width
-                - '576'
-              -
-                - useAspectRatio
-                - '1'
-              -
-                - aspectRatioX
-                - '3'
-              -
-                - aspectRatioY
-                - '4'
-              -
-                - retinaSizes
-                -
-                  - '1'
-              -
-                - quality
-                - '82'
-              -
-                - format
-                - jpg
+            - '1'
+        -
+          - quality
+          - '82'
+        -
+          - format
+          - jpg
 translationKeyFormat: null
 translationMethod: none
-type: craft\fields\MissingField
+type: nystudio107\imageoptimize\fields\OptimizedImages
