@@ -1,4 +1,4 @@
-dateModified: 1760547887
+dateModified: 1760548321
 elementSources:
   Solspace\Freeform\Elements\Submission:
     -
@@ -915,7 +915,7 @@ plugins:
       useQueueForIntegrations: false
   image-optimize:
     edition: standard
-    enabled: false
+    enabled: true
     licenseKey: 7KKXMBXM9ZFL4O5NT05RO3KN
     schemaVersion: 1.0.0
     settings:
