@@ -46,6 +46,7 @@ dbdump*
 /.vscode
 /.vagrant
 /.cache
+/.zed
 
 # SYSTEM FILES
 .DS_Store

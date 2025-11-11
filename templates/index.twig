@@ -292,7 +292,7 @@
 		</div>
 	</section>
 
-	<section x-data="{ open: false }" class="px-4 py-10 sm:py-20 md:py-32" style="background-image:url('/assets/images/Plants/Flowers/_1920x1569_crop_center-center_82_line/goldenrod.jpg.webp?mtime=1750967773');">
+	<section x-data="{ open: false }" @keydown.escape.window="open = false" class="px-4 py-10 sm:py-20 md:py-32" style="background-image:url('/assets/images/Plants/Flowers/_1920x1569_crop_center-center_82_line/goldenrod.jpg.webp?mtime=1750967773');">
 		<div class="px-4 py-2 mx-auto bg-white border-8 border-gray-200 rounded-sm sm:w-2/3 lg:w-1/2 bg-opacity-90">
 			<h2 class="mx-auto mb-2 text-xl font-semibold text-center md:text-3xl">
 				Keep in Touch
@@ -303,29 +303,37 @@
 			<!-- BEGIN MODAL -->
 			<div>
 				<div class="flex items-center justify-center relative mx-auto">
-					<button type="button" class="bg-green-600 hover:bg-green-700 text-white rounded py-2 px-4 text-center transition-colors duration-300" @click.stop="open = true">Subscribe Now!</button>
+					<button type="button" class="bg-green-600 hover:bg-green-700 text-white rounded py-2 px-4 text-center transition-colors duration-300" @click="open = true">Subscribe Now!</button>
 				</div>
 
-				<div x-show="open" x-cloak x-transition.opacity x-transition:enter="transition ease-out duration-150" x-transition:leave="transition ease-in duration-100" class="fixed inset-0 z-[1000] flex items-center justify-center bg-black/50" aria-hidden="false">
-					<div x-transition.scale.opacity class="bg-white rounded-lg shadow-lg w-full max-w-xl p-4 sm:p-6 md:p-8 mx-4 relative" @mousedown.outside="open = false" @click.stop @keydown.escape.window="open = false" role="dialog" aria-modal="true">
-						<button class="absolute right-0 text-xl top-0 px-3 py-1" @click="open = false">x</button>
-						<!-- Begin Constant Contact Inline Form Code -->
-<!--
-<div class="ctct-inline-form" data-form-id="ee8156e7-8d1f-4ab2-9f63-9623bc04d66a"></div>
-<script id="signupScript" src="https://static.ctctcdn.com/js/signup-form-widget/current/signup-form-widget.min.js" async defer></script>
--->
-<form class="space-y-4" @submit.prevent>
-  <div>
-    <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
-    <input type="text" id="name" name="name" class="mt-1 block w-full rounded-md border-gray-300 focus:border-green-600 focus:ring-green-600" placeholder="Your name">
-  </div>
-  <div>
-    <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
-    <input type="email" id="email" name="email" required class="mt-1 block w-full rounded-md border-gray-300 focus:border-green-600 focus:ring-green-600" placeholder="you@example.com">
-  </div>
-  <button type="submit" class="w-full bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-4 rounded transition-colors duration-300">Subscribe</button>
-</form>
-<!-- End Constant Contact Inline Form Code -->
+				<div x-data="{ ccLoaded: false, loadCC() { if (this.ccLoaded) return; const target = document.querySelector('.ctct-inline-form'); if (target && target.children.length) { this.ccLoaded = true; return; } const s = document.createElement('script'); s.src = 'https://static.ctctcdn.com/js/signup-form-widget/current/signup-form-widget.min.js'; s.async = true; s.defer = true; s.onload = () => { this.ccLoaded = true }; document.body.appendChild(s); } }" x-effect="if (open) loadCC()" class="fixed inset-0 z-[1000] pointer-events-none opacity-0 transition-opacity duration-200" :class="open ? 'opacity-100 pointer-events-auto' : ''">
+					<div class="absolute inset-0 bg-black/50 backdrop-blur-sm transition-opacity duration-200 opacity-0" :class="open ? 'opacity-100' : ''" @click="open = false"></div>
+					<div class="absolute inset-0 flex items-center justify-center p-4">
+						<div class="bg-white rounded-lg shadow-2xl ring-1 ring-green-900/10 w-full max-w-xl p-6 sm:p-8 mx-4 relative border-t-4 border-green-800 transform transition-all duration-200 opacity-0 translate-y-4 scale-95" :class="open ? 'opacity-100 translate-y-0 scale-100' : ''" @click.stop role="dialog" aria-modal="true">
+							<!-- Header -->
+							<div class="mb-4 sm:mb-6">
+								<div class="flex items-start justify-between">
+									<h3 class="text-xl sm:text-2xl font-semibold text-green-800">Join the Landis Newsletter</h3>
+									<button type="button" class="ml-3 inline-flex items-center justify-center rounded-full p-2 text-gray-500 hover:text-green-800 hover:bg-green-50 focus:outline-none focus:ring-2 focus:ring-green-700/30" aria-label="Close modal" @click="open = false">
+										<svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+											<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+										</svg>
+									</button>
+								</div>
+								<p class="mt-2 text-sm text-gray-600">Seasonal events, classes, and garden tips — quarterly, no spam.</p>
+							</div>
+
+							<!-- Begin Constant Contact Inline Form Code -->
+							<!--
+							<div class="ctct-inline-form" data-form-id="ee8156e7-8d1f-4ab2-9f63-9623bc04d66a"></div>
+							<script id="signupScript" src="https://static.ctctcdn.com/js/signup-form-widget/current/signup-form-widget.min.js" async defer></script>
+							-->
+							<div class="ctct-inline-form" data-form-id="ee8156e7-8d1f-4ab2-9f63-9623bc04d66a"></div>
+							<div class="mt-4 rounded-md border border-green-100 bg-green-50 px-3 py-2 text-sm text-green-800" x-show="!ccLoaded">
+								Loading form…
+							</div>
+							<!-- End Constant Contact Inline Form Code -->
+						</div>
 					</div>
 				</div>
 			</div>

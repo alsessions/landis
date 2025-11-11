@@ -1,4 +1,4 @@
-dateModified: 1761157812
+dateModified: 1762890864
 elementSources:
   Solspace\Freeform\Elements\Submission:
     -
@@ -556,10 +556,6 @@ meta:
     fb54f643-0fca-4cd4-af27-ab9bc32c5997: 'Site Contact' # Site Contact
     fbb2efa0-366e-4b12-9981-03525862552e: Text # Text
 plugins:
-  assetusage:
-    edition: standard
-    enabled: true
-    schemaVersion: 2.0.0
   ckeditor:
     edition: standard
     enabled: true
@@ -586,7 +582,7 @@ plugins:
     edition: pro
     enabled: true
     licenseKey: OCU2AH2L5VOWK3HV2HUJV760
-    schemaVersion: 5.7.0
+    schemaVersion: 5.8.0
     settings:
       alertNotificationRecipients: fultonchain@gmail.com
       allowBuilderTemplateCreation: true
