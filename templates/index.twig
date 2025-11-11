@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en-US">
 
@@ -8,6 +9,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
 	<meta name="referrer" content="origin-when-cross-origin" />
 	<script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
 	<script>
 		// Alpine.js v2 component initialization
 		function countdownTimer(targetDate) {
@@ -50,6 +52,7 @@
 			}
 		}
 	</script>
+
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Rosarivo&display=swap" rel="stylesheet">
@@ -195,14 +198,14 @@
 											<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
 										</svg>
 									{% endif %}
-								</div>
 							</div>
-							<h3 class="text-2xl font-medium text-center uppercase text-green-800 mb-4">
-								{{ block.tripTitle }} {# Type: Plain Text #}
-							</h3>
-							<div class="prose prose-p:leading-relaxed max-w-none text-gray-600">
-								{{ block.tripText | markdown | typogrify | widont }}
-							</div>
+						</div>
+						<h3 class="text-2xl font-medium text-center uppercase text-green-800 mb-4">
+							{{ block.tripTitle }} {# Type: Plain Text #}
+						</h3>
+						<div class="prose prose-p:leading-relaxed max-w-none text-gray-600">
+							{{ block.tripText | markdown | typogrify | widont }}
+						</div>
 					{% endswitch %}
 				</div>
 			{% endfor %}
@@ -248,11 +251,11 @@
 						the <strong>free</strong> app and search for "Landis Arboretum".</p>
 					<div class="flex flex-wrap">
 						<a href="https://apps.apple.com/us/app/uniguide-audio-tours-and-maps/id862232588?mt=8"><img
-								src="/assets/images/app-store.jpg"
-								class="inline-block max-w-full px-2 w-36 filter hover:brightness-50"></a>
+							src="/assets/images/app-store.jpg"
+							class="inline-block max-w-full px-2 w-36 filter hover:brightness-50"></a>
 						<a href="https://play.google.com/store/apps/details?id=com.vitart.audiotour"><img
-								src="/assets/images/play-store.jpg"
-								class="inline-block max-w-full px-2 w-36 filter hover:brightness-50"></a>
+							src="/assets/images/play-store.jpg"
+							class="inline-block max-w-full px-2 w-36 filter hover:brightness-50"></a>
 					</div>-->
 				</div>
 
@@ -277,16 +280,16 @@
 			<div class="grid gap-8 lg:grid-cols-2 mx-auto">
 				<div class="bg-white p-6 rounded-md shadow-lg transform transition-all duration-300 hover:shadow-xl border-t-4 border-green-800">
 					<h2 class="text-2xl font-medium text-center uppercase text-green-800 mb-4">Landis Arboretum: Who We Are</h2>
-					<div class="aspect-w-16 aspect-h-9 overflow-hidden rounded-sm shadow-md">
-						<iframe src="https://www.youtube.com/embed/M8g4RC_FudM?rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-					</div>
+						<div class="aspect-w-16 aspect-h-9 overflow-hidden rounded-sm shadow-md">
+							<iframe src="https://www.youtube-nocookie.com/embed/M8g4RC_FudM?rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen referrerpolicy="no-referrer-when-downgrade" loading="lazy"></iframe>
+						</div>
 				</div>
 
 				<div class="bg-white p-6 rounded-md shadow-lg transform transition-all duration-300 hover:shadow-xl border-t-4 border-green-800">
 					<h2 class="text-2xl font-medium text-center uppercase text-green-800 mb-4">Landis: Yesterday, Today ...</h2>
-					<div class="aspect-w-16 aspect-h-9 overflow-hidden rounded-sm shadow-md">
-						<iframe src="https://www.youtube.com/embed/U8vF-696mOE?rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-					</div>
+						<div class="aspect-w-16 aspect-h-9 overflow-hidden rounded-sm shadow-md">
+							<iframe src="https://www.youtube-nocookie.com/embed/U8vF-696mOE?rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen referrerpolicy="no-referrer-when-downgrade" loading="lazy"></iframe>
+						</div>
 				</div>
 			</div>
 		</div>
@@ -306,7 +309,7 @@
 					<button type="button" class="bg-green-600 hover:bg-green-700 text-white rounded py-2 px-4 text-center transition-colors duration-300" @click="open = true">Subscribe Now!</button>
 				</div>
 
-				<div x-data="{ ccLoaded: false, loadCC() { if (this.ccLoaded) return; const target = document.querySelector('.ctct-inline-form'); if (target && target.children.length) { this.ccLoaded = true; return; } const s = document.createElement('script'); s.src = 'https://static.ctctcdn.com/js/signup-form-widget/current/signup-form-widget.min.js'; s.async = true; s.defer = true; s.onload = () => { this.ccLoaded = true }; document.body.appendChild(s); } }" x-effect="if (open) loadCC()" class="fixed inset-0 z-[1000] pointer-events-none opacity-0 transition-opacity duration-200" :class="open ? 'opacity-100 pointer-events-auto' : ''">
+				<div class="fixed inset-0 z-[1000] pointer-events-none opacity-0 transition-opacity duration-200" :class="open ? 'opacity-100 pointer-events-auto' : ''">
 					<div class="absolute inset-0 bg-black/50 backdrop-blur-sm transition-opacity duration-200 opacity-0" :class="open ? 'opacity-100' : ''" @click="open = false"></div>
 					<div class="absolute inset-0 flex items-center justify-center p-4">
 						<div class="bg-white rounded-lg shadow-2xl ring-1 ring-green-900/10 w-full max-w-xl p-6 sm:p-8 mx-4 relative border-t-4 border-green-800 transform transition-all duration-200 opacity-0 translate-y-4 scale-95" :class="open ? 'opacity-100 translate-y-0 scale-100' : ''" @click.stop role="dialog" aria-modal="true">
@@ -323,16 +326,27 @@
 								<p class="mt-2 text-sm text-gray-600">Seasonal events, classes, and garden tips — quarterly, no spam.</p>
 							</div>
 
-							<!-- Begin Constant Contact Inline Form Code -->
-							<!--
+							<!-- Begin Constant Contact Inline Form Code (static include so it renders into the modal) -->
 							<div class="ctct-inline-form" data-form-id="ee8156e7-8d1f-4ab2-9f63-9623bc04d66a"></div>
-							<script id="signupScript" src="https://static.ctctcdn.com/js/signup-form-widget/current/signup-form-widget.min.js" async defer></script>
+
+							<!-- Constant Contact universal code placeholder:
+								 Replace the string below with the 'universal code' from your Constant Contact account
+								 (Account > Integrations or the inline form instructions). Example from CTCT:
+								 <script>var _ctct_m = 'UNIVERSAL_CODE_VALUE';</script>
 							-->
-							<div class="ctct-inline-form" data-form-id="ee8156e7-8d1f-4ab2-9f63-9623bc04d66a"></div>
-							<div class="mt-4 rounded-md border border-green-100 bg-green-50 px-3 py-2 text-sm text-green-800" x-show="!ccLoaded">
-								Loading form…
-							</div>
+							<script>
+								// Define _ctct_m if not already defined. Replace the placeholder value with your account's universal code.
+								if (typeof window._ctct_m === 'undefined') {
+									window._ctct_m = 'REPLACE_WITH_YOUR_UNIVERSAL_CODE';
+								}
+							</script>
+
+							<script id="signupScript" src="https://static.ctctcdn.com/js/signup-form-widget/current/signup-form-widget.min.js" async defer></script>
 							<!-- End Constant Contact Inline Form Code -->
+
+							<div class="mt-4 rounded-md border border-green-100 bg-green-50 px-3 py-2 text-sm text-green-800">
+								If the form does not appear, try disabling any content blockers or check the browser console for errors.
+							</div>
 						</div>
 					</div>
 				</div>
