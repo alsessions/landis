@@ -326,32 +326,22 @@
 								<p class="mt-2 text-sm text-gray-600">Seasonal events, classes, and garden tips — quarterly, no spam.</p>
 							</div>
 
-							<!-- Begin Constant Contact Inline Form Code (static include so it renders into the modal) -->
-							<div class="ctct-inline-form" data-form-id="ee8156e7-8d1f-4ab2-9f63-9623bc04d66a"></div>
+            	<!-- BEGIN MODAL-->
+	<div x-data="{ open: false }">
+        <div class="flex  items-center relative">
+            <button class="text-white rounded py-2" @click="open = !open">Subscribe Now!</button>
+        </div>
+        <div x-show="open" x-cloak="" class="fixed inset-0 z-50 flex justify-center items-center max-w-5xl mx-auto">
+            <div class="bg-green-300 rounded shadow-lg p-8 relative">
+                <button class="absolute right-0 text-xl top-0 px-3 py-1" @click="open = false">x</button>
+                									<!-- Begin Constant Contact Inline Form Code -->
+<div class="ctct-inline-form" data-form-id="ee8156e7-8d1f-4ab2-9f63-9623bc04d66a"></div>
+<!-- End Constant Contact Inline Form Code -->
+            </div>
+        </div>
+    </div>
 
-							<!-- Constant Contact universal code placeholder:
-								 Replace the string below with the 'universal code' from your Constant Contact account
-								 (Account > Integrations or the inline form instructions). Example from CTCT:
-								 <script>var _ctct_m = 'UNIVERSAL_CODE_VALUE';</script>
-							-->
-							<script>
-								// Define _ctct_m if not already defined. Replace the placeholder value with your account's universal code.
-								if (typeof window._ctct_m === 'undefined') {
-									window._ctct_m = 'REPLACE_WITH_YOUR_UNIVERSAL_CODE';
-								}
-							</script>
-
-							<script id="signupScript" src="https://static.ctctcdn.com/js/signup-form-widget/current/signup-form-widget.min.js" async defer></script>
-							<!-- End Constant Contact Inline Form Code -->
-
-							<div class="mt-4 rounded-md border border-green-100 bg-green-50 px-3 py-2 text-sm text-green-800">
-								If the form does not appear, try disabling any content blockers or check the browser console for errors.
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- END MODAL -->
+	<!-- END MODAL -->
 		</div>
 	</section>
 
