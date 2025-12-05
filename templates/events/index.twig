@@ -25,10 +25,13 @@
 
 		<section class="px-4 mx-auto mt-10 max-w-7xl">
 			<h1 class="mb-12">Upcoming Events @ Landis</h1>
+			
+			{% paginate craft.entries.section('events').date('>= '~ now|atom).orderBy('date asc').limit(10) as pageInfo, pageEntries %}
+			{% if pageEntries | length == 0 %}
+				{{ entry.noContent }}
+			{% else %}
 			<div class="grid grid-cols-1 md:grid-cols-2 md:gap-4">
-			{% paginate craft.entries.section('events').date('>= '~ now|atom)
-		.orderBy('date asc').limit(10) as pageInfo, pageEntries %}
-{% for entry in pageEntries %}
+			{% for entry in pageEntries %}
 					<div class="flex flex-wrap md:mb-8 bg-white rounded-lg shadow-sm hover:shadow transition-shadow duration-300">
 						<div class="w-3/12 flex flex-col items-center pt-4">
 							{% if entry.featuredImage | length %}
@@ -89,6 +92,7 @@
 				{% endfor %}
 
 			</div>
+			{% endif %}
 			<div class="flex justify-between max-w-7xl mx-auto my-8">
 				<div>{% if pageInfo.prevUrl %}<a href="{{ pageInfo.prevUrl }}" class="inline-flex items-center px-4 py-2 bg-green-600 text-white text-sm font-medium rounded-md shadow-sm hover:bg-green-700 transition-colors duration-300"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>Previous Events</a>{% endif %}</div>
 				<div>{% if pageInfo.nextUrl %}<a href="{{ pageInfo.nextUrl }}" class="inline-flex items-center px-4 py-2 bg-green-600 text-white text-sm font-medium rounded-md shadow-sm hover:bg-green-700 transition-colors duration-300">More Events<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" /></svg></a>{% endif %}</div>

@@ -396,6 +396,14 @@
 					.orderBy('date asc')
 					.limit(5)
 					.all() %}
+					
+				{% if events | length == 0 %}
+					<div class="mb-6 bg-white rounded-sm shadow-sm hover:shadow transition-all duration-300 overflow-hidden border border-gray-50 not-prose">
+						<div class="p-4">
+							{{ entry.noContent }}
+						</div>
+					</div>
+				{% else %}
 				{% for entry in events %}
 					<div class="mb-6 bg-white rounded-sm shadow-sm hover:shadow transition-all duration-300 overflow-hidden border border-gray-50 not-prose">
 						<div class="p-4">
@@ -428,6 +436,7 @@
 						</div>
 					</div>
 				{% endfor %}
+				{% endif %}
 				<p class="px-4 mt-2 mb-6 text-sm text-right">
 					<a href="/events" class="inline-flex items-center px-4 py-2 bg-green-600 text-white text-sm font-medium rounded-md shadow-sm hover:bg-green-700 transition-colors duration-300">All Events</a>
 				</p>
