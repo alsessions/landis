@@ -23,7 +23,7 @@
 
 
 
-		<section class="px-4 mx-auto mt-10 max-w-7xl">
+		<section class="px-4 mx-auto mt-10 max-w-7xl min-h-screen">
 			<h1 class="mb-12">Upcoming Events @ Landis</h1>
 			
 			{% paginate craft.entries.section('events').date('>= '~ now|atom).orderBy('date asc').limit(10) as pageInfo, pageEntries %}
