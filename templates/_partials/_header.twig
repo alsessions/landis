@@ -3,20 +3,20 @@
 
     <div
         x-data="{ open: false }"
-        class="flex flex-col px-4 mx-auto max-w-screen-3xl md:items-center md:justify-between md:flex-row">
+        class="flex flex-col px-4 mx-auto max-w-screen-3xl lg:items-center lg:justify-between lg:flex-row">
 
         <div
-            class="flex flex-row items-center justify-between py-2 md:py-6">
+            class="flex flex-row items-center justify-between py-2 lg:py-6">
 
             <a
                 href="/">
                 <img
                     src="https://landisarboretum.org/assets/images/landis-new-logo-edit.png"
-                    class="h-12 w-auto md:h-24 md:w-auto">
+                    class="h-12 w-auto lg:h-24 lg:w-auto">
             </a>
 
             <button
-                class=" md:hidden focus:outline-none focus:shadow-outline"
+                class=" lg:hidden focus:outline-none focus:shadow-outline"
                 @click="open = !open">
                 <svg
                     fill="currentColor"
@@ -38,18 +38,18 @@
 
         <nav
             :class="{'flex': open, 'hidden': !open}"
-            class="flex-col flex-grow pb-4 md:pb-0 md:flex md:justify-end md:flex-row">
+            class="flex-col flex-grow pb-4 lg:pb-0 lg:flex lg:justify-end lg:flex-row">
 
             <div
                 @click.outside="open = false"
                 class="relative"
                 x-data="{ open: false }"
-                @mouseenter="window.innerWidth >= 768 && (open = true)"
-                @mouseleave="window.innerWidth >= 768 && (open = false)">
+                @mouseenter="window.innerWidth >= 1024 && (open = true)"
+                @mouseleave="window.innerWidth >= 1024 && (open = false)">
 
                 <button
                     @click="open = !open"
-                    class="z-50 flex flex-row items-center w-full py-2 mt-2 font-semibold text-left text-green-700 uppercase bg-transparent md:w-auto md:inline md:mt-0 md:ml-4 hover:text-gray-700 focus:text-gray-900 focus:outline-none focus:shadow-outline">
+                    class="z-50 flex flex-row items-center w-full py-2 mt-2 font-semibold text-left text-green-700 uppercase bg-transparent lg:w-auto lg:inline lg:mt-0 lg:ml-4 hover:text-gray-700 focus:text-gray-900 focus:outline-none focus:shadow-outline whitespace-nowrap">
                     <span>
                         About
                     </span>
@@ -57,7 +57,7 @@
                         fill="currentColor"
                         viewbox="0 0 20 20"
                         :class="{'rotate-180': open, 'rotate-0': !open}"
-                        class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1">
+                        class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform lg:-mt-1">
                         <path
                             fill-rule="evenodd"
                             d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
@@ -72,66 +72,66 @@
                     x-transition:leave="transition ease-in duration-75"
                     x-transition:leave-start="transform opacity-100 scale-100"
                     x-transition:leave-end="transform opacity-0 scale-95"
-                    class="absolute right-0 z-50 w-full mt-2 origin-top-right rounded-md shadow-lg md:w-60">
+                    class="absolute right-0 z-50 w-full mt-2 origin-top-right rounded-md shadow-lg lg:w-60">
                     <div
                         class="px-2 py-2 bg-white rounded-md shadow dark-mode:bg-gray-800">
                         <a
-                            class="block px-4 py-2 mt-2 text-lg bg-transparent md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                            class="block px-4 py-2 mt-2 text-lg bg-transparent lg:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
                             href="/overview">
                             About Landis
                         </a>
 
                         <a
-                        class="block px-4 py-2 mt-2 bg-transparent md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                        class="block px-4 py-2 mt-2 bg-transparent lg:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
                         href="/support">
                         Membership & Support
                     </a>
 
                     <a
-                    class="block px-4 py-2 mt-2 bg-transparent md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                    class="block px-4 py-2 mt-2 bg-transparent lg:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
                     href="/donate">
                     Donate to Landis
                 </a>
 
                 <a
-                class="block px-4 py-2 mt-2 bg-transparent md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                class="block px-4 py-2 mt-2 bg-transparent lg:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
                 href="/arboretum-wish-list">
                 Arboretum Wish List
             </a>
 
                 <a
-                class="block px-4 py-2 mt-2 bg-transparent md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                class="block px-4 py-2 mt-2 bg-transparent lg:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
                 href="/volunteer">
                  Volunteer at Landis
             </a>
 
                         <a
-                            class="block px-4 py-2 mt-2 bg-transparent md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                            class="block px-4 py-2 mt-2 bg-transparent lg:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
                             href="/history">
                             History
                         </a>
 
                         <a
-                        class="block px-4 py-2 mt-2 bg-transparent md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                        class="block px-4 py-2 mt-2 bg-transparent lg:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
                         href="/people">
                         Who We Are
                     </a>
 
                         <a
-                            class="block px-4 py-2 mt-2 bg-transparent md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                            class="block px-4 py-2 mt-2 bg-transparent lg:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
                             href="/faq">
                             FAQ
                         </a>
 
 
                         <a
-                            class="block px-4 py-2 mt-2 bg-transparent md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                            class="block px-4 py-2 mt-2 bg-transparent lg:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
                             href="/sales">
                             Plant Sales
                         </a>
 
                         <a
-                        class="block px-4 py-2 mt-2 bg-transparent md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                        class="block px-4 py-2 mt-2 bg-transparent lg:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
                         href="/scouting">
                         Scouting at Landis
                     </a>
@@ -146,11 +146,11 @@
                 @click.outside="open = false"
                 class="relative"
                 x-data="{ open: false }"
-                @mouseenter="window.innerWidth >= 768 && (open = true)"
-                @mouseleave="window.innerWidth >= 768 && (open = false)">
+                @mouseenter="window.innerWidth >= 1024 && (open = true)"
+                @mouseleave="window.innerWidth >= 1024 && (open = false)">
                 <button
                     @click="open = !open"
-                    class="z-50 flex flex-row items-center w-full py-2 mt-2 font-semibold text-left text-green-700 uppercase bg-transparent md:w-auto md:inline md:mt-0 md:ml-4 hover:text-gray-700 focus:text-gray-900 focus:outline-none focus:shadow-outline">
+                    class="z-50 flex flex-row items-center w-full py-2 mt-2 font-semibold text-left text-green-700 uppercase bg-transparent lg:w-auto lg:inline lg:mt-0 lg:ml-4 hover:text-gray-700 focus:text-gray-900 focus:outline-none focus:shadow-outline whitespace-nowrap">
                     <span>
                         Discover
                     </span>
@@ -158,7 +158,7 @@
                         fill="currentColor"
                         viewbox="0 0 20 20"
                         :class="{'rotate-180': open, 'rotate-0': !open}"
-                        class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1">
+                        class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform lg:-mt-1">
                         <path
                             fill-rule="evenodd"
                             d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
@@ -173,54 +173,54 @@
                     x-transition:leave="transition ease-in duration-75"
                     x-transition:leave-start="transform opacity-100 scale-100"
                     x-transition:leave-end="transform opacity-0 scale-95"
-                    class="absolute right-0 z-50 w-full mt-2 origin-top-right rounded-md shadow-lg md:w-60">
+                    class="absolute right-0 z-50 w-full mt-2 origin-top-right rounded-md shadow-lg lg:w-60">
                     <div
                         class="px-2 py-2 bg-white rounded-md shadow dark-mode:bg-gray-800">
 
                         <a
-                        class="block px-4 py-2 mt-2 bg-transparent md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                        class="block px-4 py-2 mt-2 bg-transparent lg:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
                         href="/bluebirds-and-birding-at-landis">
                         Birding at Landis
                     </a>
 
                     <a
-                    class="block px-4 py-2 mt-2 bg-transparent md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                    class="block px-4 py-2 mt-2 bg-transparent lg:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
                     href="/birding">
                     The Bird Blog
                 </a>
                         <a
-                            class="block px-4 py-2 mt-2 bg-transparent md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                            class="block px-4 py-2 mt-2 bg-transparent lg:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
                             href="/collections">
                             Collections
                         </a>
                         <a
-                            class="block px-4 py-2 mt-2 bg-transparent md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                            class="block px-4 py-2 mt-2 bg-transparent lg:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
                             href="/maps">
                             Maps &amp; Guides
                         </a>
                         <a
-                            class="block px-4 py-2 mt-2 bg-transparent md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                            class="block px-4 py-2 mt-2 bg-transparent lg:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
                             href="/sculpture-at-landis">
                             Sculpture at Landis
                         </a>
                             <a
-                            class="block px-4 py-2 mt-2 bg-transparent md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                            class="block px-4 py-2 mt-2 bg-transparent lg:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
                             href="/shanti-vun">
                             Shanti-Vun Meditation Garden
                         </a>
                           </a>
                             <a
-                            class="block px-4 py-2 mt-2 bg-transparent md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                            class="block px-4 py-2 mt-2 bg-transparent lg:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
                             href="/video">
                             Video from Landis
                         </a>
                         <a
-                        class="block px-4 py-2 mt-2 bg-transparent md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                        class="block px-4 py-2 mt-2 bg-transparent lg:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
                         href="/audio">
                         Native Plants Trail Tour
                     </a>
                                             <a
-                        class="block px-4 py-2 mt-2 bg-transparent md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                        class="block px-4 py-2 mt-2 bg-transparent lg:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
                         href="/resources">
                         Resources
                     </a>
@@ -243,11 +243,11 @@
                 @click.outside="open = false"
                 class="relative"
                 x-data="{ open: false }"
-                @mouseenter="window.innerWidth >= 768 && (open = true)"
-                @mouseleave="window.innerWidth >= 768 && (open = false)">
+                @mouseenter="window.innerWidth >= 1024 && (open = true)"
+                @mouseleave="window.innerWidth >= 1024 && (open = false)">
                 <button
                     @click="open = !open"
-                    class="z-50 flex flex-row items-center w-full py-2 mt-2 font-semibold text-left text-green-700 uppercase bg-transparent md:w-auto md:inline md:mt-0 md:ml-4 hover:text-gray-700 focus:text-gray-900 focus:outline-none focus:shadow-outline">
+                    class="z-50 flex flex-row items-center w-full py-2 mt-2 font-semibold text-left text-green-700 uppercase bg-transparent lg:w-auto lg:inline lg:mt-0 lg:ml-4 hover:text-gray-700 focus:text-gray-900 focus:outline-none focus:shadow-outline whitespace-nowrap">
                     <span>
                         News &amp; Events
                     </span>
@@ -255,7 +255,7 @@
                         fill="currentColor"
                         viewbox="0 0 20 20"
                         :class="{'rotate-180': open, 'rotate-0': !open}"
-                        class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1">
+                        class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform lg:-mt-1">
                         <path
                             fill-rule="evenodd"
                             d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
@@ -270,28 +270,28 @@
                     x-transition:leave="transition ease-in duration-75"
                     x-transition:leave-start="transform opacity-100 scale-100"
                     x-transition:leave-end="transform opacity-0 scale-95"
-                    class="absolute right-0 z-50 w-full mt-2 origin-top-right rounded-md shadow-lg md:w-60" x-cloak>
+                    class="absolute right-0 z-50 w-full mt-2 origin-top-right rounded-md shadow-lg lg:w-60" x-cloak>
                     <div
                         class="px-2 py-2 bg-white rounded-md shadow dark-mode:bg-gray-800">
                         <a
-                            class="block px-4 py-2 mt-2 bg-transparent md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                            class="block px-4 py-2 mt-2 bg-transparent lg:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
                             href="/events">
                             Upcoming Events
                         </a>
                         <a
-                            class="block px-4 py-2 mt-2 bg-transparent md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                            class="block px-4 py-2 mt-2 bg-transparent lg:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
                             href="/newsletters">
                             The Landis Newsletter
                         </a>
                         <a
-                            class="block px-4 py-2 mt-2 bg-transparent md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                            class="block px-4 py-2 mt-2 bg-transparent lg:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
                             href="/news">
                             News From Landis
                         </a>
 
                           </a>
                             <a
-                            class="block px-4 py-2 mt-2 bg-transparent md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                            class="block px-4 py-2 mt-2 bg-transparent lg:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
                             href="/video">
                             Video from Landis
                         </a>
@@ -300,30 +300,30 @@
                 </div>
             </div>
             <a
-                class="py-2 pr-2 mt-2 font-semibold text-green-700 uppercase bg-transparent md:pl-2 md:mt-0 hover:text-gray-400 focus:text-gray-400 focus:outline-none focus:shadow-outline"
+                class="py-2 pr-2 mt-2 font-semibold text-green-700 uppercase bg-transparent lg:pl-2 lg:mt-0 hover:text-gray-400 focus:text-gray-400 focus:outline-none focus:shadow-outline"
                 href="/rentals">
-                Weddings &amp; Rentals
+                Rentals
             </a>
 
             <a
-                class="py-2 pr-2 mt-2 font-semibold text-green-700 uppercase bg-transparent md:pl-2 md:mt-0 hover:text-gray-400 focus:text-gray-400 focus:outline-none focus:shadow-outline"
+                class="py-2 pr-2 mt-2 font-semibold text-green-700 uppercase bg-transparent lg:pl-2 lg:mt-0 hover:text-gray-400 focus:text-gray-400 focus:outline-none focus:shadow-outline"
                 href="/visit">
                 Visit
             </a>
             <a
-                class="py-2 pr-2 mt-2 font-semibold text-green-700 uppercase bg-transparent md:pl-2 md:mt-0 hover:text-gray-400 focus:text-gray-400 focus:outline-none focus:shadow-outline"
+                class="py-2 pr-2 mt-2 font-semibold text-green-700 uppercase bg-transparent lg:pl-2 lg:mt-0 hover:text-gray-400 focus:text-gray-400 focus:outline-none focus:shadow-outline"
                 href="/contact">
-                Contact Us
+                Contact
             </a>
             <div
                 @click.outside="open = false"
                 class="relative"
                 x-data="{ open: false }"
-                @mouseenter="window.innerWidth >= 768 && (open = true)"
-                @mouseleave="window.innerWidth >= 768 && (open = false)">
+                @mouseenter="window.innerWidth >= 1024 && (open = true)"
+                @mouseleave="window.innerWidth >= 1024 && (open = false)">
                 <button
                     @click="open = !open"
-                    class="z-50 flex flex-row items-center w-full px-2 py-2 mt-2 text-lg text-left bg-transparent md:w-auto md:inline md:mt-0 md:ml-2 hover:text-gray-900 focus:text-gray-900 focus:outline-none focus:shadow-outline">
+                    class="z-50 flex flex-row items-center w-full px-2 py-2 mt-2 text-lg text-left bg-transparent lg:w-auto lg:inline lg:mt-0 lg:ml-2 hover:text-gray-900 focus:text-gray-900 focus:outline-none focus:shadow-outline">
                     <span>
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -347,7 +347,7 @@
                     x-transition:leave="transition ease-in duration-75"
                     x-transition:leave-start="transform opacity-100 scale-100"
                     x-transition:leave-end="transform opacity-0 scale-95"
-                    class="absolute right-0 z-50 w-full mt-2 origin-top-right rounded-md shadow-lg md:w-80">
+                    class="absolute right-0 z-50 w-full mt-2 origin-top-right rounded-md shadow-lg lg:w-80">
                     <div
                         class="px-2 py-2 bg-white rounded-md shadow ">
                         <div
