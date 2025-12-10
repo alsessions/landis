@@ -2175,6 +2175,11 @@ select {
   background-color: rgb(0 0 0 / 0.5);
 }
 
+.bg-blue-900 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(30 58 138 / var(--tw-bg-opacity));
+}
+
 .bg-green-300 {
   --tw-bg-opacity: 1;
   background-color: rgb(134 239 172 / var(--tw-bg-opacity));
@@ -2227,11 +2232,6 @@ select {
 .bg-blue-50 {
   --tw-bg-opacity: 1;
   background-color: rgb(239 246 255 / var(--tw-bg-opacity));
-}
-
-.bg-blue-900 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(30 58 138 / var(--tw-bg-opacity));
 }
 
 .bg-blue-600 {
@@ -4325,18 +4325,6 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
     margin-top: 0px;
   }
 
-  .md\:ml-4 {
-    margin-left: 1rem;
-  }
-
-  .md\:-mt-1 {
-    margin-top: -0.25rem;
-  }
-
-  .md\:ml-2 {
-    margin-left: 0.5rem;
-  }
-
   .md\:mt-10 {
     margin-top: 2.5rem;
   }
@@ -4373,10 +4361,6 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
     display: none;
   }
 
-  .md\:h-24 {
-    height: 6rem;
-  }
-
   .md\:w-2\/3 {
     width: 66.666667%;
   }
@@ -4387,18 +4371,6 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
 
   .md\:w-3\/4 {
     width: 75%;
-  }
-
-  .md\:w-auto {
-    width: auto;
-  }
-
-  .md\:w-60 {
-    width: 15rem;
-  }
-
-  .md\:w-80 {
-    width: 20rem;
   }
 
   .md\:w-52 {
@@ -4452,14 +4424,6 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
 
   .md\:flex-row {
     flex-direction: row;
-  }
-
-  .md\:items-center {
-    align-items: center;
-  }
-
-  .md\:justify-end {
-    justify-content: flex-end;
   }
 
   .md\:justify-between {
@@ -4544,14 +4508,6 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
 
   .md\:pt-60 {
     padding-top: 15rem;
-  }
-
-  .md\:pb-0 {
-    padding-bottom: 0px;
-  }
-
-  .md\:pl-2 {
-    padding-left: 0.5rem;
   }
 
   .md\:pl-6 {
@@ -4815,10 +4771,6 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
     margin-bottom: 0;
   }
 
-  .lg\:mt-10 {
-    margin-top: 2.5rem;
-  }
-
   .lg\:mt-0 {
     margin-top: 0px;
   }
@@ -4835,16 +4787,16 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
     margin-left: 0.5rem;
   }
 
+  .lg\:mt-10 {
+    margin-top: 2.5rem;
+  }
+
   .lg\:inline {
     display: inline;
   }
 
   .lg\:flex {
     display: flex;
-  }
-
-  .lg\:\!flex {
-    display: flex !important;
   }
 
   .lg\:grid {
