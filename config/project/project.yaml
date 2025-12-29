@@ -1,4 +1,4 @@
-dateModified: 1764897341
+dateModified: 1767042492
 elementSources:
   Solspace\Freeform\Elements\Submission:
     -
@@ -583,23 +583,24 @@ plugins:
     edition: pro
     enabled: true
     licenseKey: OCU2AH2L5VOWK3HV2HUJV760
-    schemaVersion: 5.8.1
+    schemaVersion: 5.14.1
     settings:
       alertNotificationRecipients: fultonchain@gmail.com
       allowBuilderTemplateCreation: true
-      allowDashesInFieldHandles: false
+      allowDashesInFieldHandles: ''
       allowFileTemplateEdit: true
-      autoScroll: true
-      autoScrollToErrors: true
+      autoScroll: '1'
+      autoScrollToErrors: '1'
       badgeType: all
-      blockedEmails: ''
+      blockedEmails: null
       blockedEmailsError: 'Invalid Email Address'
-      blockedIpAddresses: ''
-      blockedKeywords: ''
+      blockedIpAddresses: null
+      blockedKeywords: null
       blockedKeywordsError: 'Invalid Entry Data'
       bypassSpamCheckOnLoggedInUsers: '1'
-      clientDigestFrequency: '5'
+      clientDigestFrequency: 5
       clientDigestRecipients: info@landisarboretum.org
+      csrfRefresh: none
       defaultFromEmail: '{{ craft.app.projectConfig.get(''email.fromEmail'') }}'
       defaultFromName: '{{ craft.app.projectConfig.get(''email.fromName'') }}'
       defaultView: dashboard
@@ -864,34 +865,635 @@ plugins:
                             -
                               - value
                               - no_limit
-      digestFrequency: '5'
+          -
+            - props
+            -
+              __assoc__:
+                -
+                  - date
+                  -
+                    __assoc__:
+                      -
+                        - type
+                        -
+                          __assoc__:
+                            -
+                              - locked
+                              - false
+                            -
+                              - value
+                              - both
+                      -
+                        - initialValue
+                        -
+                          __assoc__:
+                            -
+                              - locked
+                              - false
+                            -
+                              - value
+                              - ''
+                      -
+                        - locale
+                        -
+                          __assoc__:
+                            -
+                              - locked
+                              - false
+                            -
+                              - value
+                              - ''
+                      -
+                        - datepicker
+                        -
+                          __assoc__:
+                            -
+                              - locked
+                              - false
+                            -
+                              - value
+                              - true
+                      -
+                        - nativeTypes
+                        -
+                          __assoc__:
+                            -
+                              - locked
+                              - false
+                            -
+                              - value
+                              - false
+                      -
+                        - formatAsPlaceholder
+                        -
+                          __assoc__:
+                            -
+                              - locked
+                              - false
+                            -
+                              - value
+                              - true
+                      -
+                        - dateOrder
+                        -
+                          __assoc__:
+                            -
+                              - locked
+                              - false
+                            -
+                              - value
+                              - ymd
+                      -
+                        - date4DigitYear
+                        -
+                          __assoc__:
+                            -
+                              - locked
+                              - false
+                            -
+                              - value
+                              - true
+                      -
+                        - dateLeadingZero
+                        -
+                          __assoc__:
+                            -
+                              - locked
+                              - false
+                            -
+                              - value
+                              - true
+                      -
+                        - dateSeparator
+                        -
+                          __assoc__:
+                            -
+                              - locked
+                              - false
+                            -
+                              - value
+                              - '-'
+                      -
+                        - minDate
+                        -
+                          __assoc__:
+                            -
+                              - locked
+                              - false
+                            -
+                              - value
+                              - ''
+                      -
+                        - maxDate
+                        -
+                          __assoc__:
+                            -
+                              - locked
+                              - false
+                            -
+                              - value
+                              - ''
+                      -
+                        - clock24h
+                        -
+                          __assoc__:
+                            -
+                              - locked
+                              - false
+                            -
+                              - value
+                              - false
+                      -
+                        - clockSeparator
+                        -
+                          __assoc__:
+                            -
+                              - locked
+                              - false
+                            -
+                              - value
+                              - ':'
+                      -
+                        - clockAMPMSeparate
+                        -
+                          __assoc__:
+                            -
+                              - locked
+                              - false
+                            -
+                              - value
+                              - true
+                -
+                  - phone
+                  -
+                    __assoc__:
+                      -
+                        - pattern
+                        -
+                          __assoc__:
+                            -
+                              - locked
+                              - false
+                            -
+                              - value
+                              - ''
+                      -
+                        - javascript
+                        -
+                          __assoc__:
+                            -
+                              - locked
+                              - false
+                            -
+                              - value
+                              - false
+                -
+                  - file
+                  -
+                    __assoc__:
+                      -
+                        - count
+                        -
+                          __assoc__:
+                            -
+                              - locked
+                              - false
+                            -
+                              - value
+                              - 1
+                      -
+                        - initialValue
+                        -
+                          __assoc__:
+                            -
+                              - locked
+                              - false
+                            -
+                              - value
+                              - ''
+                      -
+                        - uploadLocation
+                        -
+                          __assoc__:
+                            -
+                              - locked
+                              - false
+                            -
+                              - value
+                              - ''
+                      -
+                        - fileKinds
+                        -
+                          __assoc__:
+                            -
+                              - locked
+                              - false
+                            -
+                              - value
+                              -
+                                - image
+                      -
+                        - maxFileSizeKB
+                        -
+                          __assoc__:
+                            -
+                              - locked
+                              - false
+                            -
+                              - value
+                              - '2048'
+                      -
+                        - accentColor
+                        -
+                          __assoc__:
+                            -
+                              - locked
+                              - false
+                            -
+                              - value
+                              - '#3a85ee'
+                      -
+                        - theme
+                        -
+                          __assoc__:
+                            -
+                              - locked
+                              - false
+                            -
+                              - value
+                              - light
+                      -
+                        - placeholder
+                        -
+                          __assoc__:
+                            -
+                              - locked
+                              - false
+                            -
+                              - value
+                              - ''
+                      -
+                        - removeFileMessage
+                        -
+                          __assoc__:
+                            -
+                              - locked
+                              - false
+                            -
+                              - value
+                              - ''
+                      -
+                        - dialogElement
+                        -
+                          __assoc__:
+                            -
+                              - locked
+                              - false
+                            -
+                              - value
+                              - false
+                      -
+                        - dialogSelector
+                        -
+                          __assoc__:
+                            -
+                              - locked
+                              - false
+                            -
+                              - value
+                              - ''
+                -
+                  - html
+                  -
+                    __assoc__:
+                      -
+                        - twig
+                        -
+                          __assoc__:
+                            -
+                              - locked
+                              - false
+                            -
+                              - value
+                              - false
+                -
+                  - table
+                  -
+                    __assoc__:
+                      -
+                        - javascript
+                        -
+                          __assoc__:
+                            -
+                              - locked
+                              - false
+                            -
+                              - value
+                              - true
+                      -
+                        - maxRows
+                        -
+                          __assoc__:
+                            -
+                              - locked
+                              - false
+                            -
+                              - value
+                              - ''
+                      -
+                        - addButtonLabel
+                        -
+                          __assoc__:
+                            -
+                              - locked
+                              - false
+                            -
+                              - value
+                              - Add
+                      -
+                        - addButtonMarkup
+                        -
+                          __assoc__:
+                            -
+                              - locked
+                              - false
+                            -
+                              - value
+                              - ''
+                      -
+                        - removeButtonLabel
+                        -
+                          __assoc__:
+                            -
+                              - locked
+                              - false
+                            -
+                              - value
+                              - Remove
+                      -
+                        - removeButtonMarkup
+                        -
+                          __assoc__:
+                            -
+                              - locked
+                              - false
+                            -
+                              - value
+                              - ''
+                      -
+                        - tableAttributes
+                        -
+                          __assoc__:
+                            -
+                              - locked
+                              - false
+                            -
+                              - value
+                              - true
+                -
+                  - rating
+                  -
+                    __assoc__:
+                      -
+                        - max
+                        -
+                          __assoc__:
+                            -
+                              - locked
+                              - false
+                            -
+                              - value
+                              - 5
+                      -
+                        - idle
+                        -
+                          __assoc__:
+                            -
+                              - locked
+                              - false
+                            -
+                              - value
+                              - '#DDDDDD'
+                      -
+                        - hover
+                        -
+                          __assoc__:
+                            -
+                              - locked
+                              - false
+                            -
+                              - value
+                              - '#FFD700'
+                      -
+                        - selected
+                        -
+                          __assoc__:
+                            -
+                              - locked
+                              - false
+                            -
+                              - value
+                              - '#FF7700'
+                -
+                  - signature
+                  -
+                    __assoc__:
+                      -
+                        - width
+                        -
+                          __assoc__:
+                            -
+                              - locked
+                              - false
+                            -
+                              - value
+                              - '400'
+                      -
+                        - height
+                        -
+                          __assoc__:
+                            -
+                              - locked
+                              - false
+                            -
+                              - value
+                              - '100'
+                      -
+                        - clear
+                        -
+                          __assoc__:
+                            -
+                              - locked
+                              - false
+                            -
+                              - value
+                              - true
+                      -
+                        - borderColor
+                        -
+                          __assoc__:
+                            -
+                              - locked
+                              - false
+                            -
+                              - value
+                              - '#999999'
+                      -
+                        - backgroundColor
+                        -
+                          __assoc__:
+                            -
+                              - locked
+                              - false
+                            -
+                              - value
+                              - TRANSPARENT
+                      -
+                        - penColor
+                        -
+                          __assoc__:
+                            -
+                              - locked
+                              - false
+                            -
+                              - value
+                              - '#000000'
+                      -
+                        - penDotSize
+                        -
+                          __assoc__:
+                            -
+                              - locked
+                              - false
+                            -
+                              - value
+                              - '2.5'
+                -
+                  - calculation
+                  -
+                    __assoc__:
+                      -
+                        - decimalCount
+                        -
+                          __assoc__:
+                            -
+                              - locked
+                              - false
+                            -
+                              - value
+                              - ''
+                      -
+                        - inputType
+                        -
+                          __assoc__:
+                            -
+                              - locked
+                              - false
+                            -
+                              - value
+                              - regularTextInput
+                -
+                  - cards
+                  -
+                    __assoc__:
+                      -
+                        - max
+                        -
+                          __assoc__:
+                            -
+                              - locked
+                              - false
+                            -
+                              - value
+                              - ''
+                      -
+                        - perRow
+                        -
+                          __assoc__:
+                            -
+                              - locked
+                              - false
+                            -
+                              - value
+                              - 5
+                      -
+                        - transform
+                        -
+                          __assoc__:
+                            -
+                              - locked
+                              - false
+                            -
+                              - value
+                              - ''
+                      -
+                        - srcset
+                        -
+                          __assoc__:
+                            -
+                              - locked
+                              - false
+                            -
+                              - value
+                              - ''
+                -
+                  - image
+                  -
+                    __assoc__:
+                      -
+                        - transform
+                        -
+                          __assoc__:
+                            -
+                              - locked
+                              - false
+                            -
+                              - value
+                              - ''
+                      -
+                        - srcset
+                        -
+                          __assoc__:
+                            -
+                              - locked
+                              - false
+                            -
+                              - value
+                              - ''
+      digestFrequency: 5
       digestOnlyOnProduction: '1'
       digestRecipients: info@landisarboretum.org
       displayFeed: '1'
+      emailNotificationToolbarConfiguration: 'blocks bold italic underline forecolor backcolor | align numlist bullist | link image table | removeformat code'
       emailTemplateDefault: database
       emailTemplateDirectory: null
       emailTemplateMethod: global
       emailTemplateStorageType: files_database
-      exportHandlesAsNames: false
-      exportLabels: false
-      fillWithGet: false
+      errorNotificationRecipients: null
+      exportHandlesAsNames: ''
+      exportLabels: ''
+      fillWithGet: ''
       footerScripts: false
-      formFieldShowOnlyAllowedForms: false
-      formSubmitDisable: true
-      formSubmitExpiration: ''
+      formFieldShowOnlyAllowedForms: ''
+      formSubmitDisable: '1'
+      formSubmitExpiration: null
       formTemplateDirectory: null
       formattingTemplate: tailwind-3/index.twig
       loggingLevel: error
-      minimumSubmitTime: '10'
-      pluginName: ''
-      purgableSpamAgeInDays: '0'
+      managedPingerEnabled: false
+      minimumSubmitTime: 10
+      pluginName: null
+      purgableFormIds: null
+      purgableSpamAgeInDays: 0
       purgableSubmissionAgeInDays: null
       purgableUnfinalizedAssetAgeInMinutes: 180
       purgeAssets: true
+      queuePingMinIntervalSeconds: 600
+      queuePingToken: null
       queuePriority: null
-      rememberPageSubmitOrder: true
-      removeNewlines: false
-      renderFormHtmlInCpViews: '1'
+      rememberPageSubmitOrder: '1'
+      removeNewlines: ''
+      renderFormHtmlInCpViews: true
       saveFormSessionLimit: 10
       saveFormTtl: 30
       scriptInsertLocation: footer
@@ -902,17 +1504,19 @@ plugins:
       sessionContextTimeToLiveMinutes: 180
       sessionEntryMaxCount: 50
       sessionEntryTTL: 10800
-      showErrorsForBlockedEmails: ''
-      showErrorsForBlockedKeywords: ''
-      sitesEnabled: false
+      showErrorsForBlockedEmails: false
+      showErrorsForBlockedKeywords: false
+      sitesEnabled: ''
       spamFolderEnabled: '1'
       spamProtectionBehavior: simulate_success
-      submissionThrottlingCount: ''
+      submissionThrottlingCount: null
       submissionThrottlingTimeFrame: m
       successTemplateDirectory: null
-      updateSearchIndexes: true
-      useQueueForEmailNotifications: false
-      useQueueForIntegrations: false
+      updateSearchIndexes: '1'
+      useIdempotencyKey: 'false'
+      useQueueForAiFields: '1'
+      useQueueForEmailNotifications: '1'
+      useQueueForIntegrations: '0'
   image-optimize:
     edition: standard
     enabled: true
