@@ -73,7 +73,7 @@ fieldLayouts:
 handle: default
 hasTitleField: true
 name: Default
-section: 7d2f1d61-50b5-41ad-9814-fb33aa21a00f # Map
+section: 7d2f1d61-50b5-41ad-9814-fb33aa21a00f # Map Item
 showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: site

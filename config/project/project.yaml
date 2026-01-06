@@ -1,4 +1,4 @@
-dateModified: 1767042492
+dateModified: 1767660149
 elementSources:
   Solspace\Freeform\Elements\Submission:
     -
@@ -94,6 +94,16 @@ elementSources:
         - link
       type: native
     -
+      defaultSort:
+        - title
+        - asc
+      disabled: false
+      key: 'single:d88a6933-19d2-42a9-b9f0-3ce161f74d40' # Landis Arboretum (HOME)
+      tableAttributes:
+        - postDate
+        - link
+      type: native
+    -
       heading: Channels
       type: heading
     -
@@ -101,7 +111,7 @@ elementSources:
         - postDate
         - desc
       disabled: false
-      key: 'section:1bd53fd1-157a-471b-a19d-caa2a0a2f0b1' # Events
+      key: 'section:1bd53fd1-157a-471b-a19d-caa2a0a2f0b1' # Add Event
       tableAttributes:
         - 'field:6cbeb24e-1d09-449d-8e70-95dd68e8f71d' # Date
         - dateCreated
@@ -113,7 +123,7 @@ elementSources:
         - postDate
         - desc
       disabled: false
-      key: 'section:762300b5-fa76-4ba6-ac94-33ec53c50db6' # News
+      key: 'section:762300b5-fa76-4ba6-ac94-33ec53c50db6' # Newsletter Item
       tableAttributes:
         - 'field:ea0f14f7-38cc-4763-a0c5-fbc6c70c1451' # Issue
         - link
@@ -121,6 +131,27 @@ elementSources:
         - postDate
         - 'field:9d1afefd-6011-4b8d-86c5-78b3b2fcb9d6' # Author
       type: native
+    -
+      key: 'section:1c5b4d35-7397-4999-a4e2-aeda50aee03f' # Bird Blog
+      tableAttributes:
+        - postDate
+        - expiryDate
+        - link
+      type: native
+    -
+      defaultSort:
+        - postDate
+        - desc
+      disabled: false
+      key: 'section:7d2f1d61-50b5-41ad-9814-fb33aa21a00f' # Map Item
+      tableAttributes:
+        - postDate
+        - expiryDate
+        - link
+      type: native
+    -
+      heading: 'Freestanding Pages'
+      type: heading
     -
       defaultSort:
         - structure
@@ -134,30 +165,10 @@ elementSources:
         - slug
       type: native
     -
-      key: 'section:1c5b4d35-7397-4999-a4e2-aeda50aee03f' # Bird Blog
-      tableAttributes:
-        - postDate
-        - expiryDate
-        - link
-      type: native
-    -
-      heading: 'Freestanding Pages'
+      heading: 'Topic Pages'
       type: heading
     -
-      defaultSort:
-        - title
-        - asc
-      disabled: false
-      key: 'single:d88a6933-19d2-42a9-b9f0-3ce161f74d40' # Landis Arboretum (HOME)
-      tableAttributes:
-        - postDate
-        - link
-      type: native
-    -
       key: 'single:c5865b6a-7482-4a59-8212-4273ff47b853' # Vist Landis
-      type: native
-    -
-      key: 'single:73e6f389-874a-42a1-8d01-a2b6dc9d021e' # FAQ
       type: native
     -
       defaultSort:
@@ -171,7 +182,16 @@ elementSources:
         - link
       type: native
     -
+      key: 'single:0ec10247-de60-40f9-a891-f06dc34d99d5' # Bookings
+      type: native
+    -
+      key: 'single:73e6f389-874a-42a1-8d01-a2b6dc9d021e' # FAQ
+      type: native
+    -
       key: 'single:7be06789-bc7c-40fa-a931-0947a71cae01' # Audio Tour
+      type: native
+    -
+      key: 'single:a7931313-4e13-4423-ae89-3e60ed563a58' # Privacy Policy
       type: native
     -
       key: 'section:1f2f0b85-84dd-4cb7-996f-cfc1f7478721' # Native Plants Tour
@@ -179,9 +199,6 @@ elementSources:
         - postDate
         - expiryDate
         - link
-      type: native
-    -
-      key: 'single:a7931313-4e13-4423-ae89-3e60ed563a58' # Privacy Policy
       type: native
     -
       heading: 'Forms & Payments'
@@ -278,6 +295,9 @@ elementSources:
       key: 'single:5e8484d8-801c-49d6-a6bb-e5786bfa1fa3' # Gallery Index
       type: native
     -
+      key: 'single:433b6d9e-7282-4d08-aecf-76961050bbdd' # Maps Index
+      type: native
+    -
       heading: Sections
       type: heading
     -
@@ -291,10 +311,15 @@ elementSources:
       key: 'section:93878cb5-0ca9-4979-a0c4-252b4f6cf04d' # Video
       type: native
     -
+      defaultSort:
+        - structure
+        - asc
+      disabled: false
       key: 'section:e16e1677-c1c6-4584-9a04-55c202f2cbf8' # Gallery
-      type: native
-    -
-      key: 'single:433b6d9e-7282-4d08-aecf-76961050bbdd' # Maps Index
+      tableAttributes:
+        - postDate
+        - expiryDate
+        - link
       type: native
     -
       heading: 'Partials (embedded content)'
@@ -381,7 +406,7 @@ meta:
     0ec10247-de60-40f9-a891-f06dc34d99d5: Bookings # Bookings
     0f368f05-6c07-47a0-ba95-53d57584765d: Text # Text
     1a3c75ec-5449-408a-90b3-92144c5b8ae1: Simple # Simple
-    1bd53fd1-157a-471b-a19d-caa2a0a2f0b1: Events # Events
+    1bd53fd1-157a-471b-a19d-caa2a0a2f0b1: 'Add Event' # Add Event
     1c5b4d35-7397-4999-a4e2-aeda50aee03f: 'Bird Blog' # Bird Blog
     1ed8c75c-1b8a-48c3-aa76-2be72964d57b: Link # Link
     1f2f0b85-84dd-4cb7-996f-cfc1f7478721: 'Native Plants Tour' # Native Plants Tour
@@ -422,7 +447,7 @@ meta:
     7b53cb51-2c46-4eb9-887a-50b0ece85a8b: 'Video Date' # Video Date
     7be06789-bc7c-40fa-a931-0947a71cae01: 'Audio Tour' # Audio Tour
     7d1f53be-fac3-4734-b463-26a876e35a5f: Header # Header
-    7d2f1d61-50b5-41ad-9814-fb33aa21a00f: Map # Map
+    7d2f1d61-50b5-41ad-9814-fb33aa21a00f: 'Map Item' # Map Item
     7ddfd564-9dbb-4f4f-980e-4f8558e686d4: Membership # Membership
     7e12476d-61a5-493d-b2f2-364e3b534a9a: Header # Header
     7eb9288d-a2b2-43f4-9081-c2c32b6e8a39: Rentals # Rentals
@@ -489,7 +514,7 @@ meta:
     93878cb5-0ca9-4979-a0c4-252b4f6cf04d: Video # Video
     248386fe-8099-4726-908b-b085800c794a: 'Site Contact' # Site Contact
     511297b0-ffe8-4eb3-8bf8-1255f1cd2729: 'Article 400 Wide' # Article 400 Wide
-    762300b5-fa76-4ba6-ac94-33ec53c50db6: News # News
+    762300b5-fa76-4ba6-ac94-33ec53c50db6: 'Newsletter Item' # Newsletter Item
     795332e7-f37b-4fb7-8b7c-4d06ae676444: 'Gallery Index' # Gallery Index
     818868ff-8958-4554-ae24-e5ce8daa6451: 'Full Width CTA' # Full Width CTA
     24907884-0f61-4170-86f9-fb5e19a65286: Pages # Pages

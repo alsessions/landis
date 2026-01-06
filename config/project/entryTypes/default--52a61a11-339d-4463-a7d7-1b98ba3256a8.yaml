@@ -145,7 +145,7 @@ fieldLayouts:
 handle: default
 hasTitleField: true
 name: Default
-section: 1bd53fd1-157a-471b-a19d-caa2a0a2f0b1 # Events
+section: 1bd53fd1-157a-471b-a19d-caa2a0a2f0b1 # Add Event
 showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: site

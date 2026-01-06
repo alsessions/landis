@@ -1,7 +1,7 @@
 defaultPlacement: end
 enableVersioning: true
 handle: events
-name: Events
+name: 'Add Event'
 propagationMethod: all
 siteSettings:
   ccdf06db-63d7-465e-8ec1-7ae2b8a1ad53: # Landis Arboretum

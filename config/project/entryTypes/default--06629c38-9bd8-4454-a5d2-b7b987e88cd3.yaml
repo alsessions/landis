@@ -97,7 +97,7 @@ fieldLayouts:
 handle: default
 hasTitleField: true
 name: Default
-section: 762300b5-fa76-4ba6-ac94-33ec53c50db6 # News
+section: 762300b5-fa76-4ba6-ac94-33ec53c50db6 # Newsletter Item
 showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
