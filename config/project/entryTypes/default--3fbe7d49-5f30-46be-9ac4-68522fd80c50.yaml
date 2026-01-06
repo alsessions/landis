@@ -85,7 +85,7 @@ fieldLayouts:
 handle: default
 hasTitleField: true
 name: Default
-section: 24907884-0f61-4170-86f9-fb5e19a65286 # Pages
+section: 24907884-0f61-4170-86f9-fb5e19a65286 # Add or Edit Page
 showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: site

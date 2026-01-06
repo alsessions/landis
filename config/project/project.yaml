@@ -1,4 +1,4 @@
-dateModified: 1767660149
+dateModified: 1767664872
 elementSources:
   Solspace\Freeform\Elements\Submission:
     -
@@ -157,7 +157,7 @@ elementSources:
         - structure
         - asc
       disabled: false
-      key: 'section:24907884-0f61-4170-86f9-fb5e19a65286' # Pages
+      key: 'section:24907884-0f61-4170-86f9-fb5e19a65286' # Add or Edit Page
       tableAttributes:
         - postDate
         - expiryDate
@@ -322,7 +322,7 @@ elementSources:
         - link
       type: native
     -
-      heading: 'Partials (embedded content)'
+      heading: 'Embedded Content'
       type: heading
     -
       key: 'single:af5c675a-209c-402a-9952-31e471fce849' # Sponsors
@@ -340,7 +340,7 @@ elementSources:
         - structure
         - asc
       disabled: false
-      key: 'section:3562ff77-b843-496b-898e-d8bae315e570' # Newsletter
+      key: 'section:3562ff77-b843-496b-898e-d8bae315e570' # PDF Newsletters [1982-2014]
       tableAttributes:
         - postDate
         - 'field:c2355853-0b3a-451c-bc58-915c397e7a06' # Volume
@@ -498,7 +498,7 @@ meta:
     888dcda0-1806-4ad3-906c-d61ea274c245: 'Upcoming Events' # Upcoming Events
     962d6eb5-bd48-427a-b80e-fb61b587cc16: 'Left Column' # Left Column
     0979c525-68a2-44e5-95a2-1a5385cad4fa: Video # Video
-    3562ff77-b843-496b-898e-d8bae315e570: Newsletter # Newsletter
+    3562ff77-b843-496b-898e-d8bae315e570: 'PDF Newsletters [1982-2014]' # PDF Newsletters [1982-2014]
     06629c38-9bd8-4454-a5d2-b7b987e88cd3: Default # Default
     007394ea-f95b-4d5d-a291-eda4df8659e0: Question # Question
     7469dd6b-45d6-4034-9c59-9351553737c8: Image # Image
@@ -517,7 +517,7 @@ meta:
     762300b5-fa76-4ba6-ac94-33ec53c50db6: 'Newsletter Item' # Newsletter Item
     795332e7-f37b-4fb7-8b7c-4d06ae676444: 'Gallery Index' # Gallery Index
     818868ff-8958-4554-ae24-e5ce8daa6451: 'Full Width CTA' # Full Width CTA
-    24907884-0f61-4170-86f9-fb5e19a65286: Pages # Pages
+    24907884-0f61-4170-86f9-fb5e19a65286: 'Add or Edit Page' # Add or Edit Page
     31059278-fbc1-4257-bc3e-db4adaf39246: 'Newsletter PDF' # Newsletter PDF
     31172786-ddd2-45a8-8f50-dceb8550a656: 'Two Columns' # Two Columns
     38818040-89c6-431f-a5c9-0ae9248834f9: Text # Text

@@ -97,7 +97,7 @@ fieldLayouts:
 handle: default
 hasTitleField: true
 name: Default
-section: 3562ff77-b843-496b-898e-d8bae315e570 # Newsletter
+section: 3562ff77-b843-496b-898e-d8bae315e570 # PDF Newsletters [1982-2014]
 showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
