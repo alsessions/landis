@@ -1,4 +1,4 @@
-dateModified: 1767664872
+dateModified: 1767816290
 elementSources:
   Solspace\Freeform\Elements\Submission:
     -
@@ -1506,7 +1506,7 @@ plugins:
       formattingTemplate: tailwind-3/index.twig
       loggingLevel: error
       managedPingerEnabled: false
-      minimumSubmitTime: 10
+      minimumSubmitTime: 5
       pluginName: null
       purgableFormIds: null
       purgableSpamAgeInDays: 0
@@ -1539,8 +1539,8 @@ plugins:
       successTemplateDirectory: null
       updateSearchIndexes: '1'
       useIdempotencyKey: 'false'
-      useQueueForAiFields: '1'
-      useQueueForEmailNotifications: '1'
+      useQueueForAiFields: '0'
+      useQueueForEmailNotifications: '0'
       useQueueForIntegrations: '0'
   image-optimize:
     edition: standard
