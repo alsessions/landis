@@ -1,4 +1,4 @@
-dateModified: 1767816290
+dateModified: 1767824090
 elementSources:
   Solspace\Freeform\Elements\Submission:
     -
@@ -354,7 +354,7 @@ email:
   replyToEmail: info@landisarboretum.org
   template: null
   transportSettings:
-    host: smtp.ipower.com
+    host: smtp.ipage.com
     password: '548EArbor?'
     port: '587'
     useAuthentication: '1'
