@@ -1,4 +1,4 @@
-dateModified: 1771883424
+dateModified: 1776966733
 elementSources:
   Solspace\Freeform\Elements\Submission:
     -
@@ -351,12 +351,12 @@ elementSources:
 email:
   fromEmail: info@landisarboretum.org
   fromName: 'Landis Arboretum'
-  replyToEmail: info@landisarboretum.org
+  replyToEmail: null
   template: null
   transportSettings:
-    host: smtp.ipage.com
-    password: '548EArbor?'
-    port: '587'
+    host: smtp.ipower.com
+    password: Landisis75thisyear!
+    port: '465'
     useAuthentication: '1'
     username: info@landisarboretum.org
   transportType: craft\mail\transportadapters\Smtp
@@ -608,7 +608,7 @@ plugins:
     edition: pro
     enabled: true
     licenseKey: OCU2AH2L5VOWK3HV2HUJV760
-    schemaVersion: 5.14.2
+    schemaVersion: 5.15.1
     settings:
       alertNotificationRecipients: fultonchain@gmail.com
       allowBuilderTemplateCreation: true
