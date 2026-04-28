@@ -1,4 +1,4 @@
-dateModified: 1776966733
+dateModified: 1777397415
 elementSources:
   Solspace\Freeform\Elements\Submission:
     -
@@ -356,7 +356,7 @@ email:
   transportSettings:
     host: smtp.ipower.com
     password: Landisis75thisyear!
-    port: '465'
+    port: '587'
     useAuthentication: '1'
     username: info@landisarboretum.org
   transportType: craft\mail\transportadapters\Smtp
