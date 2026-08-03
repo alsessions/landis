@@ -23,6 +23,9 @@
     "config": {
         "sort-packages": true,
         "optimize-autoloader": true,
+                "audit": {
+            "block-insecure": false
+        },
         "platform": {
             "php": "8.2"
         },
