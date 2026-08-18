@@ -1,4 +1,4 @@
-dateModified: 1785780126
+dateModified: 1787067078
 elementSources:
   Solspace\Freeform\Elements\Submission:
     -
@@ -351,7 +351,7 @@ elementSources:
 email:
   fromEmail: mailer@landisarboretum.org
   fromName: 'Landis Arboretum'
-  replyToEmail: info@fultonchain.com
+  replyToEmail: info@landisarboretum.org
   template: null
   transportSettings:
     host: sunfire.mxrouting.net
@@ -608,7 +608,7 @@ plugins:
     edition: pro
     enabled: true
     licenseKey: OCU2AH2L5VOWK3HV2HUJV760
-    schemaVersion: 5.15.2
+    schemaVersion: 5.15.3
     settings:
       alertNotificationRecipients: fultonchain@gmail.com
       allowBuilderTemplateCreation: true
